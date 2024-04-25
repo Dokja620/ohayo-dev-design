@@ -1,0 +1,50 @@
+@import 'google-fonts.css';
+
+@font-face {
+    font-family: 'Pirulen';
+    src:url('/fonts/Pirulen.ttf.woff') format('woff'),
+        url('/fonts/Pirulen.ttf.svg#Pirulen') format('svg'),
+        url('/fonts/Pirulen.ttf.eot'),
+        url('/fonts/Pirulen.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+main, ::placeholder {
+    font-family: 'Poppins';
+}
+a, header, button {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 400;
+}
+
+h1
+ {
+    font-family: 'Pirulen';
+    font-weight: 700;
+}
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+html {font-size: 100%;} /* 16px */
+
+// h1 {font-size: 1.753rem; /* 48.8px */}
+
+h1 {font-size: 1.65rem; /* 48.8px */}
+
+h2 {font-size: 1.25rem; /* 39.04px */}
+
+h3 {font-size: 1.954rem; /* 31.2px */}
+
+h4 {font-size: 1.563rem; /* 24.96px */}
+
+h5, a {font-size: 1.250rem; /* 20px */}
+
+small {font-size: 0.800rem; /* 12.8px */}

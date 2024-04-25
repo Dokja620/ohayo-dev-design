@@ -1,0 +1,46 @@
+// First section of the Homepage
+#home-1 {
+    min-height: calc(100vh - 86px);
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .content {
+        width: 55%;
+        height: max-content;
+        line-height: 27px;
+        text-align: justify;
+    }
+    h1{
+        font-size: 1.753rem;
+    }
+    h2{
+        margin: 8px 0 0;
+    }
+    .text{
+        margin: $spacing 0 0;
+    }
+}
+
+.deco-home {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: auto;
+    height: clamp(250px, 60vh, 600px);
+    opacity: .7;
+    pointer-events: none;
+    img{
+        height: 100%;
+        width: 100%;
+    }
+    &.spatios{
+        right: 20%;
+        opacity: 1;
+        animation: floating-home 7s ease infinite;
+    }
+    &.planets{
+        z-index: -1;
+    }
+}

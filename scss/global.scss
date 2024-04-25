@@ -1,0 +1,52 @@
+/* Default styles */
+:root {
+    //--------------//
+    //  Blue  clrs //
+    //------------//
+    --yale-blue: hsla(212, 72%, 26%, 1);
+    --berkeley-blue: hsla(215, 66%, 22%, 1);
+    --oxford-blue: hsla(213, 72%, 16%, 1);
+    --powder-blue: hsla(209, 32%, 66%, 1);
+    --mint-cream: hsla(111, 24%, 94%, 1);
+
+    //--------------//
+    // Violet clrs //
+    //------------//
+    --phthalo-blue: hsla(243, 76%, 27%, 1);
+    --black-pearl: hsla(230, 70%, 5%, 1);
+    --lavender-web: hsla(248, 54%, 89%, 1);
+    --moonstone: hsla(185, 84%, 38%, 1);
+    --russian-violet: hsla(295, 100%, 15%, 1);
+    --chinese-violet: hsla(269, 9%, 45%, 1);
+    --btn-grey: hsla(240, 3%, 12%, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--mint-cream);
+}
+
+body {
+    background: var(--black-pearl) url(../src/media/bg-004.webp) top center/100vw no-repeat fixed;
+    color: var(--mint-cream);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+@import './shared/typo';
+@import './shared/var';
+@import './shared/mixins';
+@import './components/navbar';
+@import './components/footer';
+@import './pages/home';
+@import './pages/order';
+@import './pages/price';
+@import './pages/about';
+@import './responsive';
+@import './shared/animation';

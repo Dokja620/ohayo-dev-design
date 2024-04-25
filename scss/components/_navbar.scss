@@ -1,0 +1,128 @@
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: $spacing;
+    gap: $spacing;
+    z-index: 3;
+    .logo {
+        cursor: pointer;
+    }
+}
+
+// All three part, one is hidden
+.nav-links {
+    display: flex;
+    width: 100%;
+    
+    .links {
+        display: flex;
+        height: max-content;
+        gap: $spacing;
+        margin-left: auto;
+        &> :nth-child(1) {
+            position: relative;
+        }
+
+        &> :nth-child(2) {
+            position: relative;
+            padding-left: 8px;
+            
+            &::after {
+                position: absolute;
+                content: '';
+                top: 45%;
+                transform: translateY(-50%) scale(.5);
+                left: -5px;
+                height: 200%;
+                width: 4px;
+                border-radius: 2px;
+                background: var(--lavender-web);
+                z-index: 2;
+            }
+        }
+    }
+}
+// pure css burger menu
+.menu a{
+    position: relative;
+    z-index: 3;
+}
+.menu.second{
+    position: relative;
+    
+    input{
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 25px;
+        height: 25px;
+        opacity: 0;
+        z-index: 5;
+        &:checked ~ .burger > :nth-child(1) {
+            transform: rotate(45deg) translate(7px, 2px);
+        }
+        &:checked ~ .burger > :nth-child(2) {
+            opacity: 0;
+        }
+        &:checked ~ .burger > :nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -2px);
+        }
+        &:checked ~ .burger-links {
+            height: 235px;
+            transform: scale(1);
+        }
+    }
+}
+.burger {
+    position: relative;
+    z-index: 3;
+    div {
+        width: 25px;
+        height: 2px;
+        border-radius: 2px;
+        margin: 4px 0;
+        background: var(--mint-cream);
+        transition: transform .25s ease-in-out, opacity .25s ease;
+    }
+}
+
+.burger-links {
+    display: flex;
+    gap: $spacing-lg;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    flex-direction: column;
+    height: 1px;
+    transform: scale(0);
+    transform-origin: top right;
+    overflow: hidden;
+    width: max-content;
+    background: hsla(230, 70%, 5%, .31);
+    border: 2px solid hsla(111, 24%, 94%, .1);
+    backdrop-filter: blur(2px);
+    // border-right: none;
+    border-radius: $spacing 5px $spacing $spacing;
+    padding: $spacing-md $spacing-xxl $spacing $spacing;
+    z-index: 2;
+    transition: height .45s ease-in-out .5s, transform .35s ease-in-out;
+    & :first-child{
+        margin-top: $spacing-lg;
+    }
+    a{
+        opacity: .7;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+// order a website button
+.command {
+    border-radius: $spacing;
+    padding: 8px $spacing;
+}
