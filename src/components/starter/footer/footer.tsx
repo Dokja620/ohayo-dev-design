@@ -21,16 +21,13 @@ export default component$(() => {
             <div class="separation"></div>
             <div class="get-in-touch">
                 <div class="tel">
-                    <p>Tel :</p>
-                    <a href="tel:+261329068335">+261 32 90 683 35</a> <br />
+                    <a href="tel:+261329078335">+261 32 90 783 35</a> <br />
                     <a href="tel:+261334144813">+261 33 41 448 13</a>
                 </div>
                 <div class="mail">
-                    <p>E-mail :</p>
                     <a href="mailto:ohayodevanddesign@gmail.com">ohayodevanddesign@gmail.com</a>
                 </div>
                 <div class="adress">
-                    <p>Adresse :</p>
                     <a href="">Madagascar, <br /> Antananarivo</a>
                 </div>
             </div>

@@ -33,6 +33,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -254,7 +255,7 @@ footer {
   text-align: left;
   line-height: 25px;
   padding: 0 0 1em;
-  margin-top: 3em;
+  margin-top: 6em;
   position: relative;
   font-family: "Poppins";
   background: hsla(0, 0%, 0%, 0.5);
@@ -277,9 +278,11 @@ footer {
 .get-in-touch {
   display: flex;
   justify-content: space-between;
-  max-width: 50%;
+  align-items: center;
+  max-width: 60%;
   min-width: 280px;
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .get-in-touch a {
@@ -400,6 +403,13 @@ footer {
 
 .deco-home.planets {
   z-index: -1;
+}
+
+.deco-home.planets.two {
+  left: 0;
+  top: 70%;
+  aspect-ratio: 1/1;
+  scale: 0.8;
 }
 
 [active-step] > div {
@@ -819,12 +829,39 @@ button {
   box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
 }
 
+#about {
+  margin-top: clamp(25px, 10%, 75px);
+}
+
+#about > :first-child {
+  background: hsla(230, 70%, 5%, 0.7);
+  border-radius: 1.5em;
+  padding: 3em;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 4;
+}
+
+#about .spatios {
+  opacity: 0.6;
+}
+
+#about .planets.one {
+  top: 60%;
+  right: -5%;
+  scale: 125%;
+}
+
 .part {
-  margin-bottom: 3em;
+  margin: 0 auto 3em;
+  width: 80%;
+  min-width: 300px;
+  text-align: justify;
 }
 
 .part h1 {
-  margin-bottom: 16px;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 .team {
@@ -837,15 +874,24 @@ button {
   width: -moz-max-content;
   width: max-content;
   text-align: center;
+  text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
+  font-size: 1.2rem;
+}
+
+.person h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .person .picture {
   text-align: center;
-  height: 150px;
+  height: 200px;
   aspect-ratio: 1/1;
-  margin: 0 auto;
+  margin: 0 auto 8px;
   border-radius: 50%;
   overflow: hidden;
+  border: 2px solid var(--oxford-blue);
+  box-shadow: 0px 0px 10px var(--chinese-violet);
 }
 
 .person .picture img {
@@ -853,8 +899,8 @@ button {
   height: 125%;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: -125px 0;
-  object-position: -125px 0;
+  -o-object-position: -170px 0;
+  object-position: -170px 0;
 }
 
 /*Desktop First*/

@@ -2,7 +2,7 @@ footer {
     text-align: left;
     line-height: 25px;
     padding: 0 0 $spacing;
-    margin-top: $spacing-xxl;
+    margin-top: calc($spacing-xxl * 2);
     position: relative;
     font-family: 'Poppins';
     background: hsla(0, 0%, 0%, 0.5);
@@ -25,9 +25,11 @@ footer {
 .get-in-touch {
     display: flex;
     justify-content: space-between;
-    max-width: 50%;
+    align-items: center;
+    max-width: 60%;
     min-width: 280px;
     margin: 0 auto;
+    text-transform: uppercase;
 
     a {
         font-weight: 200;
