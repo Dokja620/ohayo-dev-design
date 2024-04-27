@@ -16,6 +16,7 @@
     --black-pearl: hsla(230, 70%, 5%, 1);
     --lavender-web: hsla(248, 54%, 89%, 1);
     --moonstone: hsla(185, 84%, 38%, 1);
+    --moonstone-dark: hsl(200, 84%, 38%);
     --russian-violet: hsla(295, 100%, 15%, 1);
     --chinese-violet: hsla(269, 9%, 45%, 1);
     --btn-grey: hsla(240, 3%, 12%, 1);
@@ -48,6 +49,7 @@ body {
 @import './pages/home';
 @import './pages/order';
 @import './pages/price';
+@import './pages/work';
 @import './pages/about';
 @import './responsive';
 @import './shared/animation';

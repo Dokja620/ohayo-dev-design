@@ -4,6 +4,9 @@
 /lib-types
 /server
 
+# Site audit
+.unlighthouse/*
+
 # Development
 node_modules
 *.local

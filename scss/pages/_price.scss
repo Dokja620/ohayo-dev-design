@@ -3,10 +3,11 @@
         font-size: 1.4rem;
         text-align: center;
         width: 75%;
-        margin: $spacing-lg auto $spacing;
+        margin: $spacing auto $spacing-lg;
     }
     h2{
         opacity: .8;
+        margin: 0 0 $spacing;
     }
 }
 .offer{
@@ -18,7 +19,7 @@
     backdrop-filter: blur(3px);
     border: 2px solid #3f3636;
     border-radius: $spacing-md;
-    padding: $spacing;
+    padding: $spacing-lg;
 }
 
 .extras{
@@ -40,10 +41,11 @@
     border: 2px solid var(--oxford-blue);
     background: var(--black-pearl);
     backdrop-filter: blur(25%);
-    border-radius: 12px;
-    padding: 4px 8px;
+    border-radius: $spacing-md;
+    padding: 8px;
     outline: 1px solid hsla(0, 0%, 8%, 0.3);
     outline-offset: 3px;
+    text-align: center;
 }
 .ord{
     text-align: center;

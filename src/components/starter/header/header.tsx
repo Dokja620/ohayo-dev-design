@@ -3,6 +3,7 @@ import { Link } from '@builder.io/qwik-city';
 import logo from '/media/logo.webp';
 
 export default component$(() => {
+    // TODO exit menu whenever I click outside when the check box is checked watch then uncheck when outside is clicked
     return (
         <header>
             <nav>
