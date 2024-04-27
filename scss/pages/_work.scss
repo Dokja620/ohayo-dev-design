@@ -1,37 +1,46 @@
-#works{
+#works {
     min-height: calc(100vh - 86px);
-    h1{
-        margin: $spacing-lg 0 $spacing-xxl;
+
+    h1 {
+        margin: $spacing-md 0 $spacing-xl;
         text-align: center;
     }
 }
-.site{
+
+.site {
+    position: relative;
     display: flex;
     align-items: center;
     gap: $spacing-xxl;
     margin: 0 0 75px;
-    .img{
+
+    .img {
         width: 500px;
         height: 300px;
         overflow: hidden;
         border-radius: $spacing;
         border: 2px solid var(--lavender-web);
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top center;
         }
     }
-    .descrip{
+
+    .descrip {
         position: relative;
         width: max-content;
         text-align: justify;
         position: relative;
-        h2{
+
+        h2 {
             margin: 0 0 8px;
+            text-align: initial;
         }
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             top: 50%;
@@ -43,7 +52,8 @@
             background: hsla(223, 9%, 45%, 0.459);
         }
     }
-    a{
+
+    a {
         @include button();
         position: relative;
         top: 25px;
@@ -54,37 +64,92 @@
     position: relative;
     width: 1000px;
     height: auto;
-    & > img{
+
+    &>img {
         z-index: 4;
         width: 100%;
         height: 100%;
     }
-    & > div{
+
+    &>div {
         position: absolute;
         top: 0;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
         }
     }
-    .mobile{
+
+    .mobile {
         z-index: -1;
         width: 118px;
         top: initial;
         bottom: 35px;
         left: 25px;
     }
-    .desktop{
+
+    .desktop {
         z-index: -1;
         width: 560px;
         height: auto;
         top: 114px;
         right: 105px;
     }
-    .tablette{
+
+    .tablette {
         z-index: -2;
         width: 305px;
         top: 32px;
         left: 96px;
     }
 }
+
+
+.nav-btn {
+    position: absolute;
+    filter: invert(100%);
+    opacity: .7;
+    transition: .25s opacity ease-in-out;
+    cursor: pointer;
+    &:hover{
+        opacity: 1;
+    }
+
+    &.next {
+        right: -85px;
+        transform: rotate(90deg);
+    }
+
+    &.pre {
+        left: -85px;
+        transform: rotate(-90deg);
+    }
+}
+
+// Website display slider
+[active-site]>div {
+    display: none;
+}
+
+[active-site="1"]>.site-1,
+[active-site="2"]>.site-2 {
+    display: flex;
+}
+// Steps changing animaations
+.prev, .descrip {
+    animation: siteIn .5s ease-out;
+}
+
+@keyframes siteIn {
+    from {
+        // opacity: 0;
+        transform: translateX(25px);
+    }
+    
+    to {
+        // opacity: 1;
+        transform: translateX(0);
+    }
+}
+

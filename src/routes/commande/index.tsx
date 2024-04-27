@@ -242,11 +242,11 @@ export default component$(() => {
 
 
 export const head: DocumentHead = {
-    title: "Ohayo Dev & Design - Commande",
+    title: "Ohayo Dev & Design | Commande",
     meta: [
         {
             name: "description",
-            content: "Homepage ohayo dev & design",
+            content: "Commandez votre site personnalisé chez Ohayo Dev & Design. Choisissez le type de site, les services supplémentaires, et spécifiez vos besoins en détail pour une création qui vous ressemble.",
         },
     ],
 };

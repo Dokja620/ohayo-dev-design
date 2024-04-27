@@ -110,11 +110,11 @@ export default component$(() => {
 
 
 export const head: DocumentHead = {
-    title: "Ohayo Dev & Design - Nos prix",
+    title: "Ohayo Dev & Design | Nos services",
     meta: [
         {
             name: "description",
-            content: "Homepage ohayo dev & design",
+            content: "Explorez nos services de développement web et design avec des prix transparents. Découvrez nos offres pour la création de sites web statiques, fonctionnalités back-end, et services supplémentaires. Prêt à marquer votre présence en ligne ? Visitez-nous pour plus d'informations.",
         },
     ],
 };

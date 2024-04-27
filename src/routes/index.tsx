@@ -248,11 +248,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-    title: "Ohayo Dev & Design - Acceuil",
+    title: "Ohayo Dev & Design | Acceuil",
     meta: [
         {
             name: "description",
-            content: "Homepage ohayo dev & design",
+            content: "Découvrez Ohayo Dev & Design, votre partenaire de choix pour des solutions web complètes. De la conception front-end et back-end au design UX/UI et à l'optimisation SEO, notre équipe d'experts est dédiée à transformer votre présence numérique. Explorez nos services et laissez-nous vous aider à réussir en ligne.",
         },
     ],
 };

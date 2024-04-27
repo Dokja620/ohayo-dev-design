@@ -89,11 +89,11 @@ export default component$(() => {
 
 
 export const head: DocumentHead = {
-    title: "Ohayo Dev & Design - à propos",
+    title: "Ohayo Dev & Design | à propos",
     meta: [
         {
             name: "description",
-            content: "Homepage ohayo dev & design",
+            content: "Rencontrez Ohayo Dev & Design, votre agence de développement web à Antananarivo, spécialisée en création de sites web, UX/UI Design, SEO et marketing digital. Fondée par des experts reconnus, nous transformons vos idées en réalités digitales performantes.",
         },
     ],
 };

@@ -1076,11 +1076,12 @@ button {
 }
 
 #works h1 {
-  margin: 1.75em 0 3em;
+  margin: 1.5em 0 2em;
   text-align: center;
 }
 
 .site {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 3em;
@@ -1114,6 +1115,7 @@ button {
 
 .site .descrip h2 {
   margin: 0 0 8px;
+  text-align: initial;
 }
 
 .site .descrip::before {
@@ -1187,6 +1189,52 @@ button {
   width: 305px;
   top: 32px;
   left: 96px;
+}
+
+.nav-btn {
+  position: absolute;
+  filter: invert(100%);
+  opacity: 0.7;
+  transition: 0.25s opacity ease-in-out;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  opacity: 1;
+}
+
+.nav-btn.next {
+  right: -85px;
+  transform: rotate(90deg);
+}
+
+.nav-btn.pre {
+  left: -85px;
+  transform: rotate(-90deg);
+}
+
+[active-site] > div {
+  display: none;
+}
+
+[active-site="1"] > .site-1,
+[active-site="2"] > .site-2 {
+  display: flex;
+}
+
+.prev,
+.descrip {
+  animation: siteIn 0.5s ease-out;
+}
+
+@keyframes siteIn {
+  from {
+    transform: translateX(25px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 #about {
