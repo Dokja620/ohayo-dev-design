@@ -77,264 +77,264 @@
 // First Big cards
 // 001
 .big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/web/001.webp");
+    background-image: url("../../public/media/pub/preview/web/001.webp");
     transform: translate(10%, 3%) rotate(5deg);
 }
 // 002
 .big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/web/002.webp");
+    background-image: url("../../public/media/pub/preview/web/002.webp");
     transform: translateX(-6%) rotate(-3deg);
 }
 // 003
 .big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/web/003.webp");
+    background-image: url("../../public/media/pub/preview/web/003.webp");
     transform: rotate(2deg);
 }
 // 004
 .big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/web/004.webp");
+    background-image: url("../../public/media/pub/preview/web/004.webp");
     transform: translateX(-10%) rotate(-1deg);
 }
 
 // First little cards
 .little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/web/005.webp");
+    background-image: url("../../public/media/pub/preview/web/005.webp");
 }
 
 .little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/web/006.webp");
+    background-image: url("../../public/media/pub/preview/web/006.webp");
 }
 
 .little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/web/007.webp");
+    background-image: url("../../public/media/pub/preview/web/007.webp");
 }
 
 .little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/web/008.webp");
+    background-image: url("../../public/media/pub/preview/web/008.webp");
 }
 
 // second Big cards
 // 001
 .card-group[data-index="2"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/host/001.webp");
+    background-image: url("../../public/media/pub/preview/host/001.webp");
 }
 // 002
 .card-group[data-index="2"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/host/002.webp");
+    background-image: url("../../public/media/pub/preview/host/002.webp");
 }
 // 003
 .card-group[data-index="2"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/host/003.webp");
+    background-image: url("../../public/media/pub/preview/host/003.webp");
 }
 // 004
 .card-group[data-index="2"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/host/004.webp");
+    background-image: url("../../public/media/pub/preview/host/004.webp");
 }
 // second little cards
 .card-group[data-index="2"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/host/005.webp");
+    background-image: url("../../public/media/pub/preview/host/005.webp");
 }
 
 .card-group[data-index="2"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/host/006.webp");
+    background-image: url("../../public/media/pub/preview/host/006.webp");
 }
 
 .card-group[data-index="2"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/host/007.webp");
+    background-image: url("../../public/media/pub/preview/host/007.webp");
 }
 
 .card-group[data-index="2"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/host/008.webp");
+    background-image: url("../../public/media/pub/preview/host/008.webp");
 }
 // third Big cards
 // 001
 .card-group[data-index="3"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/front/001.webp");
+    background-image: url("../../public/media/pub/preview/front/001.webp");
 }
 // 002
 .card-group[data-index="3"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/front/002.webp");
+    background-image: url("../../public/media/pub/preview/front/002.webp");
 }
 // 003
 .card-group[data-index="3"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/front/003.webp");
+    background-image: url("../../public/media/pub/preview/front/003.webp");
 }
 // 004
 .card-group[data-index="3"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/front/004.webp");
+    background-image: url("../../public/media/pub/preview/front/004.webp");
 }
 // third little cards
 .card-group[data-index="3"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/front/005.webp");
+    background-image: url("../../public/media/pub/preview/front/005.webp");
 }
 
 .card-group[data-index="3"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/front/006.webp");
+    background-image: url("../../public/media/pub/preview/front/006.webp");
 }
 
 .card-group[data-index="3"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/front/007.webp");
+    background-image: url("../../public/media/pub/preview/front/007.webp");
 }
 
 .card-group[data-index="3"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/front/008.webp");
+    background-image: url("../../public/media/pub/preview/front/008.webp");
 }
 // fourth Big cards
 // 001
 .card-group[data-index="4"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/back/001.webp");
+    background-image: url("../../public/media/pub/preview/back/001.webp");
 }
 // 002
 .card-group[data-index="4"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/back/002.webp");
+    background-image: url("../../public/media/pub/preview/back/002.webp");
 }
 // 003
 .card-group[data-index="4"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/back/003.webp");
+    background-image: url("../../public/media/pub/preview/back/003.webp");
 }
 // 004
 .card-group[data-index="4"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/back/004.webp");
+    background-image: url("../../public/media/pub/preview/back/004.webp");
 }
 // fourth little cards
 .card-group[data-index="4"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/back/005.webp");
+    background-image: url("../../public/media/pub/preview/back/005.webp");
 }
 
 .card-group[data-index="4"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/back/006.webp");
+    background-image: url("../../public/media/pub/preview/back/006.webp");
 }
 
 .card-group[data-index="4"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/back/007.webp");
+    background-image: url("../../public/media/pub/preview/back/007.webp");
 }
 
 .card-group[data-index="4"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/back/008.webp");
+    background-image: url("../../public/media/pub/preview/back/008.webp");
 }
 // fifth Big cards
 // 001
 .card-group[data-index="5"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/design/001.webp");
+    background-image: url("../../public/media/pub/preview/design/001.webp");
 }
 // 002
 .card-group[data-index="5"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/design/002.webp");
+    background-image: url("../../public/media/pub/preview/design/002.webp");
 }
 // 003
 .card-group[data-index="5"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/design/003.webp");
+    background-image: url("../../public/media/pub/preview/design/003.webp");
 }
 // 004
 .card-group[data-index="5"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/design/004.webp");
+    background-image: url("../../public/media/pub/preview/design/004.webp");
 }
 // fifth little cards
 .card-group[data-index="5"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/design/005.webp");
+    background-image: url("../../public/media/pub/preview/design/005.webp");
 }
 
 .card-group[data-index="5"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/design/006.webp");
+    background-image: url("../../public/media/pub/preview/design/006.webp");
 }
 
 .card-group[data-index="5"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/design/007.webp");
+    background-image: url("../../public/media/pub/preview/design/007.webp");
 }
 
 .card-group[data-index="5"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/design/008.webp");
+    background-image: url("../../public/media/pub/preview/design/008.webp");
 }
 // sixth Big cards
 // 001
 .card-group[data-index="6"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/reda/001.webp");
+    background-image: url("../../public/media/pub/preview/reda/001.webp");
 }
 // 002
 .card-group[data-index="6"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/reda/002.webp");
+    background-image: url("../../public/media/pub/preview/reda/002.webp");
 }
 // 003
 .card-group[data-index="6"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/reda/003.webp");
+    background-image: url("../../public/media/pub/preview/reda/003.webp");
 }
 // 004
 .card-group[data-index="6"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/reda/004.webp");
+    background-image: url("../../public/media/pub/preview/reda/004.webp");
 }
 // sixth little cards
 .card-group[data-index="6"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/reda/005.webp");
+    background-image: url("../../public/media/pub/preview/reda/005.webp");
 }
 
 .card-group[data-index="6"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/reda/006.webp");
+    background-image: url("../../public/media/pub/preview/reda/006.webp");
 }
 
 .card-group[data-index="6"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/reda/007.webp");
+    background-image: url("../../public/media/pub/preview/reda/007.webp");
 }
 
 .card-group[data-index="6"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/reda/008.webp");
+    background-image: url("../../public/media/pub/preview/reda/008.webp");
 }
 // seventh Big cards
 // 001
 .card-group[data-index="7"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/soft/001.webp");
+    background-image: url("../../public/media/pub/preview/soft/001.webp");
 }
 // 002
 .card-group[data-index="7"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/soft/002.webp");
+    background-image: url("../../public/media/pub/preview/soft/002.webp");
 }
 // 003
 .card-group[data-index="7"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/soft/003.webp");
+    background-image: url("../../public/media/pub/preview/soft/003.webp");
 }
 // 004
 .card-group[data-index="7"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/soft/004.webp");
+    background-image: url("../../public/media/pub/preview/soft/004.webp");
 }
 // seventh little cards
 .card-group[data-index="7"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/soft/005.webp");
+    background-image: url("../../public/media/pub/preview/soft/005.webp");
 }
 
 .card-group[data-index="7"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/soft/006.webp");
+    background-image: url("../../public/media/pub/preview/soft/006.webp");
 }
 
 .card-group[data-index="7"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/soft/007.webp");
+    background-image: url("../../public/media/pub/preview/soft/007.webp");
 }
 
 .card-group[data-index="7"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/soft/008.webp");
+    background-image: url("../../public/media/pub/preview/soft/008.webp");
 }
 // heighth Big cards
 // 001
 .card-group[data-index="8"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/pub/001.webp");
+    background-image: url("../../public/media/pub/preview/pub/001.webp");
 }
 // 002
 .card-group[data-index="8"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/pub/002.webp");
+    background-image: url("../../public/media/pub/preview/pub/002.webp");
 }
 // 003
 .card-group[data-index="8"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/pub/003.webp");
+    background-image: url("../../public/media/pub/preview/pub/003.webp");
 }
 // 004
 .card-group[data-index="8"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/pub/004.webp");
+    background-image: url("../../public/media/pub/preview/pub/004.webp");
 }
 // heighth little cards
 .card-group[data-index="8"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/pub/005.webp");
+    background-image: url("../../public/media/pub/preview/pub/005.webp");
 }
 
 .card-group[data-index="8"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/pub/006.webp");
+    background-image: url("../../public/media/pub/preview/pub/006.webp");
 }
 
 .card-group[data-index="8"]>.little-card:nth-child(5) {
@@ -347,40 +347,40 @@
 }
 
 .card-group[data-index="8"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/pub/008.webp");
+    background-image: url("../../public/media/pub/preview/pub/008.webp");
 }
 // ninth Big cards
 // 001
 .card-group[data-index="9"]>.big-card:nth-child(8) {
-    background-image: url("../../public/media/pub/seo/001.webp");
+    background-image: url("../../public/media/pub/preview/seo/001.webp");
 }
 // 002
 .card-group[data-index="9"]>.big-card:nth-child(6) {
-    background-image: url("../../public/media/pub/seo/002.webp");
+    background-image: url("../../public/media/pub/preview/seo/002.webp");
 }
 // 003
 .card-group[data-index="9"]>.big-card:nth-child(4) {
-    background-image: url("../../public/media/pub/seo/003.webp");
+    background-image: url("../../public/media/pub/preview/seo/003.webp");
 }
 // 004
 .card-group[data-index="9"]>.big-card:nth-child(2) {
-    background-image: url("../../public/media/pub/seo/004.webp");
+    background-image: url("../../public/media/pub/preview/seo/004.webp");
 }
 // ninth little cards
 .card-group[data-index="9"]>.little-card:nth-child(1) {
-    background-image: url("../../public/media/pub/seo/005.webp");
+    background-image: url("../../public/media/pub/preview/seo/005.webp");
 }
 
 .card-group[data-index="9"]>.little-card:nth-child(3) {
-    background-image: url("../../public/media/pub/seo/006.webp");
+    background-image: url("../../public/media/pub/preview/seo/006.webp");
 }
 
 .card-group[data-index="9"]>.little-card:nth-child(5) {
-    background-image: url("../../public/media/pub/seo/007.webp");
+    background-image: url("../../public/media/pub/preview/seo/007.webp");
 }
 
 .card-group[data-index="9"]>.little-card:nth-child(7) {
-    background-image: url("../../public/media/pub/seo/008.webp");
+    background-image: url("../../public/media/pub/preview/seo/008.webp");
 }
 
 
