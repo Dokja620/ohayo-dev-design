@@ -1,5 +1,8 @@
 #about{
     margin-top: clamp(25px, 10%, 75px);
+    overflow: hidden;
+    width: 100vw;
+    // background: url(../../public/media/home/planet.webp);
     & > :first-child{
         background: hsla(230, 70%, 5%, .7);
         border-radius: $spacing-md;
@@ -16,11 +19,62 @@
         right: -5%;
         scale: 125%;
     }
+    @media (max-width: $breakpoint-lg) {
+        h1{
+            font-size: clamp(1.2rem, 3vw, 3rem);
+        }
+        .planets.one{
+            top: 45%;
+            right: -7%;
+            scale: 100%;
+        }
+        .part{
+            width: 90%;
+            padding: $spacing-2xl;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        .planets.two{
+            top: 110%;
+            left: -10%;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .part{
+            width: 100%;
+            padding: $spacing-md;
+        }
+        .spatios{
+            opacity: .5;
+            scale: .7;
+        }
+        .planets.one{
+            top: 45%;
+            right: -7%;
+            scale: 80%;
+            opacity: .3;
+        }
+        .planets.two{
+            top: 130%;
+            right: -7%;
+            scale: 75%;
+            opacity: .3;
+        }
+    }
+    @media (max-width: $breakpoint-xs) {
+        &.container{
+            padding: $spacing;
+            font-size: .9rem;
+        }
+        .part{
+            padding: $spacing-md;
+        }
+    }
 }
 .part{
     margin: 0 auto $spacing-xxl;
     width: 80%;
-    min-width: 300px;
+    min-width: none;
     text-align: justify;
     h1{
         margin-bottom: $spacing;
@@ -33,12 +87,15 @@
     margin-top: $spacing-lg;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: $spacing-xxl;
 }
 .person{
     width: max-content;
     text-align: center;
     text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
     font-size: 1.2rem;
+    // margin: 0 $spacing-lg;
     h4{
         font-size: 1.2rem;
         font-weight: 600;
