@@ -40,7 +40,7 @@ nav {
 
         &> :nth-child(2) {
             position: relative;
-            padding-left: 8px;
+            padding-left: 32px;
             
             &::after {
                 position: absolute;
@@ -52,7 +52,7 @@ nav {
                 width: 4px;
                 border-radius: 2px;
                 background: var(--lavender-web);
-                z-index: 2;
+                z-index: 5;
             }
         }
     }
@@ -60,37 +60,37 @@ nav {
 // pure css burger menu
 .menu a{
     position: relative;
-    z-index: 3;
+    z-index: 5;
 }
-.menu.second{
-    position: relative;
-    
-    input{
-        position: absolute;
-        top: 0;
-        left: 10px;
-        width: 25px;
-        height: 25px;
+#nav-menu{
+    position: absolute;
+    background: red;
+    top: 24px;
+    right: 16px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    z-index: 6;
+    &:checked ~ .burger > :nth-child(1) {
+        transform: rotate(45deg) translate(7px, 2px);
+    }
+    &:checked ~ .burger > :nth-child(2) {
         opacity: 0;
-        z-index: 5;
-        &:checked ~ .burger > :nth-child(1) {
-            transform: rotate(45deg) translate(7px, 2px);
-        }
-        &:checked ~ .burger > :nth-child(2) {
-            opacity: 0;
-        }
-        &:checked ~ .burger > :nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -2px);
-        }
-        &:checked ~ .burger-links {
-            height: 235px;
-            transform: scale(1);
-        }
+    }
+    &:checked ~ .burger > :nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -2px);
+    }
+    &:checked ~ .burger-links {
+        height: 235px;
+        transform: scale(1);
+    }
+    &:checked ~ label {
+        display: block;
     }
 }
 .burger {
     position: relative;
-    z-index: 3;
+    z-index: 5;
     div {
         width: 25px;
         height: 2px;
@@ -99,14 +99,19 @@ nav {
         background: var(--mint-cream);
         transition: transform .25s ease-in-out, opacity .25s ease;
     }
+    &.toggle{
+        position: absolute;
+        right: 16px;
+        top: 24px;
+    }
 }
 
 .burger-links {
     display: flex;
     gap: $spacing-lg;
     position: absolute;
-    top: -12px;
-    right: -12px;
+    top: 16px;
+    right: 4px;
     flex-direction: column;
     height: 1px;
     transform: scale(0);
@@ -119,7 +124,7 @@ nav {
     // border-right: none;
     border-radius: $spacing 5px $spacing $spacing;
     padding: $spacing-md $spacing-xxl $spacing $spacing;
-    z-index: 2;
+    z-index: 4;
     transition: height .35s ease-in-out .25s, transform .25s ease-in-out;
     & :first-child{
         margin-top: $spacing-lg;
@@ -137,3 +142,17 @@ nav {
 //     border-radius: $spacing;
 //     padding: 8px $spacing;
 // }
+
+.toogle-menu{
+    display: none;
+    cursor: initial;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 3;
+    }
+}
