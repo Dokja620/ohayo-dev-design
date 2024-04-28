@@ -29,9 +29,9 @@
 }
 
 body {
-  background: var(--black-pearl) url(../src/media/bg-004.webp) top center/100vw no-repeat fixed;
+  background: var(--black-pearl) url(../src/media/bg-004.webp) top center/cover no-repeat fixed;
   color: var(--mint-cream);
-  min-height: 100vh;
+  min-height: 900px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
