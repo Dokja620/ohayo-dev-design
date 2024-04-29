@@ -39,7 +39,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
     transition: background .25s ease-in-out;
-    overflow-x: hidden;
+    overflow-x: clip;
     @media (max-width: 640px) {
         background: var(--black-pearl) url(../src/media/bg-004.webp) top center/auto 100vh no-repeat fixed;
     }

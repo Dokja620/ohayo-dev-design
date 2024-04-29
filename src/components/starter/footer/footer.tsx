@@ -16,8 +16,8 @@ export default component$(() => {
     });
     return (
         <footer>
-            <div class="deco ship"><img src={ship} alt="spaceship illustration" width={1500} height={844}/></div>
-            <div class="deco spatio"><img src={spatio} alt="spationaute illustration" width={1500} height={844}/></div>
+            <div class="deco ship"><img loading="lazy" src={ship} alt="spaceship illustration" width={1500} height={844}/></div>
+            <div class="deco spatio"><img loading="lazy" src={spatio} alt="spationaute illustration" width={1500} height={844}/></div>
             <div class="separation"></div>
             <div class="get-in-touch">
                 <div class="tel">
@@ -32,17 +32,17 @@ export default component$(() => {
                 </div>
             </div>
             <div class="social-media">
-                <div class="ico"><a href="facebook.com" target="_blank"><img src={facebook} alt="Facebook icon" width={35} height={35}/></a></div>
-                <div class="ico"><a href="whatsapp.com" target="_blank"><img src={whatsapp} alt="whatsapp icon" width={35} height={35}/></a></div>
-                <div class="ico"><a href="linkedin.com" target="_blank"><img src={linkedin} alt="linkedin icon" width={35} height={35}/></a></div>
-                <div class="ico"><a href="github.com" target="_blank"><img src={github} alt="github icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="facebook.com" target="_blank"><img loading="lazy" src={facebook} alt="Facebook icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="whatsapp.com" target="_blank"><img loading="lazy" src={whatsapp} alt="whatsapp icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="linkedin.com" target="_blank"><img loading="lazy" src={linkedin} alt="linkedin icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="github.com" target="_blank"><img loading="lazy" src={github} alt="github icon" width={35} height={35}/></a></div>
             </div>
             <div class="copyright">
                 <p>Fait avec 💙 par Ohayo Dev & Design.</p>
             </div>
 
             <div class="get-to-top" onClick$={scrollToTop}>
-                <img src={upArrow} alt="go to top arrow" width={35} height={35}/>
+                <img loading="lazy" src={upArrow} alt="go to top arrow" width={35} height={35}/>
             </div>
         </footer>
     );
