@@ -33,7 +33,7 @@
 }
 
 body {
-    background: var(--black-pearl) url(../src/media/bg-004.webp) top center/cover no-repeat fixed;
+    background: var(--black-pearl) url(../src/media/bg-004-1.webp) top center/cover no-repeat fixed;
     color: var(--mint-cream);
     min-height: 900px;
     display: grid;
@@ -41,7 +41,10 @@ body {
     transition: background .25s ease-in-out;
     overflow-x: clip;
     @media (max-width: 640px) {
-        background: var(--black-pearl) url(../src/media/bg-004.webp) top center/auto 100vh no-repeat fixed;
+        background: var(--black-pearl) url(../src/media/bg-004-1.webp) top center/auto 100vh no-repeat fixed;
+    }
+    @media (min-width: 1500px) {
+        background: var(--black-pearl) url(../src/media/bg-004.webp) top center/cover no-repeat fixed;
     }
 }
 
