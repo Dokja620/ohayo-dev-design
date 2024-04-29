@@ -62,7 +62,9 @@
 
 .responsive {
     position: relative;
-    width: 1000px;
+    width: 65vw;
+    min-width: 90vmin;
+    margin: 0 auto;
     height: auto;
 
     &>img {
@@ -91,7 +93,7 @@
 
     .desktop {
         z-index: -1;
-        width: 560px;
+        width: 76vmin;
         height: auto;
         top: 114px;
         right: 105px;

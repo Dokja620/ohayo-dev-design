@@ -179,7 +179,6 @@ nav .logo img {
 
 #nav-menu {
   position: absolute;
-  background: red;
   top: 24px;
   right: 16px;
   width: 25px;
@@ -201,7 +200,8 @@ nav .logo img {
 }
 
 #nav-menu:checked ~ .burger-links {
-  height: 235px;
+  height: -moz-max-content;
+  height: max-content;
   transform: scale(1);
 }
 
@@ -231,37 +231,64 @@ nav .logo img {
 
 .burger-links {
   display: flex;
-  gap: 1.75em;
+  gap: 1.5em;
   position: absolute;
-  top: 16px;
-  right: 4px;
+  top: 58px;
+  right: 8px;
   flex-direction: column;
   height: 1px;
   transform: scale(0);
   transform-origin: top right;
   overflow: hidden;
-  width: -moz-max-content;
-  width: max-content;
-  background: hsla(230, 70%, 5%, 0.31);
+  width: 250px;
+  background: hsla(230, 70%, 5%, 0.75);
   border: 2px solid hsla(111, 24%, 94%, 0.1);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   border-radius: 1em 5px 1em 1em;
-  padding: 1.5em 3em 1em 1em;
+  padding: 1em;
   z-index: 4;
   transition: height 0.35s ease-in-out 0.25s, transform 0.25s ease-in-out;
 }
 
-.burger-links :first-child {
-  margin-top: 1.75em;
+.burger-links:hover .link {
+  opacity: 0.5;
 }
 
-.burger-links a {
-  opacity: 0.7;
+.burger-links .link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.15s ease-in-out;
 }
 
-.burger-links a:hover {
+.burger-links .link a {
+  font-size: 1rem;
+}
+
+.burger-links .link img {
+  filter: invert(100%);
+}
+
+.burger-links .link:hover {
   opacity: 1;
+}
+
+.command {
+  border-radius: 1.75em;
+  background: hsla(230, 70%, 5%, 0.75) url("/media/nav-001.webp") 50% 85%/500px no-repeat;
+  border: 2px solid hsla(111, 24%, 94%, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  padding: 10px 1em 8px 1em;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: 0.5s ease-in-out border, background 0.5s ease-in;
+}
+
+.command:hover {
+  background: hsla(230, 70%, 5%, 0.75) url("/media/nav-001.webp") 50% 85%/475px no-repeat;
+  border: 2px solid hsl(111, 24%, 94%);
 }
 
 .toogle-menu {
@@ -1186,7 +1213,9 @@ button {
 
 .responsive {
   position: relative;
-  width: 1000px;
+  width: 65vw;
+  min-width: 90vmin;
+  margin: 0 auto;
   height: auto;
 }
 
@@ -1216,7 +1245,7 @@ button {
 
 .responsive .desktop {
   z-index: -1;
-  width: 560px;
+  width: 76vmin;
   height: auto;
   top: 114px;
   right: 105px;
