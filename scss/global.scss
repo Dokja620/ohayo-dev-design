@@ -41,7 +41,7 @@ body {
     transition: background .25s ease-in-out;
     overflow-x: hidden;
     @media (max-width: 640px) {
-        background: var(--black-pearl) url(../src/media/bg-004.webp) top center/auto 100dvh no-repeat fixed;
+        background: var(--black-pearl) url(../src/media/bg-004.webp) top center/auto 100vh no-repeat fixed;
     }
 }
 
