@@ -780,7 +780,6 @@ input:not([type=checkbox], [type=radio]) {
   border: 2px solid var(--yale-blue);
   background: none;
   padding: 8px 16px;
-  width: clamp(250px, 27vw, 350px);
   border-radius: 1.75em;
   margin: 1em;
   position: relative;
@@ -827,8 +826,8 @@ input:not([type=checkbox], [type=radio]):focus {
 .inputs label {
   position: absolute;
   top: 4px;
+  left: 2em;
   font-size: 0.95em;
-  left: 2.5em;
   z-index: 2;
   color: var(--yale-blue);
   background: var(--black-pearl);
@@ -1134,7 +1133,7 @@ button {
 
 .ord h1 {
   font-size: 1.2rem;
-  margin: 0 0 1.75em;
+  margin: 0 auto 1.75em;
 }
 
 .ord a {
@@ -2069,6 +2068,38 @@ button {
     gap: 3em;
   }
 
+  #offer {
+    margin-top: 85px;
+  }
+
+  #offer h2 {
+    font-size: 1.1rem;
+  }
+
+  #offer .ord {
+    text-align: center;
+    width: 100%;
+    margin: 3em auto;
+  }
+
+  #offer .ord h1 {
+    font-size: 1.1rem;
+  }
+
+  #offer .ord a {
+    background: var(--btn-grey);
+    border: none;
+    border-radius: 1em;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
+    box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
+  }
+
   #about .planets.two {
     top: 110%;
     left: -10%;
@@ -2160,18 +2191,33 @@ button {
     width: 250px;
   }
 
-  form {
-    width: clamp(250px, 85%, 1000px);
+  #offer .front {
+    grid-column: span 2;
   }
 
-  form h2 {
-    font-size: 1.25em;
-    margin: 12px 0 0;
+  #offer .ord {
+    text-align: center;
+    width: 100%;
+    margin: 3em auto;
   }
 
-  .check.second {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  #offer .ord h1 {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  #offer .ord a {
+    background: var(--btn-grey);
+    border: none;
+    border-radius: 1em;
+    padding: 1em 3em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
+    box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
   }
 
   #pubs {
@@ -2271,7 +2317,7 @@ button {
   }
 
   #home-3 {
-    margin-top: 40%;
+    margin: 40% 0 20%;
   }
 
   #home-3 .portfolio h2 {
@@ -2294,12 +2340,49 @@ button {
     margin: 1em auto;
   }
 
+  #home-3 .home-links {
+    padding: 2em 1.7em;
+  }
+
   .in {
     justify-content: flex-start;
   }
 
-  .option {
-    margin-left: 1em;
+  #offer {
+    padding: 0 1em;
+    margin: 30% 0;
+  }
+
+  #offer .product {
+    grid-column: span 2;
+  }
+
+  #offer .extras .list .product {
+    grid-column: span 3;
+  }
+
+  #offer h1 {
+    font-size: 1.2rem;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .responsive {
+    margin: 25% auto 0;
+  }
+
+  .nav-btn {
+    top: 80%;
+  }
+
+  .nav-btn.next {
+    right: 3%;
+    transform: rotate(90deg);
+  }
+
+  .nav-btn.pre {
+    left: 3%;
+    transform: rotate(-90deg);
   }
 
   #about.container {

@@ -9,6 +9,54 @@
         opacity: .8;
         margin: 0 0 $spacing;
     }
+    @media (max-width: $breakpoint-md) {
+        margin-top: 85px;
+        h2{
+            font-size: 1.1rem;
+        }
+        .ord{
+            text-align: center;
+            width: 100%;
+            margin: $spacing-xxl auto;
+            h1{
+                font-size: 1.1rem;
+            }
+            a{
+                @include button();
+            }
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .front{
+            grid-column: span 2;
+        }
+        .ord{
+            text-align: center;
+            width: 100%;
+            margin: $spacing-xxl auto;
+            h1{
+                font-size: 1.1rem;
+                width: 100%;
+            }
+            a{
+                @include button();
+            }
+        }
+    }
+    @media (max-width: $breakpoint-xs) {
+        padding: 0 $spacing;
+        margin: 30% 0;
+        .product{
+            grid-column: span 2;
+        }
+        .extras .list .product{
+            grid-column: span 3;
+        }
+        h1{
+            font-size: 1.2rem;
+            width: max-content;
+        }
+    }
 }
 .offer{
     display: grid;
@@ -53,7 +101,7 @@
     margin: $spacing-xxl auto;
     h1{
         font-size: 1.2rem;
-        margin: 0 0 $spacing-lg;
+        margin: 0 auto $spacing-lg;
     }
     a{
         @include button();

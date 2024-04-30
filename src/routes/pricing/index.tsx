@@ -6,7 +6,7 @@ export default component$(() => {
 
     return (
         <section id="offer" class="container">
-            <h1>Voici nos prix pour que vous puissez calculer la somme que vous allez dépenser.</h1>
+            <h1>Nous proposons:</h1>
             <div class="offer">
                 <div class="front">
                     <h2>Création de site web et UI | Front-End</h2>

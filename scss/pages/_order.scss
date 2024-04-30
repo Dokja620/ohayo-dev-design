@@ -52,7 +52,6 @@ input:not([type="checkbox"], [type="radio"]) {
     border: 2px solid var(--yale-blue);
     background: none;
     padding: 8px 16px;
-    width: clamp(250px, 27vw, 350px);
     border-radius: $spacing-lg;
     margin: $spacing;
     position: relative;
@@ -88,8 +87,8 @@ input:not([type="checkbox"], [type="radio"]) {
     label {
         position: absolute;
         top: 4px;
+        left: $spacing-xl;
         font-size: .95em;
-        left: $spacing-2xl;
         z-index: 2;
         color: var(--yale-blue);
         background: var(--black-pearl);
@@ -143,14 +142,6 @@ form {
         display: flex;
         gap: $spacing;
     }
-
-    @media (max-width: $breakpoint-sm) {
-        h2{
-            font-size: 1.25em;
-            margin: 12px 0 0;
-        }
-        width: clamp(250px, 85%, 1000px);
-    }
 }
 
 // Button Styles
@@ -162,9 +153,6 @@ button {
 .option {
     display: flex;
     width: max-content;
-    @media (max-width: $breakpoint-xs) {
-        margin-left: $spacing;
-    }
 }
 
 .check, .option {
@@ -220,10 +208,6 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $spacing;
-    @media (max-width: $breakpoint-sm) {
-        grid-template-columns: 1fr; // Stack items vertically on small screens
-        gap: 4px;
-    }
 }
 
 .more {
