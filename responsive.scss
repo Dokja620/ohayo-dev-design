@@ -12,44 +12,19 @@
     &.container{
         border: 2px solid green;
     }
-    h1{
-        font-size: clamp(1.2rem, 3vw, 3rem);
-    }
-    .planets.one{
-        top: 45%;
-        right: -7%;
-        scale: 100%;
-    }
-    .part{
-        width: 90%;
-        padding: $spacing-2xl;
-    }
 }
 @media (max-width: $breakpoint-md) {
     &.container{
         border: 2px solid yellow;
-    }
-    .planets.two{
-        top: 110%;
-        left: -10%;
     }
 }
 @media (max-width: $breakpoint-sm) {
     &.container{
         border: 2px solid purple;
     }
-    .part{
-        width: 100%;
-        padding: $spacing-md;
-    }
 }
 @media (max-width: $breakpoint-xs) {
     &.container{
-        // border: 2px solid grey;
-        padding: $spacing;
-        font-size: .9rem;
-    }
-    .part{
-        padding: $spacing-md;
+        border: 2px solid grey;
     }
 }

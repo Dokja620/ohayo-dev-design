@@ -7,9 +7,11 @@
 
     .content {
         width: 55%;
+        min-width: 250px;
         height: max-content;
         line-height: 27px;
         text-align: justify;
+        z-index: 1;
     }
 
     h1 {
@@ -23,6 +25,113 @@
     .text {
         margin: $spacing 0 0;
     }
+    @media (max-width: $breakpoint-2xl) {
+        .content {
+            margin: 0 0 0 $spacing-xxl;
+        }
+        .spatios {
+            right: 12%;
+        }
+    }
+    @media (max-width: $breakpoint-xl) {
+        h1{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+        .spatios {
+            height: 50vh;
+            z-index: -1;
+            right: 0;
+            animation: floating-home 7s ease infinite;
+        }
+        .planets {
+            right: -25%;
+        }
+        .content {
+            width: 65%;
+        }
+    }
+    @media (max-width: $breakpoint-lg) {
+        h1{
+            font-size: 1.5rem;
+            text-align: initial;
+        }
+        h2{
+            font-size: 1.1rem;
+        }
+        .spatios {
+            height: 50vh;
+            z-index: -1;
+            right: -10%;
+            opacity: 1;
+            animation: floating-home 7s ease infinite;
+        }
+        .planets {
+            right: -40%;
+            z-index: -2;
+        }
+        .content {
+            width: 65%;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        margin-top: 85px;
+        align-items: flex-end;
+        .content {
+            width: 100%;
+            margin: 0;
+        }
+        .planets {
+            right: -40%;
+            z-index: -2;
+            height: 80vh;
+        }
+        .spatios {
+            height: 35vh;
+            right: 25%;
+        }
+        .deco-home{
+            top: 15%;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .spatios {
+            height: 40vh;
+            right: -25%;
+            opacity: .7;
+        }
+    }
+    @media (max-width: $breakpoint-xs) {
+        &.container{
+            overflow-x: clip;
+        }
+        .content{
+            text-align: initial;
+        }
+        min-height: 110vh;
+        padding: 0 $spacing-md $spacing;
+        h1{
+            padding: 0;
+            font-size: 1.2rem;
+            margin-top: clamp(50px, 70%, 40vh);
+        }
+        h2{
+            font-size: 1rem;
+        }
+        .spatios {
+            height: 30vh;
+            right: -10%;
+            opacity: .7;
+        }
+        .planets {
+            right: -40%;
+            z-index: -2;
+            height: auto;
+            width: 100vw;
+        }
+    }
 }
 
 .deco-home {
@@ -34,22 +143,22 @@
     height: clamp(250px, 60vh, 600px);
     opacity: .7;
     pointer-events: none;
-
+    
     img {
         height: 100%;
         width: 100%;
     }
-
+    
     &.spatios {
         right: 20%;
         opacity: 1;
         animation: floating-home 7s ease infinite;
-    }
-
-    &.planets {
         z-index: -1;
     }
 
+    &.planets {
+        z-index: -2;
+    }
     &.planets.two {
         left: 0;
         top: 70%;
@@ -67,15 +176,51 @@
     .content {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .tech{
-        width: 70%;
+        position: relative;
+        h2{
+            font-family: 'Pirulen';
+            text-align: center;
+            position: absolute;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+        }
     }
-    h2{
-        font-family: 'Pirulen';
-        text-align: center;
-        margin-bottom: $spacing;
+    @media (max-width: $breakpoint-lg) {
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: $spacing-xxl;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        margin-top: 35%;
+    }
+    @media (max-width: $breakpoint-sm) {
+        .tools{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 90%;
+            gap: $spacing;
+            // grid-template-columns: repeat(auto-fill, minmax(50px, 100%));
+        }
+        .fact-box{
+            width: 90%;
+            h2{
+                font-size: .9rem;
+                top: -10px;
+            }
+        }
+        .slider{
+            max-width: 100%;
+        }
     }
 }
 
@@ -83,7 +228,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: $spacing-md;
-    max-width: 70%;
+    width: max-content;
     border: 2px solid var(--lavender-web);
     border-radius: $spacing-lg;
     padding: $spacing-lg;
@@ -93,7 +238,7 @@
 }
 
 .fact{
-    width: 30%;
+    width: max-content;
 }
 .fact-box{
     height: 305px;
@@ -202,20 +347,102 @@
     display: grid;
     align-content: center;
 
+    @media (max-width: $breakpoint-xl) {
+        .portfolios{
+            gap: $spacing-xl;
+            padding: calc($spacing-xxl * 1.5) 0;
+            a{
+                max-width: 20ch;
+                font-size: 1rem;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-lg) {
+        .content{
+            gap: 15px;
+        }
+        .portfolios{
+            gap: $spacing;
+            padding: $spacing-md $spacing-xxl;
+            a{
+                max-width: none;
+                font-size: 1rem;
+            }
+        }
+        .home-links {
+            a {
+                font-size: 1rem;
+            }
+    
+            .spatio-home {
+                left: -55px;
+                height: 300px;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        margin-top: 10%;
+        .content {
+            flex-direction: column;
+            gap: $spacing-xxl;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .portfolios{
+            border-radius: $spacing-xl;
+            max-width: none;
+            margin: 0 auto;
+            padding: $spacing 0;
+            a{
+                width: 250px;
+            }
+        }
+    
+    }
+    @media (max-width: $breakpoint-xs) {
+        margin-top: 40%;
+        .portfolio {
+            h2{
+                font-size: 1rem;
+            }
+        }
+    
+        .portfolios{
+            background: hsla(230, 70%, 5%, .31) url('/media/home/bg-port.webp') top center/cover no-repeat;
+            border-radius: $spacing-xl;
+            border: 2px solid hsla(111, 24%, 94%, .1);
+            gap: $spacing;
+            width: 120%;
+            transform: translateX(-24px);
+            margin: 0 auto;
+            display: block;
+            a{
+                width: 225px;
+                margin: $spacing auto;
+            }
+        }
+    }
+
     .content {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .portfolio {
         text-align: center;
         width: 65%;
         margin: 0 auto;
+        position: relative;
         h2{
             margin: 0 0 $spacing;
             font-family: 'Pirulen';
             letter-spacing: 1px;
-            position: relative;
+            position: absolute;
             top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
         }
     }
 
@@ -231,8 +458,6 @@
         max-width: 80%;
         margin: 0 auto;
         padding: calc($spacing-xxl * 1.5) 0;
-        position: relative;
-        top: -45px;
         a{
             display: block;
             width: 275px;
