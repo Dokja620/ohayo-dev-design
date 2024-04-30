@@ -2367,6 +2367,10 @@ button {
     width: max-content;
   }
 
+  #works {
+    min-height: calc(80vh - 86px);
+  }
+
   .responsive {
     margin: 25% auto 0;
   }

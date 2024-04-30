@@ -1,11 +1,13 @@
 #works {
     min-height: calc(100vh - 86px);
-
+    
     h1 {
         margin: $spacing-md 0 $spacing-xl;
         text-align: center;
     }
-    
+    @media (max-width: $breakpoint-xs) {
+        min-height: calc(80vh - 86px);
+    }
 }
 
 .site {
