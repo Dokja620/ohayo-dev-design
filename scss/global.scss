@@ -30,6 +30,7 @@
     text-decoration: none;
     font-weight: normal;
     color: var(--mint-cream);
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 body {
@@ -47,9 +48,8 @@ body {
         background: var(--black-pearl) url(../src/media/bg-004.webp) top center/cover no-repeat fixed;
     }
 }
-
-@import './shared/typo';
 @import './shared/var';
+@import './shared/typo';
 @import './shared/mixins';
 @import './components/navbar';
 @import './components/footer';

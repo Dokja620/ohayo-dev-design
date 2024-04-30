@@ -5,6 +5,7 @@ import infoLogo from "../icons/IcOutlineInfo.svg"
 import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
 import workLogo from "../icons/IcTwotoneWorkOutline.svg"
 import postLogo from "../icons/IcOutlinePhotoSizeSelectActual.svg"
+// import orderLogo from "../icons/IcBaselineAddCircleOutline.svg"
 
 export default component$(() => {
     // TODO exit menu whenever I click outside when the check box is checked watch then uncheck when outside is clicked
@@ -19,6 +20,10 @@ export default component$(() => {
                     <div class="bur-line"></div>
                 </div>
                 <div class="burger-links">
+                    {/* <div class="link">
+                        <div class="ico-nav"><img src={orderLogo} alt="info icon" width={20} height={20}/></div>
+                        <Link href="/pricing">Commander</Link>
+                    </div> */}
                     <div class="link">
                         <div class="ico-nav"><img src={serviceLogo} alt="info icon" width={20} height={20}/></div>
                         <Link href="/pricing">Nos services</Link>
@@ -38,13 +43,13 @@ export default component$(() => {
                 </div>
             </div>
             <nav>
-                <div class="logo"><img src={logo} alt="Logo" width={50} height={50} /></div>
+                <div class="logo"><Link href="/"><img src={logo} alt="Logo" width={50} height={50} /></Link></div>
                 <div class="nav-links">
-                    <Link href="/">Acceuil</Link>
+                    <Link href="/" class="go-home">Acceuil</Link>
                     
                     <div class="links">
                         <div class="menu">
-                            <Link href="/commande" class="command">Commencez maintenant</Link>
+                            <Link href="/commande" class="command">Commencez</Link>
                         </div>
                         <div class="second">
                         </div>
