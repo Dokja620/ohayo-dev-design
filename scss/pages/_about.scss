@@ -43,6 +43,9 @@
             top: 110%;
             left: -10%;
         }
+        .part{
+            padding: $spacing-md;
+        }
     }
     @media (max-width: $breakpoint-sm) {
         .part{
@@ -71,9 +74,6 @@
             padding: $spacing;
             font-size: .9rem;
             margin-top: 85px;
-        }
-        .part{
-            padding: $spacing-md;
         }
     }
 }

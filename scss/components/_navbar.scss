@@ -5,7 +5,7 @@ header {
             font-size: 1rem;
         }
     }
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: $breakpoint-md) {
         border-bottom: 1px solid hsla(111, 24%, 94%, .1);
         position: fixed;
         z-index: 5;
@@ -157,7 +157,7 @@ nav {
             opacity: 1;
         }
     }
-    @media (max-width: $breakpoint-xs) {
+    @media (max-width: $breakpoint-md) {
         top: 78px;
         right: 6px;
     }
