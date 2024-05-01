@@ -23,7 +23,7 @@ export default component$(() => {
                 <div class="step-1">
                     <div class="info">
                         <h2>Qui fait la commande ?</h2>
-                        <div class="name in">
+                        <div class="input-box">
                             <div class="inputs">
                                 <input type="text" name="client_first_name" id="first-name-input" placeholder="" />
                                 <label for="first-name-input">Nom</label>
@@ -32,8 +32,6 @@ export default component$(() => {
                                 <input type="text" name="client_last_name" id="last-name-input" placeholder="" />
                                 <label for="last-name-input">Prénoms</label>
                             </div>
-                        </div>
-                        <div class="contact in">
                             <div class="inputs">
                                 <input type="email" name="client_name" id="email-input" placeholder="" />
                                 <label for="email-input">Adresse e-mail</label> {/* // TODO check that it's an email before being able to go next */}
@@ -51,10 +49,10 @@ export default component$(() => {
                 <div class="step-2">
                     <div class="info">
                         <h2>De quel genre de site avez vous besoin ?</h2>
-                        <div class="site in">
+                        <div class="site-desc">
                             <div class="inputs">
-                                <input type="text" name="client_first_name" id="first-name-input" placeholder="" />
-                                <label for="first-name-input">Type de site</label>
+                                <input type="text" name="client_first_name" id="site-type-input" placeholder="" />
+                                <label for="site-type-input">Type de site</label>
                             </div>
                             <div class="check">
                                 <div class="option">
@@ -66,33 +64,34 @@ export default component$(() => {
                                     <label for="more-subjects">Plus de 04 sujets</label>
                                 </div>
                             </div>
-                        </div>
-
-                        <h2>Services supplementaires :</h2>
-                        <div class="site in">
-                            <div class="check second">
-                                <div class="option">
-                                    <input type="checkbox" name="responsive" id="ui-design" />
-                                    <label for="ui-design">Avec UI Designer</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" name="responsive" id="redactor" />
-                                    <label for="redactor">Avec Rédacteur</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" name="responsive" id="back-end" />
-                                    <label for="back-end">Avec Back-End</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" name="responsive" id="seo" />
-                                    <label for="seo">Avec SEO</label>
-                                </div>
-                                <div class="option">
-                                    <input type="checkbox" name="responsive" id="extra-services" />
-                                    <label for="extra-services">Sans service supplémentaires</label>
-                                </div>
+                            <div class="option">
+                                <input type="checkbox" name="responsive" id="ui-design" />
+                                <label for="ui-design">Avec UI Designer</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" name="responsive" id="redactor" />
+                                <label for="redactor">Avec Rédacteur</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" name="responsive" id="back-end" />
+                                <label for="back-end">Avec Back-End</label>
+                            </div>
+                            <div class="option">
+                                <input type="checkbox" name="responsive" id="seo" />
+                                <label for="seo">Avec SEO</label>
+                            </div>
+                            <div class="option last">
+                                <input type="checkbox" name="responsive" id="extra-services" />
+                                <label for="extra-services">Sans service supplémentaires</label>
                             </div>
                         </div>
+
+                        {/* <h2>Services supplementaires :</h2> */}
+                        {/* <div class="site in">
+                            <div class="check second">
+                               
+                            </div>
+                        </div> */}
                     </div>
                     <div class="buttons">
                         <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(1);}}>Previous</button>
@@ -104,7 +103,7 @@ export default component$(() => {
                         <h2>À quel stade en êtes vous ?</h2>
                         <div class="more">
                             <div class="choice">
-                                <h3>Nom de domaine :</h3>
+                                <h3>Domaine :</h3>
                                 <div class="option">
                                     <input type="radio" name="domain" id="domain-yes" />
                                     <label for="domain-yes">J'ai déjà</label>
@@ -148,7 +147,7 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="choice">
-                                <h3>Contenu visuel :</h3>
+                                <h3>visuel :</h3>
                                 <div class="option">
                                     <input type="radio" name="visual-content" id="visual-yes" />
                                     <label for="visual-yes">J'ai déjà</label>
@@ -159,7 +158,7 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="choice">
-                                <h3>Contenu textuel :</h3>
+                                <h3>textuel :</h3>
                                 <div class="option">
                                     <input type="radio" name="text-content" id="text-yes" />
                                     <label for="text-yes">J'ai déjà</label>
@@ -179,9 +178,9 @@ export default component$(() => {
                 <div class="step-4">
                     <div class="info">
                         <p>Parlez nous du site que vous voulez créer avec le plus de détails possible.</p>
-                        <div class="message in">
-                            <div class="inputs">
-                                <textarea name="message" id="message-input" cols={90} rows={10} placeholder="Votre message"></textarea>
+                        <div class="message-box">
+                            <div class="message">
+                                <textarea name="message" id="message-input" placeholder="Votre message"></textarea>
                             </div>
                         </div>
                     </div>
@@ -193,12 +192,12 @@ export default component$(() => {
                 <div class="step-5">
                     <div class="info">
                         <h2>Via quoi souhaitez vous être contacté ?</h2>
-                        <div class="radio get-in-touch">
+                        <div class="radio">
                             <div class="parent">
                                 <input type="radio" name="contact" id="email-radio" />
                                 <label for="email-radio">Adresse e-mail</label>
                             </div>
-                            <div class="parent">
+                            <div class="parent s-m">
                                 <input type="radio" name="contact" id="phone-radio" />
                                 <label for="phone-radio">Numéro</label>
                             </div>
@@ -208,7 +207,7 @@ export default component$(() => {
                             </div>
                         </div>
                         <h2>Mode de paiement :</h2>
-                        <div class="radio payment-methods">
+                        <div class="radio">
                             <div class="parent">
                                 <input type="radio" name="payment" id="bank-radio" />
                                 <label for="bank-radio">Carte Bancaire</label>
@@ -224,10 +223,10 @@ export default component$(() => {
                         </div>
                         <div class="confidentiality">
                             <div><p>Condition de confidentialité</p></div>
-                            <div class="option">
+                            {/* <div class="option">
                                 <input type="checkbox" name="confidentiality" id="conditions" />
-                                <label for="conditions">J'ai lu(e) et j'accepte les condiditions de confidentialité</label>
-                            </div>
+                                <label for="conditions">J'ai lu(e) et j'accepte les conditions de confidentialité</label>
+                            </div> */}
                         </div>
                     </div>
                     <div class="buttons">

@@ -764,16 +764,73 @@ label {
   }
 }
 
-#order {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: calc(100vh - 86px);
+button {
+  border: 2px solid var(--mint-cream);
+  border-radius: 1.75em;
+  background: var(--black-pearl);
+  padding: 1em 1.75em;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-#order h1 {
-  text-align: center;
-  margin-bottom: 1em;
+.inputs {
+  position: relative;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.inputs input:not([type=checkbox], [type=radio]) {
+  color: var(--lavender-web);
+  font-family: "League Spartan";
+  font-weight: 300;
+  font-size: 1rem;
+  width: 40vmin;
+}
+
+.inputs input:not([type=checkbox], [type=radio]):focus + label {
+  color: var(--moonstone);
+}
+
+.inputs input:not([type=checkbox], [type=radio]):-moz-placeholder-shown + label {
+  top: 48%;
+  transform: translateY(-50%);
+  left: 34px;
+  color: grey;
+  padding: 0;
+}
+
+.inputs input:not([type=checkbox], [type=radio]):placeholder-shown + label {
+  top: 48%;
+  transform: translateY(-50%);
+  left: 34px;
+  color: grey;
+  padding: 0;
+}
+
+.inputs label {
+  position: absolute;
+  top: 4px;
+  left: 2em;
+  font-size: 0.95em;
+  z-index: 2;
+  color: var(--yale-blue);
+  padding: 0 8px;
+  transition: top 0.15s ease-in, left 0.15s ease-in, color 0.15s ease-in, border 0.15s ease-in, transform 0.15s ease-in, padding 0.15s ease-in;
+  pointer-events: none;
+}
+
+.inputs label::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 4px;
+  height: 4px;
+  width: 95%;
+  background: var(--black-pearl);
+  z-index: -1;
+  transition: background 0.15s ease-in;
 }
 
 input:not([type=checkbox], [type=radio]) {
@@ -788,107 +845,6 @@ input:not([type=checkbox], [type=radio]) {
 input:not([type=checkbox], [type=radio]):focus {
   outline: none;
   border-color: var(--moonstone);
-}
-
-.inputs {
-  position: relative;
-}
-
-.inputs input:not([type=checkbox], [type=radio]) {
-  color: var(--lavender-web);
-  font-family: "League Spartan";
-  font-weight: 300;
-  font-size: 1.1rem;
-}
-
-.inputs input:not([type=checkbox], [type=radio]):focus + label {
-  color: var(--moonstone);
-}
-
-.inputs input:not([type=checkbox], [type=radio]):-moz-placeholder-shown + label {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 34px;
-  color: grey;
-  padding: 0;
-  background: none;
-}
-
-.inputs input:not([type=checkbox], [type=radio]):placeholder-shown + label {
-  top: 50%;
-  transform: translateY(-50%);
-  left: 34px;
-  color: grey;
-  padding: 0;
-  background: none;
-}
-
-.inputs label {
-  position: absolute;
-  top: 4px;
-  left: 2em;
-  font-size: 0.95em;
-  z-index: 2;
-  color: var(--yale-blue);
-  background: var(--black-pearl);
-  padding: 0 8px;
-  transition: top 0.15s ease-in, left 0.15s ease-in, color 0.15s ease-in, border 0.15s ease-in, background 0.15s ease-in, transform 0.15s ease-in, padding 0.15s ease-in;
-  pointer-events: none;
-}
-
-.in {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-form {
-  background: var(--black-pearl);
-  margin: 0 auto;
-  padding: 1em 1em 3em;
-  border-radius: 1.75em;
-  border: 2px solid var(--mint-cream);
-  min-height: 375px;
-  height: 100%;
-  width: clamp(250px, 65%, 1000px);
-  text-align: center;
-  position: relative;
-  display: grid;
-  align-content: center;
-}
-
-form h2 {
-  margin-bottom: 1em;
-}
-
-form .buttons {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 1em;
-}
-
-button {
-  background: var(--btn-grey);
-  border: none;
-  border-radius: 1em;
-  padding: 1em 3em;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  cursor: pointer;
-  text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
-  box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
-}
-
-.option {
-  display: flex;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .check,
@@ -950,46 +906,170 @@ button {
   transition: 0.25s all ease-in-out;
 }
 
-.check.second {
+#order {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 86px);
+}
+
+#order h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+form {
+  background: hsla(230, 70%, 5%, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
+  margin: 0 auto;
+  border-radius: 1.75em;
+  min-height: 375px;
+  height: 100%;
+  width: clamp(250px, 65%, 1000px);
+  text-align: center;
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-content: center;
+}
+
+form .buttons {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
   gap: 1em;
 }
 
-.more {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3em 1em;
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
+.step-1 h2 {
+  margin-bottom: 1em;
 }
 
-.more h3 {
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.7;
+.step-1 .input-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.step-2 {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.step-2 .info {
+  height: 250px;
+  margin: auto 0;
+}
+
+.step-2 h2 {
+  margin-bottom: 1em;
+}
+
+.step-2 .site-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 0 3em;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.step-2 .site-desc .inputs,
+.step-2 .site-desc .check {
+  margin-bottom: 1em;
+}
+
+.step-2 .site-desc .inputs input {
+  margin: 1em 0;
+}
+
+.step-2 .site-desc .inputs input:-moz-placeholder-shown + label {
+  top: 47%;
+  left: 18px;
+}
+
+.step-2 .site-desc .inputs input:placeholder-shown + label {
+  top: 47%;
+  left: 18px;
+}
+
+.step-2 .site-desc .inputs label {
+  left: 16px;
+}
+
+.option {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.step-3 h2 {
+  margin-bottom: 1em;
+}
+
+.step-3 .more {
+  display: grid;
+  grid-template-columns: repeat(3, 165px);
+  place-content: center;
+  gap: 2.5em;
+}
+
+.step-3 .choice h3 {
+  font-size: 1rem;
+  text-align: initial;
+  opacity: 0.8;
+}
+
+.step-4 {
+  display: flex;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 .step-4 textarea {
+  width: clamp(275px, 50vw, 800px);
+  height: 225px;
+  margin: 1em auto 0;
+  resize: none;
   font-family: "Poppins";
   font-weight: 300;
   letter-spacing: 1px;
-  width: 100%;
-  background: none;
-  border: 2px solid var(--yale-blue);
+  background: hsla(228, 43%, 9%, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
   border-radius: 1em;
-  margin: 1em 0 0;
   padding: 1em;
 }
 
 .step-4 textarea:focus {
   outline: none;
-  border: 2px solid var(--moonstone);
+  border: 1px solid hsla(111, 24%, 94%, 0.3);
 }
 
 .step-5 h2 {
-  margin: 0 0 8px;
+  margin-bottom: 8px;
+}
+
+.step-5 .radio {
+  display: grid;
+  grid-template-columns: repeat(3, 185px);
+  justify-content: center;
+  margin: 0 auto 2em;
+}
+
+.step-5 .radio > div {
+  display: flex;
+  gap: 4px;
+}
+
+.step-5 .radio input {
+  opacity: 0;
 }
 
 .parent label {
@@ -1039,22 +1119,6 @@ button {
   opacity: 1;
 }
 
-.radio {
-  display: flex;
-  gap: 1.75em;
-  justify-content: center;
-  margin: 0 auto 2.5em;
-}
-
-.radio > div {
-  display: flex;
-  gap: 4px;
-}
-
-.radio input {
-  opacity: 0;
-}
-
 .confidentiality {
   width: -moz-max-content;
   width: max-content;
@@ -1062,7 +1126,10 @@ button {
 }
 
 .confidentiality > :first-child {
-  background: var(--yale-blue);
+  background: hsla(228, 43%, 9%, 0.75);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
@@ -1896,6 +1963,10 @@ button {
     font-size: 1rem;
   }
 
+  #order form {
+    width: 90%;
+  }
+
   .container {
     max-width: 1024px;
   }
@@ -1982,6 +2053,32 @@ button {
     height: 300px;
   }
 
+  #order .inputs input:not([type=checkbox], [type=radio]) {
+    width: 30vmin;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):focus + label {
+    color: var(--moonstone);
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):-moz-placeholder-shown + label {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 34px;
+    color: grey;
+    padding: 0;
+    background: none;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):placeholder-shown + label {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 34px;
+    color: grey;
+    padding: 0;
+    background: none;
+  }
+
   #about h1 {
     font-size: clamp(1.2rem, 3vw, 3rem);
   }
@@ -2004,13 +2101,13 @@ button {
 
 @media (max-width: 768px) {
   header {
+    background: hsla(230, 70%, 5%, 0.75);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     border-bottom: 1px solid hsla(111, 24%, 94%, 0.1);
     position: fixed;
     z-index: 5;
     width: 100vw;
-    background: hsla(230, 70%, 5%, 0.75);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
   }
 
   header .go-home {
@@ -2066,6 +2163,40 @@ button {
   #home-3 .content {
     flex-direction: column;
     gap: 3em;
+  }
+
+  #order {
+    margin-top: 85px;
+  }
+
+  #order form {
+    width: 100%;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]) {
+    width: 90%;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):focus + label {
+    color: var(--moonstone);
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):-moz-placeholder-shown + label {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 34px;
+    color: grey;
+    padding: 0;
+    background: none;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):placeholder-shown + label {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 34px;
+    color: grey;
+    padding: 0;
+    background: none;
   }
 
   #offer {
@@ -2189,6 +2320,102 @@ button {
 
   #home-3 .portfolios a {
     width: 250px;
+  }
+
+  #order form {
+    width: 90%;
+  }
+
+  #order h2 {
+    margin-bottom: 1em;
+    font-size: 1rem;
+  }
+
+  #order .step-2 {
+    height: -moz-max-content;
+    height: max-content;
+    margin: 1em 0;
+  }
+
+  #order .step-2 .info {
+    height: -moz-max-content;
+    height: max-content;
+    margin: auto 0;
+  }
+
+  #order .step-2 .site-desc {
+    gap: 1em;
+    width: 90%;
+  }
+
+  #order .step-2 .site-desc .inputs input {
+    margin: 1em 0;
+    width: 40vmin;
+  }
+
+  #order .step-2 .site-desc .inputs input:-moz-placeholder-shown + label {
+    top: 47%;
+    left: 18px;
+  }
+
+  #order .step-2 .site-desc .inputs input:placeholder-shown + label {
+    top: 47%;
+    left: 18px;
+  }
+
+  #order .step-2 .site-desc .inputs label {
+    left: 16px;
+  }
+
+  #order .step-2 .site-desc .inputs label::after {
+    top: 12px;
+  }
+
+  #order .step-2 .site-desc .last {
+    grid-column: span 2;
+  }
+
+  #order .step-3 h2 {
+    margin-bottom: 1em;
+  }
+
+  #order .step-3 .more {
+    grid-template-columns: repeat(auto-fill, 140px);
+    gap: 1.75em;
+  }
+
+  #order .step-5 {
+    padding: 1em;
+  }
+
+  #order .step-5 h2 {
+    margin-bottom: 8px;
+  }
+
+  #order .step-5 .radio {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+    margin: 0 auto 1em;
+  }
+
+  #order .step-5 .radio > div {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+  }
+
+  #order .step-5 .radio input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  #order .step-5 .radio .s-m {
+    order: 3;
+  }
+
+  #order .step-5 label {
+    max-width: 90%;
   }
 
   #offer .front {
@@ -2344,8 +2571,104 @@ button {
     padding: 2em 1.7em;
   }
 
-  .in {
-    justify-content: flex-start;
+  .inputs label::after {
+    top: 7px;
+  }
+
+  input:not([type=checkbox], [type=radio]) {
+    margin: 12px 1em;
+  }
+
+  #order {
+    min-height: 80vh;
+    margin-bottom: 20%;
+  }
+
+  #order form {
+    padding: 1em 0 2.5em;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]) {
+    width: 75vmin;
+  }
+
+  #order .inputs input:not([type=checkbox], [type=radio]):focus + label {
+    color: var(--moonstone);
+  }
+
+  #order .step-2 {
+    height: -moz-max-content;
+    height: max-content;
+    margin: 0;
+    padding: 0 1em;
+  }
+
+  #order .step-2 .info {
+    height: -moz-max-content;
+    height: max-content;
+    margin: auto 0;
+  }
+
+  #order .step-2 h2 {
+    margin-bottom: 1em;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #order .step-2 .check {
+    margin: 0;
+  }
+
+  #order .step-2 .site-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin: 0 auto;
+  }
+
+  #order .step-2 .site-desc .inputs {
+    grid-column: span 2;
+    display: flex;
+    width: 100%;
+  }
+
+  #order .step-2 .site-desc .inputs input {
+    justify-self: center;
+    margin: 1em 0 0;
+    width: 100%;
+  }
+
+  #order .step-2 .site-desc .inputs input:-moz-placeholder-shown + label {
+    top: 62%;
+    left: 18px;
+  }
+
+  #order .step-2 .site-desc .inputs input:placeholder-shown + label {
+    top: 62%;
+    left: 18px;
+  }
+
+  #order .step-2 .site-desc .inputs label {
+    left: 22px;
+  }
+
+  #order .step-2 .site-desc .inputs label::after {
+    top: 12px;
+  }
+
+  #order .step-2 .site-desc .option {
+    grid-column: span 2;
+    margin: 0 1em;
+  }
+
+  #order .step-3 h2 {
+    margin-bottom: 1em;
+  }
+
+  #order .step-3 .more {
+    grid-template-columns: repeat(auto-fill, 1fr);
+    gap: 1em;
   }
 
   #offer {

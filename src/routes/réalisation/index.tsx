@@ -16,7 +16,7 @@ export default component$(() => {
             console.error('Site element not found');
         }
     });
-
+    
     return (
         <section id="works" class="container">
             <h1>Voici un aperçu des projets que nous avions réalisé :</h1>

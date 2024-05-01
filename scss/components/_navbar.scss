@@ -6,12 +6,12 @@ header {
         }
     }
     @media (max-width: $breakpoint-md) {
+        background: hsla(230, 70%, 5%, .75);
+        backdrop-filter: blur(5px);
         border-bottom: 1px solid hsla(111, 24%, 94%, .1);
         position: fixed;
         z-index: 5;
         width: 100vw;
-        background: hsla(230, 70%, 5%, .75);
-        backdrop-filter: blur(5px);
         .go-home{
             display: none;
         }

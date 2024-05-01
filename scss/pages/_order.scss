@@ -9,9 +9,12 @@
 [active-step="4"]>.step-4,
 [active-step="5"]>.step-5 {
     display: block;
+
 }
 
-[type="radio"], [type="checkbox"], label{
+[type="radio"],
+[type="checkbox"],
+label {
     cursor: pointer;
 }
 
@@ -25,25 +28,82 @@
         opacity: 0;
         // transform: translateX(-15px);
     }
-    
+
     to {
         opacity: 1;
         // transform: translateX(0);
     }
 }
 
+// Button Styles
+button {
+    border: 2px solid var(--mint-cream);
+    border-radius: $spacing-lg;
+    background: var(--black-pearl);
+    padding: $spacing $spacing-lg;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
 
+.inputs {
+    position: relative;
+    width: max-content;
 
-// Layout
-#order {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: calc(100vh - 86px);
+    input:not([type="checkbox"], [type="radio"]) {
+        color: var(--lavender-web);
+        font-family: 'League Spartan';
+        font-weight: 300;
+        font-size: 1rem;
+        width: 40vmin;
 
-    h1 {
-        text-align: center;
-        margin-bottom: $spacing;
+        &:focus+label {
+            color: var(--moonstone);
+        }
+
+        &:placeholder-shown+label {
+            top: 48%;
+            transform: translateY(-50%);
+            left: 34px;
+            color: grey;
+            padding: 0;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 4px;
+        left: $spacing-xl;
+        font-size: .95em;
+        z-index: 2;
+        color: var(--yale-blue);
+        padding: 0 8px;
+        transition: top .15s ease-in,
+            left .15s ease-in,
+            color .15s ease-in,
+            border .15s ease-in,
+            transform .15s ease-in,
+            padding .15s ease-in;
+        pointer-events: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 4px;
+            height: 4px;
+            width: 95%;
+            background: var(--black-pearl);
+            z-index: -1;
+            transition: background .15s ease-in;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            &::after {
+                top: 7px;
+            }
+        }
     }
 }
 
@@ -60,112 +120,27 @@ input:not([type="checkbox"], [type="radio"]) {
         outline: none;
         border-color: var(--moonstone);
     }
-}
-.inputs {
-    position: relative;
 
-    input:not([type="checkbox"], [type="radio"]) {
-        color: var(--lavender-web);
-        font-family: 'League Spartan';
-        font-weight: 300;
-        font-size: 1.1rem;
-
-        &:focus+label {
-            color: var(--moonstone);
-        }
-
-        &:placeholder-shown+label {
-            top: 50%;
-            transform: translateY(-50%);
-            left: 34px;
-            color: grey;
-            padding: 0;
-            background: none;
-        }
-    }
-
-    label {
-        position: absolute;
-        top: 4px;
-        left: $spacing-xl;
-        font-size: .95em;
-        z-index: 2;
-        color: var(--yale-blue);
-        background: var(--black-pearl);
-        padding: 0 8px;
-        transition: top .15s ease-in,
-            left .15s ease-in,
-            color .15s ease-in,
-            border .15s ease-in,
-            background .15s ease-in,
-            transform .15s ease-in,
-            padding .15s ease-in;
-        pointer-events: none;
-    }
-}
-
-// Step 01
-.in {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     @media (max-width: $breakpoint-xs) {
-        justify-content: flex-start;
+        margin: 12px $spacing;
     }
 }
 
-// Form Styles
-form {
-    background: var(--black-pearl);
-    margin: 0 auto;
-    padding: $spacing $spacing $spacing-xxl;
-    border-radius: $spacing-lg;
-    border: 2px solid var(--mint-cream);
-    min-height: 375px;
-    height: 100%;
-    width: clamp(250px, 65%, 1000px);
-    text-align: center;
-    position: relative;
-    display: grid;
-    align-content: center;
-
-    h2 {
-        margin-bottom: $spacing;
-    }
-    
-    .buttons {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: $spacing;
-    }
-}
-
-// Button Styles
-button {
-    @include button();
-}
-
-// Step 02
+// custom radio and checkbox
+.check,
 .option {
-    display: flex;
-    width: max-content;
-}
-
-.check, .option {
     line-height: 30px;
+
     input {
         opacity: 0;
     }
 
-    input:checked + label::after{
+    input:checked+label::after {
         background: var(--black-pearl) url(/media/nav/check.svg) center/14px no-repeat;
         left: -5px;
     }
-    input:checked + label::before{
+
+    input:checked+label::before {
         background: var(--black-pearl);
     }
 
@@ -187,6 +162,7 @@ button {
             background: var(--mint-cream) url(/media/nav/check.svg) center/0px no-repeat;
             transition: .25s all ease-in-out;
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -204,56 +180,432 @@ button {
     }
 }
 
-.check.second {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $spacing;
+// Layout
+#order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 86px);
+
+    h1 {
+        text-align: center;
+        margin-bottom: $spacing;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+        form {
+            width: 90%;
+        }
+    }
+
+    @media (max-width: $breakpoint-lg) {
+        .inputs {
+            input:not([type="checkbox"], [type="radio"]) {
+                width: 30vmin;
+
+                &:focus+label {
+                    color: var(--moonstone);
+                }
+
+                &:placeholder-shown+label {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 34px;
+                    color: grey;
+                    padding: 0;
+                    background: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-md) {
+        margin-top: 85px;
+
+        form {
+            width: 100%;
+        }
+
+        .inputs {
+            input:not([type="checkbox"], [type="radio"]) {
+                width: 90%;
+
+                &:focus+label {
+                    color: var(--moonstone);
+                }
+
+                &:placeholder-shown+label {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 34px;
+                    color: grey;
+                    padding: 0;
+                    background: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-sm) {
+        form {
+            width: 90%;
+        }
+
+        h2 {
+            margin-bottom: $spacing;
+            font-size: 1rem;
+        }
+
+        .step-2 {
+            height: max-content;
+            margin: $spacing 0;
+
+            .info {
+                height: max-content;
+                margin: auto 0;
+            }
+
+            .site-desc {
+                gap: $spacing;
+                width: 90%;
+
+                .inputs {
+                    input {
+                        margin: $spacing 0;
+                        width: 40vmin;
+
+                        &:placeholder-shown+label {
+                            top: 47%;
+                            left: 18px;
+                        }
+                    }
+
+                    label {
+                        left: 16px;
+
+                        &::after {
+                            top: 12px;
+                        }
+                    }
+                }
+
+                .last {
+                    grid-column: span 2;
+                }
+            }
+        }
+
+        .step-3 {
+            h2 {
+                margin-bottom: $spacing;
+            }
+
+            .more {
+                grid-template-columns: repeat(auto-fill, 140px);
+                gap: $spacing-lg;
+            }
+        }
+
+        .step-5 {
+            padding: $spacing;
+
+            h2 {
+                margin-bottom: 8px;
+            }
+
+            .radio {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 8px 0;
+                margin: 0 auto $spacing;
+
+                &>div {
+                    display: flex;
+                    gap: 4px;
+                    justify-content: center;
+                }
+
+                input {
+                    opacity: 0;
+                    position: absolute;
+                }
+
+                .s-m {
+                    order: 3;
+                }
+            }
+
+            label {
+                max-width: 90%;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-xs) {
+        min-height: 80vh;
+        margin-bottom: 20%;
+
+        form {
+            padding: $spacing 0 $spacing-2xl;
+        }
+
+        .inputs {
+            input:not([type="checkbox"], [type="radio"]) {
+                width: 75vmin;
+
+                &:focus+label {
+                    color: var(--moonstone);
+                }
+            }
+        }
+
+        .step-2 {
+            height: max-content;
+            margin: 0;
+            padding: 0 $spacing;
+
+            .info {
+                height: max-content;
+                margin: auto 0;
+            }
+
+            h2 {
+                margin-bottom: $spacing;
+                width: 70%;
+                margin: 0 auto;
+            }
+
+            .check {
+                margin: 0;
+            }
+
+            .site-desc {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                margin: 0 auto;
+
+                .inputs {
+                    grid-column: span 2;
+                    display: flex;
+                    width: 100%;
+
+                    input {
+                        justify-self: center;
+                        margin: $spacing 0 0;
+                        width: 100%;
+
+                        &:placeholder-shown+label {
+                            top: 62%;
+                            left: 18px;
+                        }
+                    }
+
+                    label {
+                        left: 22px;
+
+                        &::after {
+                            top: 12px;
+                        }
+                    }
+                }
+
+                .option {
+                    grid-column: span 2;
+                    margin: 0 $spacing;
+                }
+            }
+        }
+
+        .step-3 {
+            h2 {
+                margin-bottom: $spacing;
+            }
+
+            .more {
+                grid-template-columns: repeat(auto-fill, 1fr);
+                gap: $spacing;
+            }
+        }
+    }
+
 }
 
-.more {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: $spacing-xxl $spacing;
-    width: 80%;
+form {
+    background: hsla(230, 70%, 5%, .5);
+    backdrop-filter: blur(5px);
+    border: 1px solid hsla(111, 24%, 94%, .1);
     margin: 0 auto;
-    text-align: left;
-    h3{
-        font-size: 1.2rem;
-        font-weight: 400;
-        opacity: .7;
+    border-radius: $spacing-lg;
+    min-height: 375px;
+    height: 100%;
+    width: clamp(250px, 65%, 1000px);
+    text-align: center;
+    position: relative;
+    display: grid;
+    align-content: center;
+
+    .buttons {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: $spacing;
     }
 }
 
-.step-4{
-    textarea {
-        font-family: 'Poppins';
-        font-weight: 300;
-        letter-spacing: 1px;
-        width: 100%;
-        background: none;
-        border: 2px solid var(--yale-blue);
-        border-radius: $spacing;
-        margin: $spacing 0 0;
-        padding: $spacing;
-        &:focus{
-            outline: none;
-            border: 2px solid var(--moonstone);
+// Step 01
+.step-1 {
+    h2 {
+        margin-bottom: $spacing;
+    }
+
+    .input-box {
+        display: flex;
+        flex-wrap: wrap;
+        // max-width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+// Step 02
+.step-2 {
+    height: max-content;
+
+    .info {
+        height: 250px;
+        margin: auto 0;
+    }
+
+    h2 {
+        margin-bottom: $spacing;
+    }
+
+    .site-desc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 0 $spacing-xxl;
+        width: 50%;
+        margin: 0 auto;
+
+        .inputs,
+        .check {
+            margin-bottom: $spacing;
+        }
+
+        .inputs {
+            input {
+                margin: $spacing 0;
+
+                // padding: 0;
+                &:placeholder-shown+label {
+                    top: 47%;
+                    left: 18px;
+                }
+            }
+
+            label {
+                left: 16px;
+            }
         }
     }
 }
 
-.step-5{
-    h2{
-        margin: 0 0 8px;
+.option {
+    display: flex;
+    width: max-content;
+}
+
+// Step 03
+.step-3 {
+    h2 {
+        margin-bottom: $spacing;
+    }
+
+    .more {
+        display: grid;
+        grid-template-columns: repeat(3, 165px);
+        place-content: center;
+        gap: $spacing-2xl;
+    }
+
+    .choice {
+        h3 {
+            font-size: 1rem;
+            text-align: initial;
+            opacity: .8;
+        }
     }
 }
 
-.parent{
-    label{
+// Step 04
+.step-4 {
+    display: flex;
+    justify-content: center;
+    padding: 0 $spacing;
+
+    textarea {
+        width: clamp(275px, 50vw, 800px);
+        height: 225px;
+        margin: $spacing auto 0;
+        resize: none;
+        font-family: 'Poppins';
+        font-weight: 300;
+        letter-spacing: 1px;
+        background: hsla(228, 43%, 9%, 0.5);
+        backdrop-filter: blur(3px);
+        border: 1px solid hsla(111, 24%, 94%, .1);
+        border-radius: $spacing;
+        padding: $spacing;
+
+        &:focus {
+            outline: none;
+            border: 1px solid hsla(111, 24%, 94%, .3);
+        }
+    }
+}
+
+// Step 05
+.step-5 {
+    h2 {
+        margin-bottom: 8px;
+    }
+
+    .radio {
+        display: grid;
+        grid-template-columns: repeat(3, 185px);
+        justify-content: center;
+        margin: 0 auto $spacing-xl;
+
+        &>div {
+            display: flex;
+            gap: 4px;
+        }
+
+        input {
+            opacity: 0;
+        }
+    }
+}
+
+// .step-5{
+//     h2{
+//         margin: 0 0 8px;
+//     }
+// }
+
+.parent {
+    label {
         width: max-content;
         padding: 0 $spacing 0 $spacing-lg;
         position: relative;
-        
+
         &::after {
             content: '';
             position: absolute;
@@ -267,6 +619,7 @@ button {
             background: var(--mint-cream) url(/media/nav/check.svg) center/0px no-repeat;
             transition: .25s all ease-in-out;
         }
+
         &::before {
             content: '';
             position: absolute;
@@ -281,39 +634,30 @@ button {
             opacity: 0;
         }
     }
-    input:checked + label{
+
+    input:checked+label {
         color: var(--yale-blue);
     }
-    input:checked + label::after{
+
+    input:checked+label::after {
         background: var(--black-pearl) url(/media/nav/check.svg) center/14px no-repeat;
     }
-    input:checked + label::before{
+
+    input:checked+label::before {
         opacity: 1;
     }
 }
 
-.radio {
-    display: flex;
-    gap: $spacing-lg;
-    justify-content: center;
-    margin: 0 auto $spacing-2xl;
 
-    & > div {
-        display: flex;
-        gap: 4px;
-    }
 
-    input{
-        opacity: 0;
-    }
-}
-
-.confidentiality{
+.confidentiality {
     width: max-content;
     margin: 0 auto;
 
-    & > :first-child{
-        background: var(--yale-blue);
+    &> :first-child {
+        background: hsla(228, 43%, 9%, 0.75);
+        backdrop-filter: blur(3px);
+        border: 1px solid hsla(111, 24%, 94%, .1);
         width: max-content;
         margin: 0 auto;
         padding: 6px 12px;
