@@ -45,6 +45,7 @@ export default component$(() => {
 
     const state = useStore({ currentSlide: 1, maxSlides: 11 });
 
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
         const updateSlide = () => {
             state.currentSlide = (state.currentSlide % state.maxSlides) + 1;

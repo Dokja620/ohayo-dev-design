@@ -102,7 +102,7 @@ export default component$(() => {
             </div>
             <div class="ord">
                 <h1>Prêt à laisser votre emprunt dans le web ?</h1>
-                <Link href="/commande" class="button">Passer commande</Link>
+                <Link href="/concevoir-site-web" class="button">Passer commande</Link>
             </div>
         </section>
     );

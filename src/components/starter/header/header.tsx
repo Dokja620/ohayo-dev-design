@@ -22,23 +22,23 @@ export default component$(() => {
                 <div class="burger-links">
                     <div class="link">
                         <div class="ico-nav"><img src={orderLogo} alt="info icon" width={20} height={20}/></div>
-                        <Link href="/pricing">Commander</Link>
+                        <Link href="/concevoir-site-web">Commander</Link>
                     </div>
                     <div class="link">
                         <div class="ico-nav"><img src={serviceLogo} alt="info icon" width={20} height={20}/></div>
-                        <Link href="/pricing">Nos services</Link>
+                        <Link href="/services-web">Nos services</Link>
                     </div>
                     <div class="link">
                         <div class="ico-nav"><img src={workLogo} alt="info icon" width={20} height={20}/></div>
-                        <Link href="/réalisation">Nos réalisations</Link>
+                        <Link href="/portefolio">Nos réalisations</Link>
                     </div>
                     <div class="link">
                         <div class="ico-nav"><img src={postLogo} alt="info icon" width={20} height={20}/></div>
-                        <Link href="/publication">Nos publications</Link>
+                        <Link href="/publication-web">Nos publications</Link>
                     </div>
                     <div class="link">
                         <div class="ico-nav"><img src={infoLogo} alt="info icon" width={20} height={20}/></div>
-                        <Link href="/more">À-propos</Link>
+                        <Link href="/a-propos">À-propos</Link>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ export default component$(() => {
                     
                     <div class="links">
                         <div class="menu">
-                            <Link href="/commande" class="command">Commencez</Link>
+                            <Link href="/concevoir-site-web" class="command">Commencez</Link>
                         </div>
                         <div class="second">
                         </div>
