@@ -1,11 +1,11 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 import logo from '/media/logo.webp';
-import infoLogo from "../icons/IcOutlineInfo.svg"
+import infoLogo from "../icons/IcBaselineInfo.svg"
 import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
-import workLogo from "../icons/IcTwotoneWorkOutline.svg"
-import postLogo from "../icons/IcOutlinePhotoSizeSelectActual.svg"
-// import orderLogo from "../icons/IcBaselineAddCircleOutline.svg"
+import workLogo from "../icons/IcRoundFolderShared.svg"
+import postLogo from "../icons/IcBaselinePhotoSizeSelectActual.svg"
+import orderLogo from "../icons/IcBaselineAppRegistration.svg"
 
 export default component$(() => {
     // TODO exit menu whenever I click outside when the check box is checked watch then uncheck when outside is clicked
@@ -20,10 +20,10 @@ export default component$(() => {
                     <div class="bur-line"></div>
                 </div>
                 <div class="burger-links">
-                    {/* <div class="link">
+                    <div class="link">
                         <div class="ico-nav"><img src={orderLogo} alt="info icon" width={20} height={20}/></div>
                         <Link href="/pricing">Commander</Link>
-                    </div> */}
+                    </div>
                     <div class="link">
                         <div class="ico-nav"><img src={serviceLogo} alt="info icon" width={20} height={20}/></div>
                         <Link href="/pricing">Nos services</Link>
