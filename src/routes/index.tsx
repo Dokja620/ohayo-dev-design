@@ -1,9 +1,11 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useStore, useVisibleTask$, $} from "@builder.io/qwik";
 import { Link } from '@builder.io/qwik-city';
 import type { DocumentHead } from "@builder.io/qwik-city";
 import planet from "/media/home/planet.webp";
 import spatio from "/media/home/spatio.webp";
 import spatioStand from "/media/home/spatio-stand.webp";
+import arrow from "/media/home/IcOutlineArrowBackIosNew.svg";
+import arrowr from "/media/home/IcOutlineArrowForwardIosNew.svg";
 
 
 // tech stack of the agency
@@ -41,32 +43,29 @@ import tech_E from "/media/tech/3d/031.webp";
 
 export default component$(() => {
 
-    // const changeStep = (index: number) => { // TODO need to activate this
-    //     const sliderElement = document.getElementById('slider');
-    //     if (sliderElement) {
-    //         sliderElement.setAttribute('slide-step', index.toString());
-    //     } else {
-    //         console.error('Slider element not found');
-    //     }
-    // };
-    
-    // let currentStep = 1;
-    // const maxStep = 11;
-    
-    // // Function to change step at intervals of 5 seconds
-    // const autoChangeStep = () => {
-    //     setInterval(() => {
-    //         changeStep(currentStep);
-    //         currentStep += 1;
-    //         if (currentStep > maxStep) {
-    //             currentStep = 1; // Reset to the first step
-    //         }
-    //     }, 100); // 5 seconds interval
-    // };
-    
-    // autoChangeStep();
-    
+    const state = useStore({ currentSlide: 1, maxSlides: 11 });
 
+    useVisibleTask$(() => {
+        const updateSlide = () => {
+            state.currentSlide = (state.currentSlide % state.maxSlides) + 1;
+        };
+
+        const intervalId = setInterval(updateSlide, 4000);
+
+        return () => clearInterval(intervalId);
+    });
+
+    const changeStep = $((index: number) => {
+        state.currentSlide = index; // Directly update the state
+        const slideEl = document.getElementById('slider');
+        if (slideEl) {
+            slideEl.setAttribute('slide-step', index.toString());
+        } else {
+            console.error('Slider element not found');
+        }
+    });
+
+  
     return (
         <>
             {/* first section intro to who we are */}
@@ -143,7 +142,7 @@ export default component$(() => {
                     <div class="fact">
                         <div class="fact-box">
                             <h2>Pourquoi nous choisir ?</h2>
-                            <div class="slider" id="slider" slide-step="1">
+                            <div class="slider" id="slider" slide-step={state.currentSlide}>
                                 <div class="wrap slides-1">
                                     <h3>Responsive Design :</h3>
                                     <p>Tous les sites web que nous concevons sont garantis 100% responsives, assurant une expérience utilisateur optimale sur tous les appareils.</p>
@@ -189,17 +188,31 @@ export default component$(() => {
                                     <p>Pour ceux qui en ont besoin, nous prenons en charge le processus d'hébergement de votre site, gratuitement.</p>
                                 </div>
                                 <div class="pagination">
-                                    <div class="active"></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(1);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(2);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(3);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(4);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(5);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(6);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(7);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(8);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(9);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(10);}}></div>
+                                    <div onClick$={(event) => {event.preventDefault(); changeStep(11);}}></div>
+                                </div>
+                                <div class="navigation">
+                                    <div class="left" onClick$={(event) => {
+                                        event.preventDefault();
+                                        changeStep(state.currentSlide > 1 ? state.currentSlide - 1 : state.maxSlides);
+                                    }}>
+                                        <img src={arrow} alt="back arrow" width={50} height={50}/>
+                                    </div>
+                                    <div class="right" onClick$={(event) => {
+                                        event.preventDefault();
+                                        changeStep(state.currentSlide < state.maxSlides ? state.currentSlide + 1 : 1);
+                                    }}>
+                                        <img src={arrowr} alt="forward arrow" width={50} height={50}/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -291,19 +291,38 @@
     left: 50%;
     transform: translateX(-50%);
     & > div{
+        height: 10px;
         width: 10px;
         margin: 0 4px;
-        aspect-ratio: 1/1;
         background: var(--lavender-web);
         border-radius: 50%;
-        &.active{
-            height: 10px;
-            width: 20px;
-            border-radius: 16px;
-        }
+        transition: .25s width ease-in, .25s border-radius ease-in;
+        cursor: pointer;
+        // &.active{
+        //     height: 10px;
+        //     width: 20px;
+        //     border-radius: 16px;
+        // }
     }
 }
-
+.navigation{
+    div{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        // background: var(--black-pearl);
+        img{
+            filter: drop-shadow(#040716 0px 0px 2px);
+        }
+    }
+    .left{
+        left: -30px;
+    }
+    .right{
+        right: -30px;
+    }
+}
 // Slider activation
 // Active steps styles
 [slide-step]>.wrap {
@@ -323,6 +342,22 @@
 [slide-step="11"]>.slides-11 {
     display: block;
 }
+[slide-step="1"]>.pagination :nth-child(1),
+[slide-step="2"]>.pagination :nth-child(2),
+[slide-step="3"]>.pagination :nth-child(3),
+[slide-step="4"]>.pagination :nth-child(4),
+[slide-step="5"]>.pagination :nth-child(5),
+[slide-step="6"]>.pagination :nth-child(6),
+[slide-step="7"]>.pagination :nth-child(7),
+[slide-step="8"]>.pagination :nth-child(8),
+[slide-step="9"]>.pagination :nth-child(9),
+[slide-step="10"]>.pagination :nth-child(10),
+[slide-step="11"]>.pagination :nth-child(11) {
+    width: 20px;
+    border-radius: 16px;
+}
+
+
 // Steps changing animaations
 .wrap {
     animation: slideIn .5s ease-out;
