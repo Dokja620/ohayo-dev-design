@@ -1,54 +1,25 @@
 @import 'google-fonts.css';
 
-@font-face {
-    font-family: 'Pirulen';
-    src:url('/fonts/Pirulen.ttf.woff') format('woff'),
-        url('/fonts/Pirulen.ttf.svg#Pirulen') format('svg'),
-        url('/fonts/Pirulen.ttf.eot'),
-        url('/fonts/Pirulen.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
-main, ::placeholder {
-    font-family: 'Poppins';
-}
-a, header, button {
-    font-family: "League Spartan", sans-serif;
-    font-weight: 400;
-}
-
-h1
- {
-    font-family: 'Pirulen';
-    font-weight: 700;
-    @media (max-width: $breakpoint-xs) {
-        font-size: 1rem;
-        padding: 0 $spacing;
-    }
-}
-h2,
-h3,
-h4,
-h5 {
-    font-family: 'Ubuntu';
-    font-weight: 700;
+h1{
+    font-family: "Bunken Tech Sans SC Wide W01Bd";
     text-transform: uppercase;
 }
 
+body {
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    font-family: "Montserrat", sans-serif;
+}
 
-html {font-size: 100%;} /* 16px */
+h1 {font-size: 2.489rem; /* 39.84px */}
 
-// h1 {font-size: 1.753rem; /* 48.8px */}
+h2 {font-size: 2.074rem; /* 33.12px */}
 
-h1 {font-size: 1.65rem; /* 48.8px */}
+h3 {font-size: 1.728rem; /* 27.68px */}
 
-h2 {font-size: 1.25rem; /* 39.04px */}
+h4 {font-size: 1.440rem; /* 23.04px */}
 
-h3 {font-size: 1.954rem; /* 31.2px */}
+h5 {font-size: 1.200rem; /* 19.2px */}
 
-h4 {font-size: 1.563rem; /* 24.96px */}
-
-h5, a {font-size: 1.250rem; /* 20px */}
-
-small {font-size: 0.800rem; /* 12.8px */}
+small {font-size: 0.833rem; /* 13.28px */}
