@@ -1,49 +1,61 @@
-#hero{
-    min-height: calc(100vh - 65px);
+#hero {
+    height: 100vh;
+    width: 100vw;
     display: grid;
     align-items: center;
+    background: url(../../src/media/bg-004-1.webp);
+    box-shadow: inset 0px -35px 50px #000;
 
-    .content{
+    .content {
         min-width: 300px;
         width: 50%;
-        h1{
+        margin: 0 10%;
+
+        h1 {
             max-width: 15ch;
             margin: 0 0 8px;
             // text-shadow: 0px 0px 5px #093eff;
         }
-        p{
+
+        p {
             max-width: 50ch;
             line-height: 24px;
         }
     }
 }
 
-.c-t-a{
+.c-t-a {
     display: flex;
-    gap: $spacing-lg;
+    gap: $spacing-md;
     margin: $spacing-xl 0 0;
+
     span {
         border: 1px solid white;
-        padding: 8px 12px;
-        border-radius:  $spacing-lg;
+        padding: 8px 16px;
+        border-radius: $spacing-lg;
     }
 }
 
 
 // deco
-.bg-h{
+.bg-h {
     position: absolute;
     height: 70vh;
-    right: clamp($spacing, 10%, 45px);
-    &.spatio{
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.spatio {
         right: 30%;
-        filter: brightness(50%);
+        filter: brightness(70%);
     }
-    &.planet{
-        height: 85vh;
-        filter: brightness(35%);
+
+    &.planet {
+        right: 8%;
+        height: 80vh;
+        filter: brightness(75%);
     }
-    img{
+
+    img {
         height: 100%;
         width: 100%;
     }
@@ -51,28 +63,221 @@
 
 // second section nous maitrisons
 #scroll {
+    height: max-content;
     padding: $spacing 0;
-    position: relative;
-    h2{
+    position: relatived;
+    display: grid;
+    align-items: center;
+    margin:  0;
+    background: var(--dark-black);
+
+    h2 {
         text-align: center;
-        margin: 0 0 $spacing
+        margin: 0 0 $spacing;
     }
 }
-.tools{
+
+.tools {
     display: flex;
-    width: 100vw;
+    width: max-content;
+    max-width: 100vw;
     height: fit-content;
+
     // overflow: scroll;
-    animation: slide 12s linear infinite;
-    div{
+    // animation: slide 32s linear infinite;
+    div {
         margin: 0 $spacing-xl;
     }
 }
+
+// .tools:hover, .tools:focus {
+//     animation-play-state: paused;
+// }
 @keyframes slide {
-    from{
+    from {
         transform: translateX(0);
     }
-    to{
-        transform: translateX(-100%);
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#reason {
+    display: flex;
+    gap: $spacing-xl;
+    align-items: center;
+    height: 100vh;
+}
+
+.fact {
+    max-width: 40ch;
+    padding: $spacing-lg;
+    border-radius: $spacing-lg;
+    position: relative;
+    background: hsla(230, 70%, 5%, .75);
+    backdrop-filter: blur(5px);
+    border: 1px solid hsla(111, 24%, 94%, .5);
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 85%;
+        background: var(--dark-black);
+        z-index: -1;
+    }
+
+    h2 {
+        width: max-content;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h3 {
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 8px;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 25px;
+    }
+}
+
+// Slider activation
+// Active steps styles
+[slide-step]>.wrap {
+    display: none;
+}
+
+[slide-step="1"]>.slides-1,
+[slide-step="2"]>.slides-2,
+[slide-step="3"]>.slides-3,
+[slide-step="4"]>.slides-4,
+[slide-step="5"]>.slides-5,
+[slide-step="6"]>.slides-6,
+[slide-step="7"]>.slides-7,
+[slide-step="8"]>.slides-8,
+[slide-step="9"]>.slides-9,
+[slide-step="10"]>.slides-10,
+[slide-step="11"]>.slides-11 {
+    display: block;
+}
+
+[slide-step="1"]>.pagination :nth-child(1),
+[slide-step="2"]>.pagination :nth-child(2),
+[slide-step="3"]>.pagination :nth-child(3),
+[slide-step="4"]>.pagination :nth-child(4),
+[slide-step="5"]>.pagination :nth-child(5),
+[slide-step="6"]>.pagination :nth-child(6),
+[slide-step="7"]>.pagination :nth-child(7),
+[slide-step="8"]>.pagination :nth-child(8),
+[slide-step="9"]>.pagination :nth-child(9),
+[slide-step="10"]>.pagination :nth-child(10),
+[slide-step="11"]>.pagination :nth-child(11) {
+    width: 20px;
+    border-radius: 16px;
+}
+
+
+// Steps changing animaations
+.wrap {
+    animation: slideIn .5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio {
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+    position: relative;
+
+    h2 {
+        margin: 0 0 $spacing;
+        letter-spacing: 1px;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    .spatio-stand{
+        bottom: -4px;
+        left: -px;
+        position: absolute;
+        height: 350px;
+        width: auto;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.portfolios {
+    background: hsla(230, 70%, 5%, .31) url('/media/home/bg-port.webp') top center/cover no-repeat;
+    border-radius: $spacing-xl;
+    border: 2px solid hsla(111, 24%, 94%, .1);
+    display: flex;
+    gap: $spacing-2xl;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: calc($spacing-xxl * 1.5) 0;
+
+    a {
+        display: block;
+        width: 275px;
+        height: max-content;
+        border-radius: $spacing-xl;
+        border: 2px solid #fff;
+        background: hsla(230, 70%, 5%, .7);
+        box-shadow: 0px 0px 10px var(--moonstone-dark), 0px 0px 10px var(--moonstone-dark) inset;
+        padding: $spacing;
+        max-width: 27ch;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
+
+.home-links {
+    width: max-content;
+    margin: 8% auto 15%;
+    border-radius: $spacing-xl;
+    padding: $spacing-xxl $spacing-xl;
+    position: relative;
+    border: 2px solid hsla(111, 24%, 94%, .1);
+    background: hsla(230, 70%, 5%, .7);
+    backdrop-filter: blur(2px);
+
+    a {
+        border-radius: $spacing-xl;
+        border: 2px solid #fff;
+        box-shadow: 0px 0px 10px var(--mint-cream), 0px 0px 10px var(--mint-cream) inset;
+        padding: $spacing $spacing-lg;
+        margin: 12px $spacing;
+        max-width: 25ch;
+        text-align: center;
     }
 }

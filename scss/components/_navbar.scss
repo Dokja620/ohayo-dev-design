@@ -2,7 +2,9 @@ header{
     // background: hsla(230, 70%, 5%, .75);
     // backdrop-filter: blur(5px);
     // border-bottom: 1px solid hsla(111, 24%, 94%, .1);
-    padding: 8px $spacing $spacing
+    padding: 8px $spacing $spacing;
+    position: absolute;
+    width: 100%;
 }
 
 nav{
