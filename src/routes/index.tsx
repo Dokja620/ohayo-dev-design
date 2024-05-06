@@ -11,9 +11,41 @@ const basePath = "/media/tech/";
 
 export default component$(() => {
     // Array of tool objects
-    const tools = Array.from({ length: 36 }, (_, i) => ({
-        src: `${basePath}${String(i + 1).padStart(3, '0')}.svg`,
+    const toolsA = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 1).padStart(3, '0')}.webp`,
         alt: `Tool ${i + 1}`
+    }));
+    const toolsB = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 5).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 5}`
+    }));
+    const toolsC = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 9).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 9}`
+    }));
+    const toolsD = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 13).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 13}`
+    }));
+    const toolsE = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 17).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 17}`
+    }));
+    const toolsF = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 21).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 21}`
+    }));
+    const toolsG = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 25).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 25}`
+    }));
+    const toolsH = Array.from({ length: 4 }, (_, i) => ({
+        src: `${basePath}${String(i + 29).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 29}`
+    }));
+    const toolsI = Array.from({ length: 2 }, (_, i) => ({
+        src: `${basePath}${String(i + 33).padStart(3, '0')}.webp`,
+        alt: `Tool ${i + 32}`
     }));
 
     return (
@@ -74,9 +106,49 @@ export default component$(() => {
             {/* Infinite skills slider section */}
             <section id="scroll">
                 <div class="content">
-                    {/* <h2>Nous maitrisons :</h2> */}
+                    <h2>Nous maitrisons :</h2>
                     <div class="tools">
-                        {tools.map(tool => (
+                        {toolsA.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsB.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsC.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsD.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsE.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsF.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsG.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsH.map(tool => (
+                            <div key={tool.src}>
+                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                            </div>
+                        ))}
+                        {toolsI.map(tool => (
                             <div key={tool.src}>
                                 <img src={tool.src} alt={tool.alt} width={75} height={75}/>
                             </div>

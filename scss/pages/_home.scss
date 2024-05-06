@@ -10,6 +10,7 @@
         min-width: 300px;
         width: 50%;
         margin: 0 10%;
+        z-index: 2;
 
         h1 {
             max-width: 15ch;
@@ -20,6 +21,66 @@
         p {
             max-width: 50ch;
             line-height: 24px;
+        }
+    }
+    @media (max-width: $breakpoint-xl) {
+        h1 {font-size: 2.389rem;}
+        .bg-h {
+            &.spatio {
+                right: 15%;
+            }
+        
+            &.planet {
+                right: -10%;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-lg) {
+        h1 {
+            font-size: 2rem;
+            width: 17ch;
+        }
+        .bg-h {
+            &.spatio {
+                right: 10%;
+                height: 50vh;
+            }
+        
+            &.planet {
+                right: -25%;
+                height: 80vh;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        .bg-h {
+            &.spatio {
+                top: 40%;
+                right: -5%;
+                height: 50vh;
+            }
+        
+            &.planet {
+                right: -45%;
+                height: 80vh;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        h1 {
+            font-size: clamp(1.2rem, 6vw, 2.5rem);
+            width: 15ch;
+        }
+        padding: $spacing;
+        .content{
+            margin: 0;
+            p{
+               max-width: none;
+               width: 100%;
+            }
+        }
+        .bg-h {
+            display: none;
         }
     }
 }
@@ -43,6 +104,7 @@
     height: 70vh;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 
     &.spatio {
         right: 30%;
@@ -58,48 +120,6 @@
     img {
         height: 100%;
         width: 100%;
-    }
-}
-
-// second section nous maitrisons
-#scroll {
-    height: max-content;
-    padding: $spacing 0;
-    position: relatived;
-    display: grid;
-    align-items: center;
-    margin:  0;
-    background: var(--dark-black);
-
-    h2 {
-        text-align: center;
-        margin: 0 0 $spacing;
-    }
-}
-
-.tools {
-    display: flex;
-    width: max-content;
-    max-width: 100vw;
-    height: fit-content;
-
-    // overflow: scroll;
-    // animation: slide 32s linear infinite;
-    div {
-        margin: 0 $spacing-xl;
-    }
-}
-
-// .tools:hover, .tools:focus {
-//     animation-play-state: paused;
-// }
-@keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(-50%);
     }
 }
 
@@ -204,6 +224,108 @@
     }
 }
 
+// portefolio
+#reason{
+    @media (max-width: $breakpoint-2xl) {
+    }
+    @media (max-width: $breakpoint-xl) {
+        .portfolios {
+            gap: $spacing-lg;
+            max-width: none;
+            margin: 0;
+        
+            a {
+                width: 250px;
+                padding: 12px;
+            }
+        }
+        .spatio-stand{
+            left: -95px;
+        }
+    }
+    @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        gap: 10%;
+        justify-content: center;
+        h2{
+            font-size: 1.3rem;
+        }
+        .portfolios {
+            padding: $spacing-lg;
+            width: 100%;
+        
+            a {
+                width: 250px;
+                padding: 12px;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+    }
+    @media (max-width: $breakpoint-sm) {
+        padding: $spacing;
+        .portfolio {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            position: relative;
+        
+            h2 {
+                margin: 0 0 $spacing;
+                letter-spacing: 1px;
+                position: absolute;
+                top: -45px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: max-content;
+            }
+        }
+        
+        .portfolios {
+            border-radius: $spacing-lg;
+            display: flex;
+            max-width: none;
+            margin: 0 auto;
+            padding: $spacing-lg 0;
+        
+            a {
+                width: 250px;
+                border-radius: $spacing-xl;
+                border: 1px solid #fff;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+        }
+        .spatio-stand{
+            display: none;
+        }
+        
+        .fact {
+            max-width: none;
+            width: 90vw;
+            min-width: 290px;
+            padding: $spacing-lg $spacing;
+            border-radius: $spacing-md;
+        
+            &::after {
+                top: -3px;
+                height: 4px;
+                width: 85%;
+            }
+            h2{
+                top: -15px;
+            }
+
+            h3 {
+                font-size: 1.1rem;
+            }
+        }
+        
+    }
+    @media (max-width: $breakpoint-xs) {
+    }
+}
+
 .portfolio {
     text-align: center;
     width: 65%;
@@ -222,7 +344,7 @@
 
     .spatio-stand{
         bottom: -4px;
-        left: -px;
+        left: -4px;
         position: absolute;
         height: 350px;
         width: auto;
@@ -261,14 +383,78 @@
     }
 }
 
-.home-links {
-    width: max-content;
-    margin: 8% auto 15%;
-    border-radius: $spacing-xl;
-    padding: $spacing-xxl $spacing-xl;
+// second section nous maitrisons
+#scroll {
+    height: max-content;
+    width: 100vw;
+    padding: $spacing 0;
     position: relative;
-    border: 2px solid hsla(111, 24%, 94%, .1);
-    background: hsla(230, 70%, 5%, .7);
+    display: grid;
+    align-items: center;
+    margin:  0;
+    background: var(--dark-black);
+    overflow: hidden;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 $spacing;
+    }
+    @media (max-width: $breakpoint-xs) {
+        h2{
+            font-size: 1.4rem;
+        }
+        .tools {
+            div {
+                margin: 0 12px;
+                scale: .9;
+            }
+        }
+    }
+}
+
+.tools {
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    height: fit-content;
+
+    // overflow: scroll;
+    // animation: slide 18s linear infinite;
+    div {
+        margin: 0 $spacing-xl;
+    }
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-200%);
+    }
+}
+#visit{
+    @media (max-width: $breakpoint-xs) {
+        padding: 0 $spacing;
+        .home-links {
+            background: hsla(230, 70%, 5%, .75);
+            backdrop-filter: blur(5px);
+            border: 1px solid hsla(111, 24%, 94%, .5);
+        }
+    }
+}
+.home-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 275px);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 8% auto 12px;
+    border-radius: $spacing-lg;
+    padding: $spacing-xl $spacing;
+    position: relative;
+    background: hsla(227, 61%, 54%, 1);
     backdrop-filter: blur(2px);
 
     a {

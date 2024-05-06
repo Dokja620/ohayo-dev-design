@@ -1,14 +1,13 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
 import logo from '/media/logo-md-1.webp';
-// import infoLogo from "../icons/IcBaselineInfo.svg"
-// import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
-// import workLogo from "../icons/IcRoundFolderShared.svg"
-// import postLogo from "../icons/IcBaselinePhotoSizeSelectActual.svg"
-// import orderLogo from "../icons/IcBaselineAppRegistration.svg"
+import infoLogo from "../icons/IcBaselineInfo.svg"
+import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
+import workLogo from "../icons/IcRoundFolderShared.svg"
+import postLogo from "../icons/IcBaselinePhotoSizeSelectActual.svg"
+import orderLogo from "../icons/IcBaselineAppRegistration.svg"
 
 export default component$(() => {
-    // TODO exit menu whenever I click outside when the check box is checked watch then uncheck when outside is clicked
     return (
         <header>
             <nav>
@@ -16,22 +15,24 @@ export default component$(() => {
                     <Link href='/' class="ico-planet"><img src={logo} alt="aze" width={378} height={172}/></Link>
                 </div>
 
+                <input type="checkbox" name="burger" id="burger-toggle" class="burger-btn"/>
+                <label for="burger-toggle" id="toggle-off"></label>
+
                 <div class="nav-links">
-                    <div class="link"><Link href='/'>Réalisations</Link></div>
-                    <div class="link"><Link href='/'>Services</Link></div>
-                    <div class="link"><Link href='/'>Publications</Link></div>
-                    <div class="link"><Link href='/'>A-propos</Link></div>
+                    <div class="link order"><span class="ico-nav"><img src={orderLogo} alt="" width={20} height={20}/></span><Link href='/'>Concevoir</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={serviceLogo} alt="" width={20} height={20}/></span><Link href='/'>Services</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={workLogo} alt="" width={20} height={20}/></span><Link href='/'>Réalisations</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={postLogo} alt="" width={20} height={20}/></span><Link href='/'>Publications</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={infoLogo} alt="" width={20} height={20}/></span><Link href='/'>A-propos</Link></div>
                 </div>
 
                 <div class="link command"><Link href='/'>Concevoir</Link></div>
 
-                <input type="checkbox" name="burger" id="burger-toggle" class="burger-btn"/>
-                <label for="burger-toggle" id="toggle-off"></label>
 
                 <div class="burger-menu">
-                    <span></span>
-                    <div><span></span><span></span></div>
-                    <span></span>
+                    <div class="line"></div>
+                    <div class="double"><div class="line"></div><div class="line"></div></div>
+                    <div class="line"></div>
                 </div>
             </nav>
         </header>
