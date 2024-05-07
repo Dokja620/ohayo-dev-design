@@ -13,24 +13,26 @@ export default component$(() => {
                 <div class="text">
                     <h1>À-propos de nous</h1>
                     <p>
-                        Ohayo Dev & Design est une agence de développement web fondée en 2024 par Axel RAKOTOARIVAO 
-                        et Jenna ANDRIANARISATA à Nosy-Be Hell-ville, Madagascar, et désormais établie à Antananarivo. 
-                        Notre équipe est formée d'une élite de freelances, tous diplômés de la prestigieuse Sayna Academy, 
-                        une plateforme de développement web reconnue dans l'océan Indien, en partenariat avec l'OIF. 
-                        Notre admission, suite à un concours sélectif, et notre parcours, jalonné de défis éliminatoires, 
-                        témoignent de notre engagement et de notre compétence. Couronnés par le prix du lauréat de SAYNA, 
-                        notamment avec notre développeur front-end, nous avons choisi d'unir nos forces pour offrir des 
-                        services de développement web de premier plan. <br /> <br />
-                        Notre expertise couvre toutes les spécialités indispensables à la création de sites web performants 
-                        et attractifs : du développement Front-end et Back-end à la rédaction web, en passant par le UX/UI Design, 
-                        jusqu'au SEO et au marketing digital. Chaque membre de notre équipe excelle dans son domaine, garantissant 
-                        une approche complète et compétente pour chaque projet. <br /> <br />
-                        Si vous envisagez de créer ou d'optimiser votre site web, vous pouvez passer commande directement sur 
-                        notre site. Nous sommes également disponibles pour tout échange via nos réseaux sociaux, par e-mail 
-                        ou par téléphone (vous trouverez nos coordonnées en bas de page). Nous vous invitons à découvrir le 
-                        travail de nos membres en consultant leur portfolio individuel, ou à explorer nos projets d'agence 
-                        dans la section "Nos réalisations". Curieux du monde du développement web ? "Nos publications" et nos 
-                        présences sur les réseaux sociaux regorgent de sujets pensés pour vous enrichir.
+                        Ohayo Dev & Design est une agence de développement web basée à Antananarivo, Madagascar en 2024. 
+                        Dirigée par Jenna ANDRIANARISATA, notre agence se distingue par son expertise dans le développement 
+                        full code avec éditeur de code ainsi que le développement low code avec CMS. <br /> <br />
+
+                        Notre équipe pluridisciplinaire maîtrise tous les aspects essentiels pour la création de sites web 
+                        performants : le développement Front-end pour des interfaces utilisateur intuitives, le développement 
+                        Back-end pour des fonctionnalités robustes, le UX/UI Design pour une expérience utilisateur optimale, 
+                        la rédaction web pour des contenus engageants, et le référencement SEO pour une visibilité accrue.
+                        Cette combinaison de compétences, alliée à notre faculté avec le développement low code et full code, 
+                        nous permet de nous adapter parfaitement aux besoins et au budget de nos clients. Que vous recherchiez 
+                        une solution sur-mesure ou une approche plus rapide et économique, nous saurons vous proposer la 
+                        meilleure option. 
+                        Nos valeurs sont au cœur de notre démarche : la fiabilité de nos livrables, la satisfaction de nos 
+                        clients et l'équité de nos salaires. Nous nous positionnons sur la qualité de nos services, les 
+                        bénéfices apportés à nos clients et l'excellence de l'expérience client. 
+                        Enfin, notre approche agile, basée sur la méthodologie Scrum, nous permet de travailler de manière 
+                        flexible et réactive pour répondre au mieux à vos attentes. <br /> <br />
+
+                        Chez Ohayo Dev & Design, nous sommes passionnés par notre métier et nous mettons tout en œuvre 
+                        pour faire de votre projet web un véritable succès.
                     </p>
                 </div>
             </div>

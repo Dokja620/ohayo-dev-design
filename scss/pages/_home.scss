@@ -90,10 +90,21 @@
     gap: $spacing-md;
     margin: $spacing-xl 0 0;
 
-    span {
+    a {
         border: 1px solid white;
-        padding: 8px 16px;
+        padding: 8px 42px 8px 16px;
         border-radius: $spacing-lg;
+        position: relative;
+        &:hover > span{
+            transform: translateY(-2px) rotate(55deg);
+        }
+    }
+    span{
+        position: absolute;
+        right: 6px;
+        top: 2px;
+        filter: invert(1);
+        transition: .25s ease-in all;
     }
 }
 
@@ -132,6 +143,7 @@
 
 .fact {
     max-width: 40ch;
+    min-height: 225px;
     padding: $spacing-lg;
     border-radius: $spacing-lg;
     position: relative;
@@ -168,6 +180,47 @@
     p {
         text-align: justify;
         line-height: 25px;
+    }
+}
+
+.pagination{
+    display: flex;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    & > div{
+        height: 10px;
+        width: 10px;
+        margin: 0 4px;
+        background: var(--lavender-web);
+        border-radius: 50%;
+        transition: .25s width ease-in, .25s border-radius ease-in;
+        cursor: pointer;
+        // &.active{
+        //     height: 10px;
+        //     width: 20px;
+        //     border-radius: 16px;
+        // }
+    }
+}
+
+.navigation{
+    div{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        // background: var(--black-pearl);
+        img{
+            filter: drop-shadow(#040716 0px 0px 2px);
+        }
+    }
+    .left{
+        left: -30px;
+    }
+    .right{
+        right: -30px;
     }
 }
 

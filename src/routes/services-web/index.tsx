@@ -24,19 +24,22 @@ export default component$(() => {
                             <p>Rédaction web</p>
                         </div>
                         <div class="product">
-                            <p>Maintenance</p>
+                            <p>Maintenance de site web</p>
                         </div>
                         <div class="product">
                             <p>Sécurisation</p>
                         </div>
                         <div class="product">
-                            <p>Refonte</p>
+                            <p>Refonte de site web</p>
                         </div>
                         <div class="product">
                             <p>Mise en ligne et Hébergement</p>
                         </div>
                         <div class="product">
                             <p>Réferencement</p>
+                        </div>
+                        <div class="product">
+                            <p>Marketing Digital</p>
                         </div>
                     </div>
                 </div>
