@@ -25,7 +25,7 @@ export default component$(() => {
                     <a href="tel:+261334144813">+261 33 41 448 13</a>
                 </div>
                 <div class="mail">
-                    <a href="mailto:ohayodevanddesign@gmail.com">ohayodevanddesign@gmail.com</a>
+                    <a href="mailto:agence@ohayodevdesign.com">agence@ohayodevdesign.com</a>
                 </div>
                 <div class="adress">
                     <a href="">Madagascar, <br /> Antananarivo</a>

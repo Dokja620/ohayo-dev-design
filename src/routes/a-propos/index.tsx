@@ -11,7 +11,7 @@ export default component$(() => {
         <section id="about" class="container">
             <div class="part">
                 <div class="text">
-                <h1>À-propos de nous</h1>
+                    <h1>À-propos de nous</h1>
                     <p>
                         Ohayo Dev & Design est une agence de développement web fondée en 2024 par Axel RAKOTOARIVAO 
                         et Jenna ANDRIANARISATA à Nosy-Be Hell-ville, Madagascar, et désormais établie à Antananarivo. 
@@ -74,13 +74,13 @@ export default component$(() => {
                     </div>
                 </div>
             </div>
-            <div class="deco-home spatios">
+            <div class="deco-more spatios">
                 <img src={spatio} alt="" height={826} width={621}/>
             </div>
-            <div class="deco-home planets one">
+            <div class="deco-more planets one">
                 <img src={planet} alt="" height={894} width={894}/>
             </div>
-            <div class="deco-home planets two">
+            <div class="deco-more planets two">
                 <img src={planetViolet} alt="" height={894} width={894}/>
             </div>
         </section>

@@ -220,10 +220,17 @@ input:not([type="checkbox"], [type="radio"]) {
     }
 
     @media (max-width: $breakpoint-md) {
-        margin-top: 85px;
+        margin-top: 65px;
 
         form {
             width: 100%;
+        }
+
+        h1 {
+            width: 80%;
+            margin: 0 auto $spacing-lg;
+            text-align: center;
+            font-size: clamp(1.2rem, 6vw, 2.5rem);
         }
 
         .inputs {

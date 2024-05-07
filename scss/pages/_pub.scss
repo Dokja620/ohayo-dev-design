@@ -9,6 +9,13 @@
     }
     @media (max-width: $breakpoint-sm) {
         overflow-x: clip;
+        margin-top: 105px;
+        margin-bottom: 100px;
+        h1 {
+            margin: $spacing-lg 0 $spacing-lg;
+            text-align: center;
+            font-size: clamp(1.2rem, 6vw, 2.5rem);
+        }
     }
 }
 

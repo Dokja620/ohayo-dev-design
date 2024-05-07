@@ -74,6 +74,10 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+p {
+  font-weight: 300;
+}
+
 h1 {
   font-size: 2.489rem;
   /* 39.84px */
@@ -1645,35 +1649,9 @@ form .buttons {
 }
 
 #about {
-  margin-top: clamp(25px, 10%, 75px);
-  overflow: hidden;
+  margin-top: 55px;
   width: 100vw;
-}
-
-#about > :first-child {
-  background: hsla(230, 70%, 5%, 0.7);
-  border-radius: 1.5em;
-  padding: 3em;
-  margin-bottom: 100px;
   position: relative;
-  z-index: 1;
-}
-
-#about .spatios {
-  opacity: 0.6;
-}
-
-#about .planets.one {
-  top: 60%;
-  right: -5%;
-  scale: 125%;
-}
-
-#about h1 {
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0;
-  margin: 0 auto 1em;
 }
 
 .part {
@@ -1681,11 +1659,25 @@ form .buttons {
   width: 80%;
   min-width: none;
   text-align: justify;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.part .text {
+  background: hsla(230, 70%, 5%, 0.7);
+  padding: 2em;
+  border-radius: 2em;
 }
 
 .part h1 {
-  margin-bottom: 1em;
+  margin-bottom: 12px;
   text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.part p {
+  line-height: 25px;
 }
 
 .team {
@@ -1727,6 +1719,37 @@ form .buttons {
   object-fit: cover;
   -o-object-position: -170px 0;
   object-position: -170px 0;
+}
+
+.deco-more {
+  position: absolute;
+  top: 0;
+  filter: brightness(40%);
+}
+
+.deco-more img {
+  width: 100%;
+  height: 100%;
+}
+
+.deco-more.spatios {
+  z-index: -1;
+  right: 0;
+  scale: 0.8;
+}
+
+.deco-more.planets.one {
+  z-index: -3;
+  right: -30%;
+}
+
+.deco-more.planets.two {
+  z-index: -2;
+  left: 0;
+  bottom: -25%;
+  top: initial;
+  width: clamp(350px, 30vw, 1000px);
+  aspect-ratio: 1/1;
 }
 
 /*Desktop First*/
@@ -1932,19 +1955,20 @@ form .buttons {
     background: none;
   }
 
-  #about h1 {
-    font-size: clamp(1.2rem, 3vw, 3rem);
-  }
-
-  #about .planets.one {
-    top: 45%;
-    right: -7%;
-    scale: 100%;
+  #about {
+    margin-top: 85px;
   }
 
   #about .part {
     width: 90%;
-    padding: 2.5em;
+  }
+
+  #about .deco-more.spatios {
+    scale: 0.7;
+  }
+
+  #about .deco-more.planets.one {
+    scale: 0.9;
   }
 
   .container {
@@ -1982,7 +2006,7 @@ form .buttons {
     padding: 0 1em 10px 1em;
     top: 70px;
     right: -10px;
-    background: hsla(230, 70%, 5%, 0.75);
+    background: hsla(230, 70%, 5%, 0.95);
     border: 1px solid hsla(111, 24%, 94%, 0.15);
     border-radius: 1.5em 0 1.5em 1.5em;
     flex-direction: column;
@@ -2025,12 +2049,23 @@ form .buttons {
     height: 80vh;
   }
 
+  #scroll .content {
+    margin-top: 72px;
+  }
+
   #order {
-    margin-top: 85px;
+    margin-top: 65px;
   }
 
   #order form {
     width: 100%;
+  }
+
+  #order h1 {
+    width: 80%;
+    margin: 0 auto 1.75em;
+    text-align: center;
+    font-size: clamp(1.2rem, 6vw, 2.5rem);
   }
 
   #order .inputs input:not([type=checkbox], [type=radio]) {
@@ -2091,13 +2126,14 @@ form .buttons {
     box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
   }
 
-  #about .planets.two {
-    top: 110%;
-    left: -10%;
+  #works {
+    margin-top: 105px;
   }
 
-  #about .part {
-    padding: 1.5em;
+  #works h1 {
+    margin: 0;
+    text-align: center;
+    font-size: clamp(1.2rem, 6vw, 2.5rem);
   }
 
   .container {
@@ -2353,34 +2389,18 @@ form .buttons {
 
   #pubs {
     overflow-x: clip;
+    margin-top: 105px;
+    margin-bottom: 100px;
+  }
+
+  #pubs h1 {
+    margin: 1.75em 0 1.75em;
+    text-align: center;
+    font-size: clamp(1.2rem, 6vw, 2.5rem);
   }
 
   .card-swiper {
     flex-direction: column;
-  }
-
-  #about .part {
-    width: 100%;
-    padding: 1.5em;
-  }
-
-  #about .spatios {
-    opacity: 0.5;
-    scale: 0.7;
-  }
-
-  #about .planets.one {
-    top: 45%;
-    right: -7%;
-    scale: 80%;
-    opacity: 0.3;
-  }
-
-  #about .planets.two {
-    top: 130%;
-    right: -7%;
-    scale: 75%;
-    opacity: 0.3;
   }
 
   .container {
@@ -2421,6 +2441,7 @@ form .buttons {
 
   #visit {
     padding: 0 1em;
+    margin: 3em 0 3em;
   }
 
   #visit .home-links {
@@ -2551,6 +2572,7 @@ form .buttons {
 
   #works {
     min-height: calc(80vh - 86px);
+    margin-bottom: 25px;
   }
 
   .responsive {
@@ -2571,15 +2593,13 @@ form .buttons {
     transform: rotate(-90deg);
   }
 
-  #about.container {
-    padding: 1em;
-    font-size: 0.9rem;
-    margin-top: 85px;
+  #about {
+    margin-bottom: 30px;
+    overflow: hidden;
   }
 
   .container {
     width: 100%;
-    margin-top: 95px;
   }
 }
 /*# sourceMappingURL=global.css.map */

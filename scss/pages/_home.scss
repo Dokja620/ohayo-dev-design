@@ -391,13 +391,18 @@
     position: relative;
     display: grid;
     align-items: center;
-    margin:  0;
+    margin: 0;
     background: var(--dark-black);
     overflow: hidden;
 
     h2 {
         text-align: center;
         margin: 0 0 $spacing;
+    }
+    @media (max-width: $breakpoint-md) {
+        .content{
+            margin-top: 72px;
+        }
     }
     @media (max-width: $breakpoint-xs) {
         h2{
@@ -437,6 +442,7 @@
 #visit{
     @media (max-width: $breakpoint-xs) {
         padding: 0 $spacing;
+        margin: $spacing-xxl 0 $spacing-xxl;
         .home-links {
             background: hsla(230, 70%, 5%, .75);
             backdrop-filter: blur(5px);
