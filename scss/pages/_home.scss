@@ -226,8 +226,6 @@
 
 // portefolio
 #reason{
-    @media (max-width: $breakpoint-2xl) {
-    }
     @media (max-width: $breakpoint-xl) {
         .portfolios {
             gap: $spacing-lg;
@@ -259,8 +257,6 @@
                 padding: 12px;
             }
         }
-    }
-    @media (max-width: $breakpoint-md) {
     }
     @media (max-width: $breakpoint-sm) {
         padding: $spacing;
@@ -320,9 +316,6 @@
                 font-size: 1.1rem;
             }
         }
-        
-    }
-    @media (max-width: $breakpoint-xs) {
     }
 }
 

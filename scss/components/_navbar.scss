@@ -51,11 +51,22 @@ header{
             }
         }
     }
-    @media (max-width: 640px) {
-    }
     @media (max-width: 475px) {
-        .order{
-            display: block;
+        .burger-menu{
+            display: flex;
+            margin-left: auto;
+        }
+        .link.order-link{
+            display: flex;
+        }
+        .command{
+            display: none;
+        }
+        .burger-btn{
+            &:checked ~ .nav-links{
+                height: 500%;
+                max-height: 250px;
+            }
         }
     }
 }
@@ -96,9 +107,9 @@ nav{
     .ico-nav{
         display: none;
         padding: 2px 0 0;
-        filter: invert(86%) sepia(21%) saturate(412%) hue-rotate(205deg) brightness(96%) contrast(98%);
+        filter: invert(94%) sepia(3%) saturate(391%) hue-rotate(66deg) brightness(105%) contrast(91%);
     }
-    &.order{
+    &.order-link{
         display: none;
     }
 }

@@ -147,7 +147,7 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="choice">
-                                <h3>visuel :</h3>
+                                <h3>Visuel :</h3>
                                 <div class="option">
                                     <input type="radio" name="visual-content" id="visual-yes" />
                                     <label for="visual-yes">J'ai déjà</label>
@@ -158,7 +158,7 @@ export default component$(() => {
                                 </div>
                             </div>
                             <div class="choice">
-                                <h3>textuel :</h3>
+                                <h3>Textuel :</h3>
                                 <div class="option">
                                     <input type="radio" name="text-content" id="text-yes" />
                                     <label for="text-yes">J'ai déjà</label>

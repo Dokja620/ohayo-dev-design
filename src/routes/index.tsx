@@ -58,8 +58,7 @@ export default component$(() => {
                         <p>Démarrez dès maintenant la conception de votre site web avec Ohayo Dev & Design pour viser un public mondial avec un service accessible partout 24h/24 et 07j/07.</p>
                     </div>
                     <div class="c-t-a">
-                        <span><Link href='/'>Démarrez maintenant</Link></span>
-                        {/* <span><Link href='/'>Contact</Link></span> */}
+                        <span><Link href='/concevoir-site-web'>Démarrez maintenant</Link></span>
                     </div>
                 </div>
 
@@ -73,19 +72,19 @@ export default component$(() => {
                     <h2>Voir nos portfolio :</h2>
                     <div class="portfolios">
                         <span class="front">
-                            <Link href="/">Développeur Front-End</Link>
+                            <a href="/" target="_blank">Développeur Front-End</a>
                         </span>
                         <span>
-                            <Link href="/">Développeur Back-End</Link>
+                            <a href="/" target="_blank">Développeur Back-End</a>
                         </span>
                         <span>
-                            <Link href="/">UX / UI Designer</Link>
+                            <a href="/" target="_blank">UX / UI Designer</a>
                         </span>
                         <span>
-                            <Link href="/">Rédacteur Web</Link>
+                            <a href="/" target="_blank">Rédacteur Web</a>
                         </span>
                         <span>
-                            <Link href="/">SEO Analyst</Link>
+                            <a href="/" target="_blank">SEO Analyst</a>
                         </span>
                     </div>
                     <div class="spatio-stand">
@@ -160,10 +159,10 @@ export default component$(() => {
             {/* Navigation */}
             <section id="visit" class="container">
                 <div class="home-links">
-                    <Link href="/">Qui sommes-nous ?</Link>
-                    <Link href="/">Aperçu de notre travail</Link>
-                    <Link href="/">Nos publications</Link>
-                    <Link href="/">Faire une commande</Link>
+                    <Link href="/a-propos">Qui sommes-nous ?</Link>
+                    <Link href="/portefolio">Aperçu de notre travail</Link>
+                    <Link href="/publication-web">Nos publications</Link>
+                    <Link href="/concevoir-site-web">Faire une commande</Link>
                 </div>
             </section>
         </>

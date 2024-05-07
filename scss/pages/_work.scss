@@ -1,16 +1,17 @@
 #works {
     min-height: calc(100vh - 86px);
-    
+    margin-top: 110px;
     h1 {
         margin: $spacing-md 0 $spacing-xl;
         text-align: center;
+        font-size: clamp(1.2rem, 1vw, 2.2rem);
     }
     @media (max-width: $breakpoint-md) {
         margin-top: 105px;
         h1 {
-            margin: 0;
+            margin: 0 0 $spacing-2xl;
             text-align: center;
-            font-size: clamp(1.2rem, 6vw, 2.5rem);
+            font-size: clamp(1.2rem, 2vw, 2.5rem);
         }
     }
     @media (max-width: $breakpoint-xs) {
@@ -102,7 +103,7 @@
         transform: rotate(-90deg);
     }
     @media (max-width: $breakpoint-xs) {
-        top: 80%;
+        top: 87%;
         &.next {
             right: 3%;
             transform: rotate(90deg);

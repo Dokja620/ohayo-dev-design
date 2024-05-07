@@ -151,10 +151,10 @@ nav a {
 .link .ico-nav {
   display: none;
   padding: 2px 0 0;
-  filter: invert(86%) sepia(21%) saturate(412%) hue-rotate(205deg) brightness(96%) contrast(98%);
+  filter: invert(94%) sepia(3%) saturate(391%) hue-rotate(66deg) brightness(105%) contrast(91%);
 }
 
-.link.order {
+.link.order-link {
   display: none;
 }
 
@@ -686,7 +686,6 @@ button {
 
 .inputs input:not([type=checkbox], [type=radio]) {
   color: var(--lavender-web);
-  font-family: "League Spartan";
   font-weight: 300;
   font-size: 1rem;
   width: 40vmin;
@@ -814,11 +813,13 @@ input:not([type=checkbox], [type=radio]):focus {
   flex-direction: column;
   justify-content: center;
   min-height: calc(100vh - 86px);
+  margin-top: 50px;
 }
 
 #order h1 {
   text-align: center;
   margin-bottom: 1em;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
 }
 
 form {
@@ -939,7 +940,6 @@ form .buttons {
   height: 225px;
   margin: 1em auto 0;
   resize: none;
-  font-family: "Poppins";
   font-weight: 300;
   letter-spacing: 1px;
   background: hsla(228, 43%, 9%, 0.5);
@@ -1041,6 +1041,10 @@ form .buttons {
   cursor: pointer;
 }
 
+#offer {
+  margin-top: 85px;
+}
+
 #offer h1 {
   font-size: 1.4rem;
   text-align: center;
@@ -1051,12 +1055,13 @@ form .buttons {
 #offer h2 {
   opacity: 0.8;
   margin: 0 0 1em;
+  text-align: center;
 }
 
 .offer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3em;
+  gap: 75px;
   justify-content: space-evenly;
   background: hsla(230, 70%, 5%, 0.5);
   -webkit-backdrop-filter: blur(3px);
@@ -1064,6 +1069,19 @@ form .buttons {
   border: 2px solid #3f3636;
   border-radius: 1.5em;
   padding: 1.75em;
+  position: relative;
+}
+
+.offer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(60%);
+  width: 4px;
+  border-radius: 2px;
+  height: 100%;
+  background: #3f3636;
 }
 
 .extras {
@@ -1087,11 +1105,14 @@ form .buttons {
   background: var(--black-pearl);
   -webkit-backdrop-filter: blur(25%);
   backdrop-filter: blur(25%);
-  border-radius: 1.5em;
-  padding: 8px;
+  border-radius: 1.75em;
+  padding: 16px 8px;
   outline: 1px solid hsla(0, 0%, 8%, 0.3);
   outline-offset: 3px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ord {
@@ -1122,11 +1143,13 @@ form .buttons {
 
 #works {
   min-height: calc(100vh - 86px);
+  margin-top: 110px;
 }
 
 #works h1 {
   margin: 1.5em 0 2em;
   text-align: center;
+  font-size: clamp(1.2rem, 1vw, 2.2rem);
 }
 
 .site {
@@ -2065,7 +2088,7 @@ form .buttons {
     width: 80%;
     margin: 0 auto 1.75em;
     text-align: center;
-    font-size: clamp(1.2rem, 6vw, 2.5rem);
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
   }
 
   #order .inputs input:not([type=checkbox], [type=radio]) {
@@ -2092,10 +2115,6 @@ form .buttons {
     color: grey;
     padding: 0;
     background: none;
-  }
-
-  #offer {
-    margin-top: 85px;
   }
 
   #offer h2 {
@@ -2126,14 +2145,18 @@ form .buttons {
     box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
   }
 
+  #offer .offer::after {
+    display: none;
+  }
+
   #works {
     margin-top: 105px;
   }
 
   #works h1 {
-    margin: 0;
+    margin: 0 0 2.5em;
     text-align: center;
-    font-size: clamp(1.2rem, 6vw, 2.5rem);
+    font-size: clamp(1.2rem, 2vw, 2.5rem);
   }
 
   .container {
@@ -2409,8 +2432,22 @@ form .buttons {
 }
 
 @media (max-width: 475px) {
-  header .order {
-    display: block;
+  header .burger-menu {
+    display: flex;
+    margin-left: auto;
+  }
+
+  header .link.order-link {
+    display: flex;
+  }
+
+  header .command {
+    display: none;
+  }
+
+  header .burger-btn:checked ~ .nav-links {
+    height: 500%;
+    max-height: 250px;
   }
 
   footer .deco {
@@ -2580,7 +2617,7 @@ form .buttons {
   }
 
   .nav-btn {
-    top: 80%;
+    top: 87%;
   }
 
   .nav-btn.next {
