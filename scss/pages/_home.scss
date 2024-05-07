@@ -1,5 +1,5 @@
 #hero {
-    height: 100vh;
+    height: calc(100vh + 50px);
     width: 100vw;
     display: grid;
     align-items: center;
@@ -90,13 +90,17 @@
     gap: $spacing-md;
     margin: $spacing-xl 0 0;
 
-    a {
+    & > * {
         border: 1px solid white;
         padding: 8px 42px 8px 16px;
         border-radius: $spacing-lg;
         position: relative;
+        transition: .25s ease-in-out background;
         &:hover > span{
             transform: translateY(-2px) rotate(55deg);
+        }
+        &:hover{
+            background: hsla(211, 93%, 27%, 1);
         }
     }
     span{
@@ -120,6 +124,7 @@
     &.spatio {
         right: 30%;
         filter: brightness(70%);
+        animation: floating-home 7s ease infinite;
     }
 
     &.planet {
@@ -493,20 +498,24 @@
             background: hsla(230, 70%, 5%, .75);
             backdrop-filter: blur(5px);
             border: 1px solid hsla(111, 24%, 94%, .5);
+            gap: $spacing;
         }
     }
 }
 .home-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, 275px);
+    gap: $spacing-xxl;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     margin: 8% auto 12px;
     border-radius: $spacing-lg;
     padding: $spacing-xl $spacing;
     position: relative;
-    background: hsla(227, 61%, 54%, 1);
+    background: hsla(230, 70%, 5%, .7);
+    border: 1px solid hsla(111, 24%, 94%, .5);
+    // background: hsla(227, 61%, 54%, 1);
     backdrop-filter: blur(2px);
 
     a {

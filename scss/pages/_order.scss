@@ -37,7 +37,7 @@ label {
 
 // Button Styles
 button {
-    border: 2px solid var(--mint-cream);
+    border: 1px solid var(--mint-cream);
     border-radius: $spacing-lg;
     background: var(--black-pearl);
     padding: $spacing $spacing-lg;
@@ -45,6 +45,10 @@ button {
     font-weight: 600;
     letter-spacing: 1px;
     cursor: pointer;
+    transition: .25s ease-in-out background;
+    &:hover{
+        background: var(--yale-blue);
+    }
 }
 
 .inputs {
@@ -581,9 +585,11 @@ form {
 // Step 05
 .step-5 {
     h2 {
-        margin-bottom: 8px;
+        margin-bottom: $spacing;
     }
-
+    .h2{
+        margin-top: $spacing-lg;
+    }
     .radio {
         display: grid;
         grid-template-columns: repeat(3, 185px);

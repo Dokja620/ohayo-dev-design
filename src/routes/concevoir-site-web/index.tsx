@@ -94,7 +94,7 @@ export default component$(() => {
                         </div> */}
                     </div>
                     <div class="buttons">
-                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(1);}}>Previous</button>
+                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(1);}}>retour</button>
                         <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(3);}}>Suivant</button>
                     </div>
                 </div>
@@ -171,7 +171,7 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="buttons">
-                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(2);}}>Previous</button>
+                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(2);}}>retour</button>
                         <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(4);}}>Suivant</button>
                     </div>
                 </div>
@@ -185,7 +185,7 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="buttons">
-                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(3);}}>Previous</button>
+                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(3);}}>retour</button>
                         <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(5);}}>Suivant</button>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ export default component$(() => {
                                 <label for="social-radio">Réseau social</label>
                             </div>
                         </div>
-                        <h2>Mode de paiement :</h2>
+                        <h2 class="h2">Mode de paiement :</h2>
                         <div class="radio">
                             <div class="parent">
                                 <input type="radio" name="payment" id="bank-radio" />
@@ -230,8 +230,8 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="buttons">
-                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(4);}}>Previous</button>
-                        <button>Envoyer</button>
+                        <button type="button" onClick$={(event) => {event.preventDefault(); changeStep(4);}}>retour</button>
+                        <button>Demander un devis</button>
                     </div>
                 </div>
             </form>

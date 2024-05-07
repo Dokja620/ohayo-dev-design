@@ -1,6 +1,9 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
-import jenna from '/media/team/jenna.webp';
+import jenna from '/media/team/001.png';
+import axel from '/media/team/002.png';
+import andreas from '/media/team/003.png';
+import florence from '/media/team/004.png';
 import planet from "/media/home/planet.webp";
 import planetViolet from "/media/home/planet-001.webp";
 import spatio from "/media/home/spatio.webp";
@@ -39,7 +42,7 @@ export default component$(() => {
             <div class="parts">
                 <div class="team">
                     <div class="person">
-                        <div class="picture">
+                        <div class="picture jenna">
                             <img src={jenna} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
                         <div class="desc">
@@ -48,8 +51,8 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="person">
-                        <div class="picture">
-                            <img src={jenna} alt="picture of Jenna" width={1344} height={756}/>
+                        <div class="picture axel">
+                            <img src={axel} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
                         <div class="desc">
                             <p id="name">Axel RAKOTOARIVAO</p>
@@ -57,8 +60,8 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="person">
-                        <div class="picture">
-                            <img src={jenna} alt="picture of Jenna" width={1344} height={756}/>
+                        <div class="picture andreas">
+                            <img src={andreas} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
                         <div class="desc">
                             <p id="name">Andréas RABESON</p>
@@ -66,8 +69,8 @@ export default component$(() => {
                         </div>
                     </div>
                     <div class="person">
-                        <div class="picture">
-                            <img src={jenna} alt="picture of Jenna" width={1344} height={756}/>
+                        <div class="picture florence">
+                            <img src={florence} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
                         <div class="desc">
                             <p id="name">Florence RAFARANIARIVELO</p>

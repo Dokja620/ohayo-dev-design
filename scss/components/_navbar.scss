@@ -125,6 +125,10 @@ nav{
         padding: 8px 12px;
         border-radius: $spacing-lg;
         border: 1px solid hsla(111, 24%, 94%, .75);
+        transition: .25s ease-in-out background;
+        &:hover{
+            background: hsla(211, 93%, 27%, 1);
+        }
     }
 }
 

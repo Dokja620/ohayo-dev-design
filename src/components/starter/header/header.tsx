@@ -4,7 +4,7 @@ import logo from '/media/logo-md-1.webp';
 import infoLogo from "../icons/IcBaselineInfo.svg"
 import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
 import workLogo from "../icons/IcRoundFolderShared.svg"
-import postLogo from "../icons/IcBaselinePhotoSizeSelectActual.svg"
+// import postLogo from "../icons/IcBaselinePhotoSizeSelectActual.svg"
 import orderLogo from "../icons/IcBaselineAppRegistration.svg"
 
 export default component$(() => {
@@ -22,7 +22,7 @@ export default component$(() => {
                     <div class="link order-link"><span class="ico-nav"><img src={orderLogo} alt="" width={20} height={20}/></span><Link href='/concevoir-site-web'>Concevoir</Link></div>
                     <div class="link"><span class="ico-nav"><img src={serviceLogo} alt="" width={20} height={20}/></span><Link href='/services-web'>Services</Link></div>
                     <div class="link"><span class="ico-nav"><img src={workLogo} alt="" width={20} height={20}/></span><Link href='/portefolio'>Réalisations</Link></div>
-                    <div class="link"><span class="ico-nav"><img src={postLogo} alt="" width={20} height={20}/></span><Link href='/publication-web'>Publications</Link></div>
+                    {/* <div class="link"><span class="ico-nav"><img src={postLogo} alt="" width={20} height={20}/></span><Link href='/publication-web'>Publications</Link></div> */}
                     <div class="link"><span class="ico-nav"><img src={infoLogo} alt="" width={20} height={20}/></span><Link href='/a-propos'>A-propos</Link></div>
                 </div>
 

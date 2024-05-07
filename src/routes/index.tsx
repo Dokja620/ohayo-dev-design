@@ -6,6 +6,7 @@ import planet from "/media/home/planet.webp";
 import spatio from "/media/home/spatio.webp";
 import spatioStand from "/media/home/spatio-stand.webp";
 import rocket from "/media/home/rocket.svg";
+// import price from "/media/home/price.svg";
 import arrow from "/media/home/IcOutlineArrowBackIosNew.svg";
 import arrowr from "/media/home/IcOutlineArrowForwardIosNew.svg";
 
@@ -54,6 +55,7 @@ export default component$(() => {
     // Why us slider
     const state = useStore({ currentSlide: 1, maxSlides: 11 });
 
+    // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
         const updateSlide = () => {
             state.currentSlide = (state.currentSlide % state.maxSlides) + 1;
@@ -82,10 +84,11 @@ export default component$(() => {
                 <div class="content">
                     <div class="intro">
                         <h1>Rendez votre entreprise visible à l'international</h1>
-                        <p>Démarrez dès maintenant la conception de votre site web avec Ohayo Dev & Design pour viser un public mondial avec un service accessible partout 24h/24 et 07j/07.</p>
+                        <p>Démarrer dès maintenant la conception de votre site web avec Ohayo Dev & Design pour viser un public mondial avec un service accessible partout 24h/24 et 07j/07.</p>
                     </div>
                     <div class="c-t-a">
-                        <Link href='/concevoir-site-web'>Démarrez maintenant <span><img src={rocket} alt="rocket icon" width={30} height={30}/></span></Link>
+                        <Link href='/concevoir-site-web'>Démarrer maintenant <span><img src={rocket} alt="rocket icon" width={30} height={30}/></span></Link>
+                        {/* <div>Demander un devis<span><img src={price} alt="rocket icon" width={30} height={30}/></span></div> */}
                     </div>
                 </div>
 
@@ -111,7 +114,7 @@ export default component$(() => {
                             <a href="https://jenna-wendy.github.io/Portefolio" target="_blank">Rédacteur Web</a>
                         </span>
                         <span>
-                            <a href="https://jenna-wendy.github.io/Portefolio" target="_blank">SEO Analyst</a>
+                            <a href="https://tantelyflorence.github.io/portfolio-tantely" target="_blank">SEO Analyst</a>
                         </span>
                     </div>
                     <div class="spatio-stand">
@@ -255,7 +258,7 @@ export default component$(() => {
                 <div class="home-links">
                     <Link href="/a-propos">Qui sommes-nous ?</Link>
                     <Link href="/portefolio">Aperçu de notre travail</Link>
-                    <Link href="/publication-web">Nos publications</Link>
+                    {/* <Link href="/publication-web">Nos publications</Link> */}
                     <Link href="/concevoir-site-web">Faire une commande</Link>
                 </div>
             </section>
