@@ -22,3 +22,18 @@ $breakpoint-lg: 1024px;
 $breakpoint-md: 768px;
 $breakpoint-sm: 640px;
 $breakpoint-xs: 475px;
+
+// split light text animation
+@mixin light($num-children: 20, $speed: 0.05s) {
+    $delay-increment: $speed;
+
+    @for $i from 1 through $num-children {
+        & :nth-child(#{$i}) {
+            $delay: $delay-increment * ($i - 1);
+            transition: .25s all ease-in-out $delay;
+        }
+        &:hover :nth-child(#{$i}) {
+            text-shadow: white 0px 0px 5px;
+        }
+    }
+}

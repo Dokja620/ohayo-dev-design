@@ -64,7 +64,7 @@ header{
         }
         .burger-btn{
             &:checked ~ .nav-links{
-                height: 500%;
+                height: 400%;
                 max-height: 250px;
             }
         }
@@ -104,6 +104,13 @@ nav{
     display: flex;
     gap: 10px;
     align-items: center;
+    a {
+        letter-spacing: 1px;
+        @media (min-width: $breakpoint-lg) {
+            @include light(12, .05s);
+        }
+    }
+    
     .ico-nav{
         display: none;
         padding: 2px 0 0;
@@ -188,7 +195,7 @@ nav{
         display: block;
     }
     &:checked ~ .nav-links{
-        height: 400%;
+        height: 300%;
         opacity: 1;
     }
     &:checked ~ .burger-menu .double :nth-child(1){

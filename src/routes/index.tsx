@@ -15,45 +15,13 @@ const basePath = "/media/tech/";
 
 export default component$(() => {
     // Array of tool objects
-    const toolsA = Array.from({ length: 4 }, (_, i) => ({
+    const tools = Array.from({ length: 35 }, (_, i) => ({
         src: `${basePath}${String(i + 1).padStart(3, '0')}.webp`,
         alt: `Tool ${i + 1}`
     }));
-    const toolsB = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 5).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 5}`
-    }));
-    const toolsC = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 9).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 9}`
-    }));
-    const toolsD = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 13).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 13}`
-    }));
-    const toolsE = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 17).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 17}`
-    }));
-    const toolsF = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 21).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 21}`
-    }));
-    const toolsG = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 25).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 25}`
-    }));
-    const toolsH = Array.from({ length: 4 }, (_, i) => ({
-        src: `${basePath}${String(i + 29).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 29}`
-    }));
-    const toolsI = Array.from({ length: 2 }, (_, i) => ({
-        src: `${basePath}${String(i + 33).padStart(3, '0')}.webp`,
-        alt: `Tool ${i + 32}`
-    }));
 
     // Why us slider
-    const state = useStore({ currentSlide: 1, maxSlides: 11 });
+    const state = useStore({ currentSlide: 1, maxSlides: 12 });
 
     // eslint-disable-next-line qwik/no-use-visible-task
     useVisibleTask$(() => {
@@ -137,34 +105,38 @@ export default component$(() => {
                             <p>Nous prenons en charge l'optimisation de chaque site web que nous créons pour améliorer ses performances et sa visibilité.</p>
                         </div>
                         <div class="wrap slides-4">
+                            <h3>Hébergement offert :</h3>
+                            <p>Nous offrons l'hébergement pour la première année avec un email professionnel.</p>
+                        </div>
+                        <div class="wrap slides-5">
                             <h3>Expertise spécialisée :</h3>
                             <p>Notre équipe comprend des spécialistes dans tous les domaines nécessaires pour optimiser votre site web au maximum et répondre à tous vos besoins.</p>
                         </div>
-                        <div class="wrap slides-5">
+                        <div class="wrap slides-6">
                             <h3>Flexibilité de développement :</h3>
                             <p>Selon vos besoins, moyens et préférences, vous avez le choix entre un développement full code pour une personnalisation maximale ou low code pour une mise en œuvre rapide.</p>
                         </div>
-                        <div class="wrap slides-6">
+                        <div class="wrap slides-7">
                             <h3>Ressources supplémentaires :</h3>
                             <p>Nous mettons  à la disposition de bos clients un e-book gratuit pour répondre à toutes vos questions, vous guidant à travers chaque étape de la conception de votre site.</p>
                         </div>
-                        <div class="wrap slides-7">
+                        <div class="wrap slides-8">
                             <h3>Analyse personnalisée :</h3>
                             <p>Nous pouvons offrir une analyse détaillée de votre site existant, si nécessaire, pour identifier les améliorations potentielles.</p>
                         </div>
-                        <div class="wrap slides-8">
+                        <div class="wrap slides-9">
                             <h3>Facilités de paiement :</h3>
                             <p>Nous offrons la possibilité de régler en plusieurs fois pour faciliter l'accès à nos services.</p>
                         </div>
-                        <div class="wrap slides-9">
+                        <div class="wrap slides-10">
                             <h3>Écoute et personnalisation :</h3>
                             <p>Notre équipe travaille en étroite collaboration avec vous pour s'assurer que le site final reflète parfaitement votre vision, prête à effectuer les ajustements nécessaires jusqu'à votre entière satisfaction.</p>
                         </div>
-                        <div class="wrap slides-10">
+                        <div class="wrap slides-11">
                             <h3>Support continu :</h3>
                             <p>La possibilité d'engager nos spécialistes à tout moment du projet assure un soutien constant et une adaptabilité à vos besoins évolutifs.</p>
                         </div>
-                        <div class="wrap slides-11">
+                        <div class="wrap slides-12">
                             <h3>Site web sécurisé :</h3>
                             <p>Pour ceux qui en ont besoin, nous prenons en charge le processus d'hébergement de votre site, gratuitement.</p>
                         </div>
@@ -180,6 +152,7 @@ export default component$(() => {
                             <div onClick$={(event) => {event.preventDefault(); changeStep(9);}}></div>
                             <div onClick$={(event) => {event.preventDefault(); changeStep(10);}}></div>
                             <div onClick$={(event) => {event.preventDefault(); changeStep(11);}}></div>
+                            <div onClick$={(event) => {event.preventDefault(); changeStep(12);}}></div>
                         </div>
                         <div class="navigation">
                             <div class="left" onClick$={(event) => {
@@ -203,52 +176,21 @@ export default component$(() => {
             <section id="scroll">
                 <div class="content">
                     <h2>Nous maitrisons :</h2>
-                    <div class="tools">
-                        {toolsA.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsB.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsC.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsD.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsE.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsF.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsG.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsH.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
-                        {toolsI.map(tool => (
-                            <div key={tool.src}>
-                                <img src={tool.src} alt={tool.alt} width={75} height={75}/>
-                            </div>
-                        ))}
+                    <div class="scroll">
+                        <div class="tools">
+                            {tools.map(tool => (
+                                <span key={tool.src}>
+                                    <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                                </span>
+                            ))}
+                        </div>
+                        <div class="tools"> 
+                            {tools.map(tool => (
+                                <span key={tool.src}>
+                                    <img src={tool.src} alt={tool.alt} width={75} height={75}/>
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>

@@ -39,3 +39,22 @@
         transform: rotate(0);
     }
 }
+
+section{
+    animation: page-entering .25s ease-in-out forwards;
+}
+
+@keyframes page-entering {
+    from{
+        opacity: 0;
+    }
+}
+
+@keyframes light {
+    0%{
+        text-shadow: none;
+    }
+    100%{
+        text-shadow: var(--lavender-web) 0px 0px 5px;
+    }
+}

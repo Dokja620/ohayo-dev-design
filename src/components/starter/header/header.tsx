@@ -8,6 +8,11 @@ import workLogo from "../icons/IcRoundFolderShared.svg"
 import orderLogo from "../icons/IcBaselineAppRegistration.svg"
 
 export default component$(() => {
+    function splitTextToChars(text: string) {
+    return text.split('').map((char, index) => (
+        <span key={index}>{char}</span>
+    ));
+}
     return (
         <header>
             <nav>
@@ -19,15 +24,13 @@ export default component$(() => {
                 <label for="burger-toggle" id="toggle-off"></label>
 
                 <div class="nav-links">
-                    <div class="link order-link"><span class="ico-nav"><img src={orderLogo} alt="" width={20} height={20}/></span><Link href='/concevoir-site-web'>Concevoir</Link></div>
-                    <div class="link"><span class="ico-nav"><img src={serviceLogo} alt="" width={20} height={20}/></span><Link href='/services-web'>Services</Link></div>
-                    <div class="link"><span class="ico-nav"><img src={workLogo} alt="" width={20} height={20}/></span><Link href='/portefolio'>Réalisations</Link></div>
-                    {/* <div class="link"><span class="ico-nav"><img src={postLogo} alt="" width={20} height={20}/></span><Link href='/publication-web'>Publications</Link></div> */}
-                    <div class="link"><span class="ico-nav"><img src={infoLogo} alt="" width={20} height={20}/></span><Link href='/a-propos'>A-propos</Link></div>
+                    <div class="link order-link"><span class="ico-nav"><img src={orderLogo} alt="" width={20} height={20}/></span><Link href='/concevoir-site-web'>{splitTextToChars('Concevoir')}</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={serviceLogo} alt="" width={20} height={20}/></span><Link href='/services-web'>{splitTextToChars('Services')}</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={workLogo} alt="" width={20} height={20}/></span><Link href='/portefolio'>{splitTextToChars('Réalisations')}</Link></div>
+                    <div class="link"><span class="ico-nav"><img src={infoLogo} alt="" width={20} height={20}/></span><Link href='/a-propos'>{splitTextToChars('A-propos')}</Link></div>
                 </div>
 
-                <div class="link command"><Link href='/concevoir-site-web'>Concevoir</Link></div>
-
+                <div class="link command"><Link href='/concevoir-site-web'>{splitTextToChars('Concevoir')}</Link></div>
 
                 <div class="burger-menu">
                     <div class="line"></div>

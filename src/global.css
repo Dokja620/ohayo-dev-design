@@ -148,6 +148,10 @@ nav a {
   align-items: center;
 }
 
+.link a {
+  letter-spacing: 1px;
+}
+
 .link .ico-nav {
   display: none;
   padding: 2px 0 0;
@@ -231,7 +235,7 @@ nav a {
 }
 
 .burger-btn:checked ~ .nav-links {
-  height: 400%;
+  height: 300%;
   opacity: 1;
 }
 
@@ -632,6 +636,11 @@ footer a {
   max-width: 27ch;
   text-align: center;
   letter-spacing: 1px;
+  transition: 0.25s ease-in-out background;
+}
+
+.portfolios a:hover {
+  background: hsl(211, 93%, 27%);
 }
 
 #scroll {
@@ -652,19 +661,43 @@ footer a {
   margin: 0 0 1em;
 }
 
-.tools {
+.scroll {
+  position: relative;
   display: flex;
-  width: 100%;
-  max-width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 95vw;
+  min-width: 300px;
+  margin: 0 auto;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  --t: 42s;
 }
 
-.tools div {
-  margin: 0 2em;
+.scroll > div {
+  white-space: nowrap;
+  animation: slide var(--t) linear infinite;
+}
+
+.scroll > div > span {
+  display: inline-flex;
+  margin: 0 1.75em;
+}
+
+.scroll > div:nth-child(2) {
+  animation: slide2 var(--t) linear infinite;
+  animation-delay: calc(var(--t) / -2);
 }
 
 @keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
   from {
     transform: translateX(0);
   }
@@ -699,6 +732,11 @@ footer a {
   margin: 12px 1em;
   max-width: 25ch;
   text-align: center;
+  transition: 0.25s ease-in-out background;
+}
+
+.home-links a:hover {
+  background: hsl(211, 93%, 27%);
 }
 
 [active-step] > div {
@@ -1523,6 +1561,124 @@ form .buttons {
   }
 }
 
+section {
+  animation: page-entering 0.25s ease-in-out forwards;
+}
+
+@keyframes page-entering {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes light {
+  0% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: var(--lavender-web) 0px 0px 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .link a :nth-child(1) {
+    transition: 0.25s all ease-in-out 0s;
+  }
+
+  .link a:hover :nth-child(1) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(2) {
+    transition: 0.25s all ease-in-out 0.05s;
+  }
+
+  .link a:hover :nth-child(2) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(3) {
+    transition: 0.25s all ease-in-out 0.1s;
+  }
+
+  .link a:hover :nth-child(3) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(4) {
+    transition: 0.25s all ease-in-out 0.15s;
+  }
+
+  .link a:hover :nth-child(4) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(5) {
+    transition: 0.25s all ease-in-out 0.2s;
+  }
+
+  .link a:hover :nth-child(5) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(6) {
+    transition: 0.25s all ease-in-out 0.25s;
+  }
+
+  .link a:hover :nth-child(6) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(7) {
+    transition: 0.25s all ease-in-out 0.3s;
+  }
+
+  .link a:hover :nth-child(7) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(8) {
+    transition: 0.25s all ease-in-out 0.35s;
+  }
+
+  .link a:hover :nth-child(8) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(9) {
+    transition: 0.25s all ease-in-out 0.4s;
+  }
+
+  .link a:hover :nth-child(9) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(10) {
+    transition: 0.25s all ease-in-out 0.45s;
+  }
+
+  .link a:hover :nth-child(10) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(11) {
+    transition: 0.25s all ease-in-out 0.5s;
+  }
+
+  .link a:hover :nth-child(11) {
+    text-shadow: white 0px 0px 5px;
+  }
+
+  .link a :nth-child(12) {
+    transition: 0.25s all ease-in-out 0.55s;
+  }
+
+  .link a:hover :nth-child(12) {
+    text-shadow: white 0px 0px 5px;
+  }
+}
+
 @media (min-width: 1536px) {
   .container {
     max-width: 1280px;
@@ -2117,7 +2273,7 @@ form .buttons {
   }
 
   header .burger-btn:checked ~ .nav-links {
-    height: 500%;
+    height: 400%;
     max-height: 250px;
   }
 
