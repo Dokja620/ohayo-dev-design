@@ -246,7 +246,8 @@
 [slide-step="8"]>.slides-8,
 [slide-step="9"]>.slides-9,
 [slide-step="10"]>.slides-10,
-[slide-step="11"]>.slides-11 {
+[slide-step="11"]>.slides-11,
+[slide-step="12"]>.slides-12 {
     display: block;
 }
 
@@ -260,7 +261,8 @@
 [slide-step="8"]>.pagination :nth-child(8),
 [slide-step="9"]>.pagination :nth-child(9),
 [slide-step="10"]>.pagination :nth-child(10),
-[slide-step="11"]>.pagination :nth-child(11) {
+[slide-step="11"]>.pagination :nth-child(11),
+[slide-step="12"]>.pagination :nth-child(12) {
     width: 20px;
     border-radius: 16px;
 }
