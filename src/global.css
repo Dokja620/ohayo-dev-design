@@ -671,7 +671,7 @@ footer a {
   margin: 0 auto;
   -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
   mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-  --t: 42s;
+  --t: 62s;
 }
 
 .scroll > div {
@@ -2054,7 +2054,7 @@ section {
   }
 
   #hero .content {
-    margin: 0;
+    margin: 0 auto;
   }
 
   #hero .content p {
@@ -2068,12 +2068,13 @@ section {
 
   #reason {
     padding: 1em;
+    overflow: hidden;
   }
 
   #reason .portfolio {
     text-align: center;
     width: 100%;
-    margin: 0;
+    margin: 2.5em 0 0;
     position: relative;
   }
 
@@ -2296,6 +2297,11 @@ section {
     width: 100px;
   }
 
+  .fact {
+    min-height: 260px;
+    margin-bottom: 3em;
+  }
+
   #scroll h2 {
     font-size: 1.4rem;
   }
@@ -2316,6 +2322,10 @@ section {
     backdrop-filter: blur(5px);
     border: 1px solid hsla(111, 24%, 94%, 0.5);
     gap: 1em;
+  }
+
+  .home-links {
+    width: 90%;
   }
 
   .inputs label::after {

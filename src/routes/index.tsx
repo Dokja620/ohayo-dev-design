@@ -1,6 +1,7 @@
 import { component$, useStore, useVisibleTask$, $} from "@builder.io/qwik";
 import { Link } from '@builder.io/qwik-city';
 import type { DocumentHead } from "@builder.io/qwik-city";
+import { useAOS } from "@cloudgakkai/qwik-aos";
 
 import planet from "/media/home/planet.webp";
 import spatio from "/media/home/spatio.webp";
@@ -44,6 +45,12 @@ export default component$(() => {
         }
     });
 
+    const { aosInit } = useAOS();
+
+    // eslint-disable-next-line qwik/no-use-visible-task
+    useVisibleTask$(() => {
+        aosInit();
+    }, { strategy: "document-ready" })
 
     return (
         <>
@@ -65,7 +72,7 @@ export default component$(() => {
             </section>
 
             {/* Why us section */}
-            <section id="reason" class="container">
+            <section id="reason" class="container" data-aos="fade-in">
                 <div class="portfolio">
                     <h2>Voir nos portfolio :</h2>
                     <div class="portfolios">

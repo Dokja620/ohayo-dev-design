@@ -74,7 +74,7 @@
         }
         padding: $spacing;
         .content{
-            margin: 0;
+            margin: 0 auto;
             p{
                max-width: none;
                width: 100%;
@@ -186,6 +186,10 @@
     p {
         text-align: justify;
         line-height: 25px;
+    }
+    @media (max-width: $breakpoint-xs) {
+        min-height: 260px;
+        margin-bottom: $spacing-xxl;
     }
 }
 
@@ -321,10 +325,11 @@
     }
     @media (max-width: $breakpoint-sm) {
         padding: $spacing;
+        overflow: hidden;
         .portfolio {
             text-align: center;
             width: 100%;
-            margin: 0;
+            margin: $spacing-2xl 0 0;
             position: relative;
         
             h2 {
@@ -483,7 +488,7 @@
     margin: 0 auto;
     -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
     mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
-    --t: 42s;
+    --t: 62s;
 
     & > div{
         white-space: nowrap;
@@ -559,5 +564,8 @@
         &:hover{
             background: hsla(211, 93%, 27%, 1);
         }
+    }
+    @media (max-width: $breakpoint-xs) {
+        width: 90%;
     }
 }
