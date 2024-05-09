@@ -1,0 +1,207 @@
+header{
+    bottom: 1px solid hsla(111, 24%, 94%, .1);
+    padding: 8px $spacing $spacing;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    @media (max-width: 768px) {
+        background: hsla(230, 70%, 5%, .50);
+        border-bottom: 1px solid hsla(111, 24%, 94%, .1);
+        backdrop-filter: blur(2px);
+        nav{
+            justify-content: initial;
+        }
+        .command{
+            margin-left: auto;
+        }
+        .burger-menu{
+            display: flex;
+        }
+        .burger-btn{
+            display: block;
+        }
+
+        .nav-links{
+            position: absolute;
+            gap: 8px;
+            padding: 0 $spacing 10px $spacing;
+            top: 70px;
+            right: -10px;
+            background: hsla(230, 70%, 5%, .95);
+            border: 1px solid hsla(111, 24%, 94%, .15);
+            border-radius: $spacing-md 0 $spacing-md $spacing-md;
+            flex-direction: column;
+            z-index: 5;
+            overflow: clip;
+            height: 0px;
+            max-height: 190px;
+            opacity: 0;
+            transition: opacity .15s linear, height .25s ease-in-out;
+            &:hover > .link{
+                opacity: .5;
+            }
+            .link:hover{
+                opacity: 1;
+            }
+        }
+        .link{
+            transition: .15s ease-in-out;
+            .ico-nav{
+                display: block;
+            }
+        }
+    }
+    @media (max-width: 475px) {
+        .burger-menu{
+            display: flex;
+            margin-left: auto;
+        }
+        .link.order-link{
+            display: flex;
+        }
+        .command{
+            display: none;
+        }
+        .burger-btn{
+            &:checked ~ .nav-links{
+                height: 400%;
+                max-height: 250px;
+            }
+        }
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    position: relative;
+    a{
+        // font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.logo{
+    display: flex;
+    height: max-content;
+    z-index: 5;
+}
+
+.ico-planet{
+    height: 45px;
+    width: auto;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.link{
+    padding: 10px 0 0;
+    z-index: 5;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    a {
+        letter-spacing: 1px;
+        @media (min-width: $breakpoint-lg) {
+            @include light(12, .05s);
+        }
+    }
+    
+    .ico-nav{
+        display: none;
+        padding: 2px 0 0;
+        filter: invert(94%) sepia(3%) saturate(391%) hue-rotate(66deg) brightness(105%) contrast(91%);
+    }
+    &.order-link{
+        display: none;
+    }
+}
+
+.nav-links{
+    display: flex;
+    gap: $spacing-lg;
+}
+
+// launch project btn
+.command{
+    a{
+        padding: 8px 12px;
+        border-radius: $spacing-lg;
+        border: 1px solid hsla(111, 24%, 94%, .75);
+        transition: .25s ease-in-out background;
+        &:hover{
+            background: hsla(211, 93%, 27%, 1);
+        }
+    }
+}
+
+// full css burger menu
+.burger-btn{
+    display: none;
+    position: absolute;
+    right: 1px;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    z-index: 5;
+    opacity: 0;
+}
+
+.burger-menu{
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    width: 32px;
+    margin: 9px 0 0 $spacing;
+    cursor: pointer;
+    .line{
+        flex-grow: 1;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--mint-cream);
+    }
+    .double{
+        display: flex;
+        gap: 4px;
+        & :nth-child(1){
+            width: 55%;
+            transition: .25s width ease-in-out;
+        }
+        & :nth-child(2){
+            width: 10%;
+            transition: .25s width ease-in-out;
+        }
+    }
+}
+
+#toggle-off{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100lvh;
+    z-index: 4;
+}
+
+
+// Full css burger menu
+.burger-btn{
+    &:checked ~ #toggle-off{
+        display: block;
+    }
+    &:checked ~ .nav-links{
+        height: 300%;
+        opacity: 1;
+    }
+    &:checked ~ .burger-menu .double :nth-child(1){
+        width: 25%;
+    }
+    &:checked ~ .burger-menu .double :nth-child(2){
+        width: 75%;
+    }
+}

@@ -1,0 +1,30 @@
+@media (max-width: $breakpoint-2xl) {
+    &.container{
+        border: 2px solid red;
+    }
+}
+@media (max-width: $breakpoint-xl) {
+    &.container{
+        border: 2px solid blue;
+    }
+}
+@media (max-width: $breakpoint-lg) {
+    &.container{
+        border: 2px solid green;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    &.container{
+        border: 2px solid yellow;
+    }
+}
+@media (max-width: $breakpoint-sm) {
+    &.container{
+        border: 2px solid purple;
+    }
+}
+@media (max-width: $breakpoint-xs) {
+    &.container{
+        border: 2px solid grey;
+    }
+}

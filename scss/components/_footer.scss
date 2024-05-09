@@ -1,0 +1,197 @@
+footer {
+    max-width: 100vw;
+    text-align: left;
+    line-height: 25px;
+    padding: 0 0 $spacing;
+    margin-top: calc($spacing-xxl * 2);
+    position: relative;
+    background: hsla(0, 0%, 0%, 0.5);
+    backdrop-filter: blur(2px);
+    box-shadow: -4px 0px 5px #000, -4px 0px 20px #000, -6px 0px 30px #000,
+                -6px 0px 15px #000 inset, 6px 0px 20px #000 inset;
+    
+    a{
+        font-size: 1rem;
+    }
+    @media (max-width: $breakpoint-xl) {
+        .deco {
+        
+            &.ship {
+                top: -25px;
+            }
+        
+            &.spatio {
+                width: 250px;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-lg) {
+        .deco {
+            width: 250px;
+        
+            &.ship {
+                top: initial;
+                bottom: 0;
+                width: 125px;
+            }
+        
+            &.spatio {
+                width: 150px;
+            }
+        }
+        .get-in-touch{
+            max-width: 80%;
+        }
+        .copyright{
+            font-weight: 200;
+            font-size: .9rem;
+        }
+    }
+    @media (max-width: $breakpoint-md) {
+        .get-in-touch{
+            max-width: 90%;
+        }
+    }
+    @media (max-width: $breakpoint-sm) {
+        .get-in-touch {
+            flex-direction: column;
+            text-align: center;
+            gap: $spacing;
+        }
+        .adress{
+            order: 1;
+        }
+        .tel{
+            order: 2;
+        }
+        .mail{
+            order: 3;
+        }
+        .deco {
+            width: 250px;
+        
+            &.ship {
+                top: -10%;
+                bottom: initial;
+                left: 12px;
+                width: 150px;
+            }
+            
+            &.spatio {
+                right: 24px;
+                width: 150px;
+            }
+        }
+    }
+    @media (max-width: $breakpoint-xs) {
+        .deco {
+            width: 250px;
+        
+            &.ship {
+                top: -10%;
+                bottom: initial;
+                left: $spacing;
+                width: 100px;
+            }
+            
+            &.spatio {
+                top: -15%;
+                right: $spacing;
+                width: 100px;
+            }
+        }
+    }
+}
+
+.separation {
+    height: 2px;
+    border-radius: 4px;
+    width: 50%;
+    min-width: 200px;
+    margin: 0 auto calc($spacing-xxl + 12px);
+    background: var(--lavender-web);
+    position: relative;
+    top: -1px;
+}
+
+.get-in-touch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    min-width: 280px;
+    margin: 0 auto;
+    text-transform: uppercase;
+
+    a {
+        font-weight: 200;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 $spacing;
+    }
+
+    li {
+        width: max-content;
+    }
+
+    .adress{
+        pointer-events: none;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: $spacing;
+    margin: $spacing-xl 0 $spacing;
+}
+
+.ico {
+    transition: transform ease-in-out .25s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1) translateY(-5px);
+    }
+}
+
+.copyright {
+    text-align: center;
+}
+
+.deco {
+    position: absolute;
+    top: -75px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.ship {
+        left: clamp(5px, 10%, 50px);
+        top: -25px;
+        width: 200px;
+        animation: flying 1.5s ease infinite;
+    }
+
+    &.spatio {
+        right: clamp(5px, 10%, 50px);
+        width: 200px;
+        animation: floating 5s ease infinite;
+    }
+}
+
+.get-to-top {
+    position: absolute;
+    top: -115px;
+    right: $spacing;
+    filter: invert(100%);
+    opacity: .7;
+}
