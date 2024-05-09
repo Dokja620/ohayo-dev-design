@@ -4,7 +4,7 @@
     width: 100vw;
     display: grid;
     align-items: center;
-    background: url(../../src/media/bg-004-1.webp);
+    background: url('/public/media/bg-004-1.webp');
     box-shadow: inset 0px -35px 50px #000;
 
     .content {
@@ -415,7 +415,7 @@
 }
 
 .portfolios {
-    background: hsla(230, 70%, 5%, .31) url('/media/home/bg-port.webp') top center/cover no-repeat;
+    background: hsla(230, 70%, 5%, .31) url('/public/media/home/bg-port.webp') top center/cover no-repeat;
     border-radius: $spacing-xl;
     border: 2px solid hsla(111, 24%, 94%, .1);
     display: flex;

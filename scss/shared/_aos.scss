@@ -119,8 +119,8 @@
 .fade-up-left,
 .fade-down-right,
 .fade-down-left {
-    animation-duration: 1s;
-    animation-fill-mode: both;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .fade-in {

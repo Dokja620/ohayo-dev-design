@@ -43,12 +43,7 @@ body {
     transition: background .25s ease-in-out;
     overflow-x: clip;
     max-width: 100vw;
-    background: var(--dark-black) url('/media/stars-001.png');
-    // @media (max-width: 640px) {
-    //     background: var(--black-pearl) url(../src/media/bg-004-1.webp) top center/auto 100vh no-repeat fixed;
-    // }
-    // @media (min-width: 1500px) {
-    // }
+    background: var(--dark-black) url('/public/media/stars-001.png');
     &::-webkit-scrollbar {
         width: .35em;
     }

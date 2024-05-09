@@ -1,18 +1,19 @@
 import { component$, useStore, useVisibleTask$, $} from "@builder.io/qwik";
 import { Link } from '@builder.io/qwik-city';
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { useAOS } from "@cloudgakkai/qwik-aos";
+// import { useAOS } from "@cloudgakkai/qwik-aos";
+import { useAOS } from "../hooks/useAos";
 
-import planet from "/media/home/planet.webp";
-import spatio from "/media/home/spatio.webp";
-import spatioStand from "/media/home/spatio-stand.webp";
-import rocket from "/media/home/rocket.svg";
-// import price from "/media/home/price.svg";
-import arrow from "/media/home/IcOutlineArrowBackIosNew.svg";
-import arrowr from "/media/home/IcOutlineArrowForwardIosNew.svg";
+import planet from "/public/media/home/planet.webp";
+import spatio from "/public/media/home/spatio.webp";
+import spatioStand from "/public/media/home/spatio-stand.webp";
+import rocket from "/public/media/home/rocket.svg";
+// import price from "/public/media/home/price.svg";
+import arrow from "/public/media/home/IcOutlineArrowBackIosNew.svg";
+import arrowr from "/public/media/home/IcOutlineArrowForwardIosNew.svg";
 
 // Import images dynamically if possible, or define base path and use it in src
-const basePath = "/media/tech/";
+const basePath = "/public/media/tech/";
 
 export default component$(() => {
     // Array of tool objects
@@ -48,9 +49,12 @@ export default component$(() => {
     const { aosInit } = useAOS();
 
     // eslint-disable-next-line qwik/no-use-visible-task
-    useVisibleTask$(() => {
+    useVisibleTask$(
+        () => {
         aosInit();
-    }, { strategy: "document-ready" })
+        },
+        { strategy: "document-ready" }
+    );
 
     return (
         <>
@@ -72,8 +76,8 @@ export default component$(() => {
             </section>
 
             {/* Why us section */}
-            <section id="reason" class="container" data-aos="fade-in">
-                <div class="portfolio">
+            <section id="reason" class="container">
+                <div class="portfolio" data-aos="fade-up">
                     <h2>Voir nos portfolio :</h2>
                     <div class="portfolios">
                         <span class="front">
@@ -96,7 +100,7 @@ export default component$(() => {
                         <img src={spatioStand} alt="standing spationaute" width={323} height={934}/>
                     </div>
                 </div>
-                <div class="content fact">
+                <div class="content fact" data-aos="fade-up">
                     <h2>Pourquoi nous ?</h2>
                     <div class="slider" id="slider" slide-step={state.currentSlide}>
                         <div class="wrap slides-1">
@@ -180,7 +184,7 @@ export default component$(() => {
             </section>
 
             {/* Infinite skills slider section */}
-            <section id="scroll">
+            <section id="scroll" data-aos="fade-down">
                 <div class="content">
                     <h2>Nous maitrisons :</h2>
                     <div class="scroll">
@@ -203,7 +207,7 @@ export default component$(() => {
             </section>
 
             {/* Navigation */}
-            <section id="visit" class="container">
+            <section id="visit" class="container" data-aos="fade-down">
                 <div class="home-links">
                     <Link href="/a-propos">Qui sommes-nous ?</Link>
                     <Link href="/portefolio">Aperçu de notre travail</Link>

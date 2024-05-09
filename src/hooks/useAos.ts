@@ -49,6 +49,11 @@ export const useAOS = () => {
 
   const animateOnScroll = $(async (animatedElements: HTMLElement[]) => {
     animatedElements.forEach(async (element) => {
+      // Check if the element has already been animated
+      if (element.dataset.animated === "true") {
+        return;
+      }
+
       const visibilityStatus = await isInViewport(element);
       const animationClass = element.getAttribute("data-aos")!;
       const initClass = await getInitClass(animationClass);
@@ -56,6 +61,8 @@ export const useAOS = () => {
       if (visibilityStatus === "show") {
         element.classList.add(animationClass);
         if (initClass) element.classList.remove(initClass);
+        // Mark the element as animated
+        element.dataset.animated = "true";
       } else if (visibilityStatus === "hide") {
         element.classList.remove(animationClass);
         if (initClass) element.classList.add(initClass);

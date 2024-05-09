@@ -1,10 +1,10 @@
 import { $, component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
-import upArrow from '/media/nav/up-001.svg';
+import upArrow from '/public/media/nav/up-001.svg';
 // Malala evasion website preview
-import malala from '/media/work/malala/responsive.png';
+import malala from '/public/media/work/malala/responsive.png';
 // Vacances Nosy Be Tour website preview
-import vacances from '/media/work/vacances/responsive.png';
+import vacances from '/public/media/work/vacances/responsive.png';
 
 export default component$(() => {
 
