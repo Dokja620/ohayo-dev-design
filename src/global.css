@@ -41,7 +41,7 @@ body {
   transition: background 0.25s ease-in-out;
   overflow-x: clip;
   max-width: 100vw;
-  background: var(--dark-black) url("/public/media/stars-001.png");
+  background: var(--dark-black) url("/media/stars-001.png");
 }
 
 body::-webkit-scrollbar {
@@ -365,7 +365,7 @@ footer a {
   width: 100vw;
   display: grid;
   align-items: center;
-  background: url("/public/media/bg-004-1.webp");
+  background: url("/media/bg-004-1.webp");
   box-shadow: inset 0px -35px 50px #000;
 }
 
@@ -612,7 +612,7 @@ footer a {
 }
 
 .portfolios {
-  background: hsla(230, 70%, 5%, 0.31) url("/public/media/home/bg-port.webp") top center/cover no-repeat;
+  background: hsla(230, 70%, 5%, 0.31) url("/media/home/bg-port.webp") top center/cover no-repeat;
   border-radius: 2em;
   border: 2px solid hsla(111, 24%, 94%, 0.1);
   display: flex;
@@ -1156,6 +1156,17 @@ form .buttons {
   cursor: pointer;
 }
 
+[active-step="1"] ~ .fuse {
+  top: 45%;
+}
+
+.fuse {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
 #offer {
   margin-top: 85px;
 }
@@ -1605,11 +1616,11 @@ section {
 
 @keyframes light {
   0% {
-    text-shadow: none;
+    color: initial;
   }
 
   100% {
-    text-shadow: var(--lavender-web) 0px 0px 5px;
+    color: red;
   }
 }
 
@@ -1619,7 +1630,8 @@ section {
   }
 
   .link a:hover :nth-child(1) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(2) {
@@ -1627,7 +1639,8 @@ section {
   }
 
   .link a:hover :nth-child(2) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(3) {
@@ -1635,7 +1648,8 @@ section {
   }
 
   .link a:hover :nth-child(3) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(4) {
@@ -1643,7 +1657,8 @@ section {
   }
 
   .link a:hover :nth-child(4) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(5) {
@@ -1651,7 +1666,8 @@ section {
   }
 
   .link a:hover :nth-child(5) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(6) {
@@ -1659,7 +1675,8 @@ section {
   }
 
   .link a:hover :nth-child(6) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(7) {
@@ -1667,7 +1684,8 @@ section {
   }
 
   .link a:hover :nth-child(7) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(8) {
@@ -1675,7 +1693,8 @@ section {
   }
 
   .link a:hover :nth-child(8) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(9) {
@@ -1683,7 +1702,8 @@ section {
   }
 
   .link a:hover :nth-child(9) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(10) {
@@ -1691,7 +1711,8 @@ section {
   }
 
   .link a:hover :nth-child(10) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(11) {
@@ -1699,7 +1720,8 @@ section {
   }
 
   .link a:hover :nth-child(11) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 
   .link a :nth-child(12) {
@@ -1707,7 +1729,8 @@ section {
   }
 
   .link a:hover :nth-child(12) {
-    text-shadow: white 0px 0px 5px;
+    text-shadow: black 0px 0px 5px;
+    color: var(--moonstone);
   }
 }
 

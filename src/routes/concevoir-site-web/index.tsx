@@ -1,6 +1,8 @@
 import { $, component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
 
+import fuse from '/media/order.webp';
+
 export default component$(() => {
     const changeStep = $((index: number) => {
         const formElement = document.getElementById('form');
@@ -235,6 +237,7 @@ export default component$(() => {
                     </div>
                 </div>
             </form>
+            <div class="fuse"><img src={fuse} alt="spaceship" width={500} height={500}/></div>
         </section>
     );
 });

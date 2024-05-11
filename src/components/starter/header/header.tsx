@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
-import logo from '/public/media/logo-md-1.webp';
+import logo from '/media/logo-md-1.webp';
 import infoLogo from "../icons/IcBaselineInfo.svg"
 import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
 import workLogo from "../icons/IcRoundFolderShared.svg"

@@ -678,3 +678,25 @@ form {
         cursor: pointer;
     }
 }
+
+[active-step="1"] ~ .fuse {
+    top: 45%;
+}
+[active-step="2"] + .fuse {
+}
+[active-step="3"] + .fuse {
+
+}
+[active-step="4"] + .fuse {
+
+}
+[active-step="5"] + .fuse {
+
+}
+
+.fuse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}

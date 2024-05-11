@@ -43,7 +43,7 @@ body {
     transition: background .25s ease-in-out;
     overflow-x: clip;
     max-width: 100vw;
-    background: var(--dark-black) url('/public/media/stars-001.png');
+    background: var(--dark-black) url('/media/stars-001.png');
     &::-webkit-scrollbar {
         width: .35em;
     }
