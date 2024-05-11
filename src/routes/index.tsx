@@ -13,11 +13,11 @@ import arrow from "/public/media/home/IcOutlineArrowBackIosNew.svg";
 import arrowr from "/public/media/home/IcOutlineArrowForwardIosNew.svg";
 
 // Import images dynamically if possible, or define base path and use it in src
-const basePath = "/public/media/tech/";
+const basePath = "/media/tech/";
 
 export default component$(() => {
     // Array of tool objects
-    const tools = Array.from({ length: 35 }, (_, i) => ({
+    const tools = Array.from({ length: 39 }, (_, i) => ({
         src: `${basePath}${String(i + 1).padStart(3, '0')}.webp`,
         alt: `Tool ${i + 1}`
     }));
