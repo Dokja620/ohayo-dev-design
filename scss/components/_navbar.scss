@@ -106,9 +106,6 @@ nav{
     align-items: center;
     a {
         letter-spacing: 1px;
-        @media (min-width: $breakpoint-lg) {
-            @include light(12, .05s);
-        }
     }
     
     .ico-nav{
@@ -124,6 +121,9 @@ nav{
 .nav-links{
     display: flex;
     gap: $spacing-lg;
+    a {
+        @include light(12, .05s);
+    }
 }
 
 // launch project btn

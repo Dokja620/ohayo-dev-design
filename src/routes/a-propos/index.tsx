@@ -1,17 +1,32 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
-import jenna from '/media/team/001.png';
-import axel from '/media/team/002.png';
-import andreas from '/media/team/003.png';
-import florence from '/media/team/004.png';
+import jenna from '/media/team/001.webp';
+import axel from '/media/team/002.webp';
+import andreas from '/media/team/003.webp';
+import florence from '/media/team/004.webp';
 import planet from "/media/home/planet.webp";
 import planetViolet from "/media/home/planet-001.webp";
 import spatio from "/media/home/spatio.webp";
+import { Animate } from '~/components/qwik-animate/animate';
 
 export default component$(() => {
 
     return (
         <section id="about" class="container">
+            <Animate optionAttribute="@rt-y!_child-ascend_origin-b @bn-y @vb @pr-in" class="whaterver">
+                <h1>A</h1>
+                <h1>B</h1>
+                <h1>C</h1>
+                <h1>D</h1>
+                <h1>E</h1>
+                <h1>F</h1>
+                <h1>G</h1>
+                <h1>H</h1>
+                <h1>I</h1>
+                <h1>J</h1>
+                <h1>K</h1>
+                <h1>L</h1>
+            </Animate>
             <div class="part">
                 <div class="text">
                     <h1>À-propos de nous</h1>

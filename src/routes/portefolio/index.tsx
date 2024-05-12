@@ -2,15 +2,15 @@ import { $, component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
 import upArrow from '/media/nav/up-001.svg';
 // Malala evasion website preview
-import malala from '/media/work/malala/responsive.png';
+import malala from '/media/work/malala/responsive.webp';
 // Vacances Nosy Be Tour website preview
-import vacances from '/media/work/vacances/responsive.png';
+import vacances from '/media/work/vacances/responsive.webp';
 // Vacances Nosy Be Tour website preview
-import jenna from '/media/work/jenna/responsive.png';
+import jenna from '/media/work/jenna/responsive.webp';
 // Vacances Nosy Be Tour website preview
-import azur from '/media/work/azur/responsive.png';
+import azur from '/media/work/azur/responsive.webp';
 // Vacances Nosy Be Tour website preview
-import ebook from '/media/work/lylith/responsive.png';
+import ebook from '/media/work/lylith/responsive.webp';
 
 export default component$(() => {
 
