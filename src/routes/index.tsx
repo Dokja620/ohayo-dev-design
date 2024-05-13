@@ -224,7 +224,7 @@ export const head: DocumentHead = {
     meta: [
         {
             name: "description",
-            content: "Découvrez Ohayo Dev & Design, votre partenaire de choix pour des solutions web complètes. De la conception front-end et back-end au design UX/UI et à l'optimisation SEO, notre équipe d'experts est dédiée à transformer votre présence numérique. Explorez nos services et laissez-nous vous aider à réussir en ligne.",
+            content: "Ohayo Dev & Design, une agence de développement web basée à Madagascar, crée des websites performants et innovants. Spécialisée en conception front-end, back-end, design UX/UI, et optimisation SEO, notre équipe Malgache est engagée à booster votre présence numérique. Découvrez nos services et permettez-nous de propulser votre succès en ligne.",
         },
     ],
 };
