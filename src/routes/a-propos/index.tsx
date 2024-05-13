@@ -1,12 +1,12 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
-import jenna from '/media/team/001.webp';
-import axel from '/media/team/002.webp';
-import andreas from '/media/team/003.webp';
-import florence from '/media/team/004.webp';
-import planet from "/media/home/planet.webp";
-import planetViolet from "/media/home/planet-001.webp";
-import spatio from "/media/home/spatio.webp";
+import jenna from '/public/media/team/001.webp';
+import axel from '/public/media/team/002.webp';
+import andreas from '/public/media/team/003.webp';
+import florence from '/public/media/team/004.webp';
+import planet from "/public/media/home/planet.webp";
+import planetViolet from "/public/media/home/planet-001.webp";
+import spatio from "/public/media/home/spatio.webp";
 
 export default component$(() => {
 

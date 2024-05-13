@@ -1,7 +1,7 @@
 import { $, component$ } from '@builder.io/qwik';
 import type { DocumentHead } from "@builder.io/qwik-city";
 
-import fuse from '/media/order.webp';
+import fuse from '/public/media/order.webp';
 
 export default component$(() => {
     const changeStep = $((index: number) => {
