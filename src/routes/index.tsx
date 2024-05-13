@@ -13,7 +13,7 @@ import arrow from "/public/media/home/IcOutlineArrowBackIosNew.svg";
 import arrowr from "/public/media/home/IcOutlineArrowForwardIosNew.svg";
 
 // Import images dynamically if possible, or define base path and use it in src
-const basePath = "/public/media/tech/";
+const basePath = "/media/tech/";
 
 export default component$(() => {
     // Array of tool objects
