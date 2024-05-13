@@ -802,6 +802,13 @@ footer a {
 .scroll > div > span {
   display: inline-flex;
   margin: 0 1.75em;
+  width: 75px;
+  height: 75px;
+}
+
+.scroll > div > span img {
+  width: 100%;
+  height: 100%;
 }
 
 .scroll > div:nth-child(2) {
