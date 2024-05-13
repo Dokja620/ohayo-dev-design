@@ -2,14 +2,14 @@
     font-family: "Bunken Tech Sans SC Wide W01Bd";
     font-display: swap;
     font-style: normal;
-    src: url('/fonts/Bunken.woff2') format('woff2'),
-    url('/fonts/Bunken.woff') format('woff');
+    src: url('/public/fonts/Bunken.woff2') format('woff2'),
+    url('/public/fonts/Bunken.woff') format('woff');
 }
 @font-face {
     font-family: "Montserrat";
     font-display: swap;
     font-style: normal;
-    src: url('/fonts/Montserrat.woff2') format('woff2');
+    src: url('/public/fonts/Montserrat.woff2') format('woff2');
 }
 
 h1 {
