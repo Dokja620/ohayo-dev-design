@@ -191,14 +191,14 @@ export default component$(() => {
                         <div class="tools">
                             {tools.map(tool => (
                                 <span key={tool.src}>
-                                    <img src={tool.src} alt={tool.alt} width={75} height={75} loading="lazy"/>
+                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
                                 </span>
                             ))}
                         </div>
                         <div class="tools"> 
                             {tools.map(tool => (
                                 <span key={tool.src}>
-                                    <img src={tool.src} alt={tool.alt} width={75} height={75} loading="lazy"/>
+                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
                                 </span>
                             ))}
                         </div>
