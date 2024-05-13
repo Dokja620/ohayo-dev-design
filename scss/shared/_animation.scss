@@ -52,9 +52,9 @@ section{
 
 @keyframes light {
     0%{
-        text-shadow: none;
+        color: initial;
     }
     100%{
-        text-shadow: var(--lavender-web) 0px 0px 5px;
+        color: red;
     }
 }

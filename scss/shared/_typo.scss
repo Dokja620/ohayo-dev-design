@@ -1,30 +1,59 @@
-@import 'google-fonts.css';
+@font-face {
+    font-family: "Bunken Tech Sans SC Wide W01Bd";
+    font-display: swap;
+    font-style: normal;
+    src: url('/fonts/Bunken.woff2') format('woff2'),
+    url('/fonts/Bunken.woff') format('woff');
+}
+@font-face {
+    font-family: "Montserrat";
+    font-display: swap;
+    font-style: normal;
+    src: url('/fonts/Montserrat.woff2') format('woff2');
+}
 
-h1{
+h1 {
     font-family: "Bunken Tech Sans SC Wide W01Bd";
     text-transform: uppercase;
 }
-h2{
+
+h2 {
     font-family: "Bunken Tech Sans SC Wide W01Bd";
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-}
-a{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
 }
 
-p{
+a {
+    font-family: "Montserrat";
+}
+
+p {
     font-weight: 300;
 }
 
-h1 {font-size: 2.489rem; /* 39.84px */}
+h1 {
+    font-size: 2.489rem;
+    /* 39.84px */
+}
 
-h2 {font-size: 1.728rem; /* 33.12px */}
+h2 {
+    font-size: 1.728rem;
+    /* 33.12px */
+}
 
-h3 {font-size: 1.440rem; /* 27.68px */}
+h3 {
+    font-size: 1.440rem;
+    /* 27.68px */
+}
 
-h4 {font-size: 1.200rem; /* 23.04px */}
+h4 {
+    font-size: 1.200rem;
+    /* 23.04px */
+}
 
-small {font-size: 0.833rem; /* 13.28px */}
+small {
+    font-size: 0.833rem;
+    /* 13.28px */
+}

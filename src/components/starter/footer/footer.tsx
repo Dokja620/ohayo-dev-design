@@ -1,7 +1,7 @@
 import { component$, $ } from "@builder.io/qwik";
-import ship from '/public/media/foot-001.webp';
-import spatio from '/public/media/foot-002.webp';
-import upArrow from '/public/media/nav/up-001.svg';
+import ship from '/media/foot-001.webp';
+import spatio from '/media/foot-002.webp';
+import upArrow from '/media/nav/up-001.svg';
 import facebook from '../icons/facebook.webp';
 import whatsapp from '../icons/whatsapp.webp';
 import linkedin from '../icons/linkedin.webp';

@@ -139,7 +139,7 @@ input:not([type="checkbox"], [type="radio"]) {
     }
 
     input:checked+label::after {
-        background: var(--black-pearl) url('/public/media/nav/check.svg') center/14px no-repeat;
+        background: var(--black-pearl) url('/media/nav/check.svg') center/14px no-repeat;
         left: -5px;
     }
 
@@ -162,7 +162,7 @@ input:not([type="checkbox"], [type="radio"]) {
             left: -20px;
             width: 20px;
             aspect-ratio: 1/1;
-            background: var(--mint-cream) url('/public/media/nav/check.svg') center/0px no-repeat;
+            background: var(--mint-cream) url('/media/nav/check.svg') center/0px no-repeat;
             transition: .25s all ease-in-out;
         }
 
@@ -653,7 +653,7 @@ form {
     }
 
     input:checked+label::after {
-        background: var(--black-pearl) url('/public/media/nav/check.svg') center/14px no-repeat;
+        background: var(--black-pearl) url('/media/nav/check.svg') center/14px no-repeat;
     }
 
     input:checked+label::before {
@@ -677,4 +677,26 @@ form {
         border-radius: $spacing-lg;
         cursor: pointer;
     }
+}
+
+[active-step="1"] ~ .fuse {
+    top: 45%;
+}
+[active-step="2"] + .fuse {
+}
+[active-step="3"] + .fuse {
+
+}
+[active-step="4"] + .fuse {
+
+}
+[active-step="5"] + .fuse {
+
+}
+
+.fuse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
 }
