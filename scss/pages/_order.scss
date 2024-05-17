@@ -642,7 +642,7 @@ form {
             border: 2px solid var(--yale-blue);
             border-radius: $spacing;
             width: 100%;
-            height: 100%;
+            height: 25px;
             transition: .25s all ease-in-out;
             opacity: 0;
         }
@@ -680,23 +680,30 @@ form {
 }
 
 [active-step="1"] ~ .fuse {
-    top: 45%;
+    bottom: 0%;
 }
 [active-step="2"] + .fuse {
+    bottom: 20%;
 }
 [active-step="3"] + .fuse {
-
+    bottom: 40%;
 }
 [active-step="4"] + .fuse {
-
+    bottom: 70%;
+    left: 10%;
+    transform: rotate(90deg);
+    
 }
 [active-step="5"] + .fuse {
-
+    bottom: 70%;
+    left: 80%;
+    transform: rotate(90deg);
 }
 
 .fuse {
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: 0;
+    left: 5%;
     z-index: 1;
+    transition: 1s;
 }
