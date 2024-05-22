@@ -82,8 +82,14 @@ body {
   font-family: "Montserrat";
 }
 
-a {
+a,
+button {
   font-family: "Montserrat";
+}
+
+input {
+  font-family: "Montserrat";
+  font-weight: 200;
 }
 
 p {
@@ -886,6 +892,136 @@ footer a {
   justify-content: center;
   min-height: calc(100vh - 86px);
   margin-top: 50px;
+}
+
+#order h1 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: clamp(1.2rem, 2vw, 2.5rem);
+}
+
+#order h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+form {
+  background: hsla(230, 70%, 5%, 0.5);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
+  border-radius: 1.75em;
+  padding: 1.75em;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  width: clamp(290px, 90%, 900px);
+  margin: 0 auto;
+  position: relative;
+  min-height: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .buttons {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+form .buttons button {
+  border: 1px solid hsla(111, 24%, 94%, 0.15);
+  background: none;
+  padding: 0.6666666667em 1.5em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 1.75em;
+  background: var(--black-pearl);
+  margin: 0 0.6666666667em;
+  cursor: pointer;
+  color: grey;
+  transition: 0.25s;
+}
+
+form .buttons button:hover {
+  color: var(--mint-cream);
+  border: 1px solid hsla(111, 24%, 94%, 0.5);
+}
+
+.input-error {
+  border: 2px solid hsl(0, 100%, 50%) !important;
+}
+
+.first-step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75em;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-step span {
+  position: relative;
+}
+
+.first-step input {
+  background: none;
+  padding: 0.6666666667em 1.5em;
+  border: 2px solid var(--yale-blue);
+  border-radius: 1.75em;
+  width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
+  font-size: 1rem;
+  position: relative;
+}
+
+.first-step input:focus {
+  outline: none;
+  border: 2px solid var(--moonstone);
+}
+
+.first-step input:focus + label {
+  color: var(--moonstone);
+}
+
+.first-step input:-moz-placeholder-shown + label {
+  position: absolute;
+  color: grey;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5em;
+  padding: 0;
+}
+
+.first-step input:placeholder-shown + label {
+  position: absolute;
+  color: grey;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5em;
+  padding: 0;
+}
+
+.first-step label {
+  position: absolute;
+  color: var(--yale-blue);
+  top: 0;
+  transform: translateY(-50%);
+  left: 1.5em;
+  padding: 0 4px;
+  transition: 0.25s;
+}
+
+.first-step label::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: var(--black-pearl);
+  z-index: -1;
 }
 
 #offer {
