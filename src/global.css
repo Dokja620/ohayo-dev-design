@@ -83,7 +83,8 @@ body {
 }
 
 a,
-button {
+button,
+textarea {
   font-family: "Montserrat";
 }
 
@@ -1022,6 +1023,121 @@ form .buttons button:hover {
   width: 100%;
   background: var(--black-pearl);
   z-index: -1;
+}
+
+.second-step input,
+.third-step input,
+.last-step input {
+  margin: 0 0.6666666667em 0 0;
+}
+
+.second-step input:checked + label::after,
+.third-step input:checked + label::after,
+.last-step input:checked + label::after {
+  transform: rotate(-45deg) scaleX(1);
+}
+
+.second-step input:checked + label::before,
+.third-step input:checked + label::before,
+.last-step input:checked + label::before {
+  background: var(--black-pearl);
+  border: 2px solid var(--mint-cream);
+}
+
+.second-step label,
+.third-step label,
+.last-step label {
+  position: relative;
+  cursor: pointer;
+}
+
+.second-step label::before,
+.third-step label::before,
+.last-step label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -24px;
+  background: var(--mint-cream);
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid var(--black-pearl);
+  transition: 0.25s;
+}
+
+.second-step label::after,
+.third-step label::after,
+.last-step label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -19px;
+  transform: rotate(-90deg) scaleX(0);
+  height: 4px;
+  width: 8px;
+  border-left: 2px solid var(--mint-cream);
+  border-bottom: 2px solid var(--mint-cream);
+  transition: 0.25s;
+}
+
+.site-type {
+  display: flex;
+  gap: 1.5em;
+  margin: 0.6666666667em 0 1.5em;
+}
+
+.options {
+  display: grid;
+  gap: 0.6666666667em;
+  margin: 0.6666666667em 0 0;
+}
+
+.third-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75em 3em;
+}
+
+.third-step label::before {
+  top: -2px;
+  left: -24px;
+}
+
+.third-step label::after {
+  top: 4px;
+  left: -19px;
+}
+
+.feature > div {
+  display: flex;
+  gap: 1.5em;
+  margin: 0.6666666667em 0 0;
+}
+
+.fourth-step textarea {
+  width: 100%;
+  margin: 1em auto 0;
+  resize: none;
+  background: rgba(13, 17, 33, 0.5019607843);
+  font-weight: 200;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.fourth-step textarea:focus {
+  border: 1px solid hsla(111, 24%, 94%, 0.5);
+  outline: none;
+}
+
+.last-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.75em;
+  margin: 1em 0 3em;
 }
 
 #offer {
