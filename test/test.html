@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background: #000;
+            max-width: 100vw;
+            height: 80vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            position: relative;
+            scale: 1.2;
+        }
+        .logo .first{
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-155%, -60%);
+            animation: appa 1s ease-in;
+        }
+        @keyframes appa {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .logo .second{
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            opacity: 0;
+            transform: translate(-40%, -50%);
+            animation: slideF 1s ease-in-out .75s forwards;
+            z-index: -1;
+        }
+        .logo .thrid{
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(90%, -60%);
+            opacity: 0;
+            animation: slideS 1s ease-in-out .75s forwards;
+            z-index: -1;
+        }
+        @keyframes slideF {
+            from{
+                transform: translate(-90%, -50%);
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes slideS {
+            from{
+                transform: translate(10%, -60%);
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        .logo .fourth{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-43%, -30%) scale(1.1);
+            opacity: 0;
+            animation: slideL .5s ease-in-out 1.5s forwards;
+            z-index: -1;
+        }
+        @keyframes slideL {
+            from{
+                transform: translate(-50%, -30%) scale(1.1);
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        </style>
+</head>
+<body>
+    
+    <div class="logo">
+        <span class="first"><img src="./001.webp" alt="" /></span>
+        <span class="second"><img src="./002.webp" alt="" /></span>
+        <span class="thrid"><img src="./003.webp" alt="" /></span>
+        <span class="fourth"><img src="./004.webp" alt="" /></span>
+    </div>
+
+</body>
+</html>

@@ -12,691 +12,131 @@
 
 }
 
-[type="radio"],
-[type="checkbox"],
-label {
-    cursor: pointer;
-}
-
-// Steps changing animaations
-.info {
-    animation: fadeIn .5s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        // transform: translateX(-15px);
-    }
-
-    to {
-        opacity: 1;
-        // transform: translateX(0);
-    }
-}
-
-// Button Styles
-button {
-    border: 1px solid var(--mint-cream);
-    border-radius: $spacing-lg;
-    background: var(--black-pearl);
-    padding: $spacing $spacing-lg;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: .25s ease-in-out background;
-    &:hover{
-        background: var(--yale-blue);
-    }
-}
-
-.inputs {
-    position: relative;
-    width: max-content;
-
-    input:not([type="checkbox"], [type="radio"]) {
-        color: var(--lavender-web);
-        font-weight: 300;
-        font-size: 1rem;
-        width: 40vmin;
-
-        &:focus+label {
-            color: var(--moonstone);
-        }
-
-        &:placeholder-shown+label {
-            top: 48%;
-            transform: translateY(-50%);
-            left: 34px;
-            color: grey;
-            padding: 0;
-        }
-    }
-
-    label {
-        position: absolute;
-        top: 4px;
-        left: $spacing-xl;
-        font-size: .95em;
-        z-index: 2;
-        color: var(--yale-blue);
-        padding: 0 8px;
-        transition: top .15s ease-in,
-            left .15s ease-in,
-            color .15s ease-in,
-            border .15s ease-in,
-            transform .15s ease-in,
-            padding .15s ease-in;
-        pointer-events: none;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 11px;
-            left: 4px;
-            height: 4px;
-            width: 95%;
-            background: var(--black-pearl);
-            z-index: -1;
-            transition: background .15s ease-in;
-        }
-
-        @media (max-width: $breakpoint-xs) {
-            &::after {
-                top: 7px;
-            }
-        }
-    }
-}
-
-// Custom input text field
-input:not([type="checkbox"], [type="radio"]) {
-    border: 2px solid var(--yale-blue);
-    background: none;
-    padding: 8px 16px;
-    border-radius: $spacing-lg;
-    margin: $spacing;
-    position: relative;
-
-    &:focus {
-        outline: none;
-        border-color: var(--moonstone);
-    }
-
-    @media (max-width: $breakpoint-xs) {
-        margin: 12px $spacing;
-    }
-}
-
-// custom radio and checkbox
-.check,
-.option {
-    line-height: 30px;
-
-    input {
-        opacity: 0;
-    }
-
-    input:checked+label::after {
-        background: var(--black-pearl) url('/public/media/nav/check.svg') center/14px no-repeat;
-        left: -5px;
-    }
-
-    input:checked+label::before {
-        background: var(--black-pearl);
-    }
-
-    label {
-        padding-left: $spacing-md;
-        cursor: pointer;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%) scale(.8);
-            border-radius: 50%;
-            border: 2px solid var(--yale-blue);
-            left: -20px;
-            width: 20px;
-            aspect-ratio: 1/1;
-            background: var(--mint-cream) url('/public/media/nav/check.svg') center/0px no-repeat;
-            transition: .25s all ease-in-out;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%) scale(.7);
-            border: 2px solid var(--yale-blue);
-            left: -20px;
-            width: 34px;
-            height: 20px;
-            border-radius: 10px;
-            background: var(--mint-cream);
-            opacity: .7;
-            transition: .25s all ease-in-out;
-        }
-    }
-}
-
 // Layout
 #order {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: calc(100vh - 86px);
-    margin-top: 50px;
-
-    h1 {
-        text-align: center;
-        margin-bottom: $spacing;
-        font-size: clamp(1.2rem, 2vw, 2.5rem);
-    }
-
-    @media (max-width: $breakpoint-xl) {
-        form {
-            width: 90%;
-        }
-    }
-
-    @media (max-width: $breakpoint-lg) {
-        .inputs {
-            input:not([type="checkbox"], [type="radio"]) {
-                width: 30vmin;
-
-                &:focus+label {
-                    color: var(--moonstone);
-                }
-
-                &:placeholder-shown+label {
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 34px;
-                    color: grey;
-                    padding: 0;
-                    background: none;
-                }
-            }
-        }
-    }
-
-    @media (max-width: $breakpoint-md) {
-        margin-top: 65px;
-
-        form {
-            width: 100%;
-        }
-
-        h1 {
-            width: 80%;
-            margin: 0 auto $spacing-lg;
-            text-align: center;
-            font-size: clamp(1.2rem, 2vw, 2.5rem);
-        }
-
-        .inputs {
-            input:not([type="checkbox"], [type="radio"]) {
-                width: 90%;
-
-                &:focus+label {
-                    color: var(--moonstone);
-                }
-
-                &:placeholder-shown+label {
-                    top: 50%;
-                    transform: translateY(-50%);
-                    left: 34px;
-                    color: grey;
-                    padding: 0;
-                    background: none;
-                }
-            }
-        }
-    }
-
-    @media (max-width: $breakpoint-sm) {
-        form {
-            width: 90%;
-        }
-
-        h2 {
-            margin-bottom: $spacing;
-            font-size: 1rem;
-        }
-
-        .step-2 {
-            height: max-content;
-            margin: $spacing 0;
-
-            .info {
-                height: max-content;
-                margin: auto 0;
-            }
-
-            .site-desc {
-                gap: $spacing;
-                width: 90%;
-
-                .inputs {
-                    input {
-                        margin: $spacing 0;
-                        width: 40vmin;
-
-                        &:placeholder-shown+label {
-                            top: 47%;
-                            left: 18px;
-                        }
-                    }
-
-                    label {
-                        left: 16px;
-
-                        &::after {
-                            top: 12px;
-                        }
-                    }
-                }
-
-                .last {
-                    grid-column: span 2;
-                }
-            }
-        }
-
-        .step-3 {
-            h2 {
-                margin-bottom: $spacing;
-            }
-
-            .more {
-                grid-template-columns: repeat(auto-fill, 140px);
-                gap: $spacing-lg;
-            }
-        }
-
-        .step-5 {
-            padding: $spacing;
-
-            h2 {
-                margin-bottom: 8px;
-            }
-
-            .radio {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 8px 0;
-                margin: 0 auto $spacing;
-
-                &>div {
-                    display: flex;
-                    gap: 4px;
-                    justify-content: center;
-                }
-
-                input {
-                    opacity: 0;
-                    position: absolute;
-                }
-
-                .s-m {
-                    order: 3;
-                }
-            }
-
-            label {
-                max-width: 90%;
-            }
-        }
-    }
-
-    @media (max-width: $breakpoint-xs) {
-        min-height: 80vh;
-        margin-bottom: 20%;
-
-        form {
-            padding: $spacing 0 $spacing-2xl;
-        }
-
-        .inputs {
-            input:not([type="checkbox"], [type="radio"]) {
-                width: 75vmin;
-
-                &:focus+label {
-                    color: var(--moonstone);
-                }
-            }
-        }
-
-        .step-2 {
-            height: max-content;
-            margin: 0;
-            padding: 0 $spacing;
-
-            .info {
-                height: max-content;
-                margin: auto 0;
-            }
-
-            h2 {
-                margin-bottom: $spacing;
-                width: 70%;
-                margin: 0 auto;
-            }
-
-            .check {
-                margin: 0;
-            }
-
-            .site-desc {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0;
-                margin: 0 auto;
-
-                .inputs {
-                    grid-column: span 2;
-                    display: flex;
-                    width: 100%;
-
-                    input {
-                        justify-self: center;
-                        margin: $spacing 0 0;
-                        width: 100%;
-
-                        &:placeholder-shown+label {
-                            top: 62%;
-                            left: 18px;
-                        }
-                    }
-
-                    label {
-                        left: 22px;
-
-                        &::after {
-                            top: 12px;
-                        }
-                    }
-                }
-
-                .option {
-                    grid-column: span 2;
-                    margin: 0 $spacing;
-                }
-            }
-        }
-
-        .step-3 {
-            h2 {
-                margin-bottom: $spacing;
-            }
-
-            .more {
-                grid-template-columns: repeat(auto-fill, 1fr);
-                gap: $spacing;
-            }
-        }
-    }
-
+    margin-top: 100px;
 }
-
-form {
-    background: hsla(230, 70%, 5%, .5);
-    backdrop-filter: blur(5px);
+form{
+    background: hsla(230, 70%, 5%, .50);
     border: 1px solid hsla(111, 24%, 94%, .1);
-    margin: 0 auto;
     border-radius: $spacing-lg;
-    min-height: 375px;
-    height: 100%;
-    width: clamp(250px, 65%, 1000px);
-    text-align: center;
-    position: relative;
-    display: grid;
-    align-content: center;
-
-    .buttons {
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
+    padding: $spacing-lg;
+    padding-right: $spacing-xxl;
+    backdrop-filter: blur(2px);
+    width: clamp(300px, 75%, 900px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: $spacing-xxl;
+    .buttons{
         display: flex;
+        justify-content: flex-end;
         gap: $spacing;
     }
-}
-
-// Step 01
-.step-1 {
-    h2 {
-        margin-bottom: $spacing;
-    }
-
-    .input-box {
-        display: flex;
-        flex-wrap: wrap;
-        // max-width: 80%;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-// Step 02
-.step-2 {
-    height: max-content;
-
-    .info {
-        height: 250px;
-        margin: auto 0;
-    }
-
-    h2 {
-        margin-bottom: $spacing;
-    }
-
-    .site-desc {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-        gap: 0 $spacing-xxl;
-        width: 50%;
-        margin: 0 auto;
-
-        .inputs,
-        .check {
-            margin-bottom: $spacing;
-        }
-
-        .inputs {
-            input {
-                margin: $spacing 0;
-
-                // padding: 0;
-                &:placeholder-shown+label {
-                    top: 47%;
-                    left: 18px;
-                }
-            }
-
-            label {
-                left: 16px;
-            }
-        }
-    }
-}
-
-.option {
-    display: flex;
-    width: max-content;
-}
-
-// Step 03
-.step-3 {
-    h2 {
-        margin-bottom: $spacing;
-    }
-
-    .more {
-        display: grid;
-        grid-template-columns: repeat(3, 165px);
-        place-content: center;
-        gap: $spacing-2xl;
-    }
-
-    .choice {
-        h3 {
-            font-size: 1rem;
-            text-align: initial;
-            opacity: .8;
-        }
-    }
-}
-
-// Step 04
-.step-4 {
-    display: flex;
-    justify-content: center;
-    padding: 0 $spacing;
-
-    textarea {
-        width: clamp(275px, 50vw, 800px);
-        height: 225px;
-        margin: $spacing auto 0;
-        resize: none;
-        font-weight: 300;
+    button{
+        background: color-mix(in srgb, var(--mint-cream), transparent 30%);
+        padding: $spacing $spacing-lg;
+        border: none;
+        border-radius: $spacing-xs;
+        text-transform: uppercase;
+        font-weight: 800;
         letter-spacing: 1px;
+        color: var(--black-pearl);
+        margin: $spacing-xl 0 0;
+        width: max-content;
+        cursor: pointer;
+    }
+}
+//Navigation form
+.navigation-form {
+    display: grid;
+    gap: $spacing;
+    background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) center/auto 100% no-repeat;
+    padding: $spacing-lg 65px $spacing-lg $spacing-lg;
+    border-radius: $spacing;
+}
+.step{
+    display: flex;
+    align-items: center;
+    gap: $spacing;
+    height: fit-content;
+    :last-child > p{
+        font-size: .8rem;
+        opacity: .8;
+    }
+    h4{
+        width: max-content;
+    }
+}
+.num{
+    border: 2px solid hsla(111, 24%, 94%, .3);
+    height: max-content;
+    width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: relative;
+    p{
+        position: absolute;
+        top: 50%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        opacity: .9;
+    }
+}
+
+.required{
+    position: relative;
+    &::after{
+        position: absolute;
+        content: '* ceci est requis';
+        color: hsla(0, 100%, 50%, .7);
+        top: 4px;
+        right: 0;
+        font-size: .8rem;
+    }
+}
+
+// step 01
+.step-1{
+    > p{
+        font-size: .9rem;
+        opacity: .7;
+        margin: $spacing-xs 0 0;
+    }
+}
+.first-step{
+    display: grid;
+    // grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    margin: $spacing-lg 0 0;
+    .in{
+        display: grid;
+        gap: $spacing-xs;
+        &.required input{
+            border: 1px solid hsla(0, 100%, 50%, .5);
+        }
+    }
+    input{
+        background: none;
+        padding: $spacing;
         background: hsla(228, 43%, 9%, 0.5);
         backdrop-filter: blur(3px);
         border: 1px solid hsla(111, 24%, 94%, .1);
-        border-radius: $spacing;
-        padding: $spacing;
-
-        &:focus {
+        border-radius: $spacing-xs;
+        &::placeholder{
+            font-weight: 300;
+        }
+        &:focus{
             outline: none;
             border: 1px solid hsla(111, 24%, 94%, .3);
         }
     }
-}
-
-// Step 05
-.step-5 {
-    h2 {
-        margin-bottom: $spacing;
+    label{
+        font-weight: 200;
     }
-    .h2{
-        margin-top: $spacing-lg;
-    }
-    .radio {
-        display: grid;
-        grid-template-columns: repeat(3, 185px);
-        justify-content: center;
-        margin: 0 auto $spacing-xl;
-
-        &>div {
-            display: flex;
-            gap: 4px;
-        }
-
-        input {
-            opacity: 0;
-        }
-    }
-}
-
-// .step-5{
-//     h2{
-//         margin: 0 0 8px;
-//     }
-// }
-
-.parent {
-    label {
-        width: max-content;
-        padding: 0 $spacing 0 $spacing-lg;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%) scale(.8);
-            border-radius: 50%;
-            border: 2px solid var(--yale-blue);
-            left: 2px;
-            width: 20px;
-            aspect-ratio: 1/1;
-            background: var(--mint-cream) url('/public/media/nav/check.svg') center/0px no-repeat;
-            transition: .25s all ease-in-out;
-        }
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid var(--yale-blue);
-            border-radius: $spacing;
-            width: 100%;
-            height: 100%;
-            transition: .25s all ease-in-out;
-            opacity: 0;
-        }
-    }
-
-    input:checked+label {
-        color: var(--yale-blue);
-    }
-
-    input:checked+label::after {
-        background: var(--black-pearl) url('/public/media/nav/check.svg') center/14px no-repeat;
-    }
-
-    input:checked+label::before {
-        opacity: 1;
-    }
-}
-
-
-
-.confidentiality {
-    width: max-content;
-    margin: 0 auto;
-
-    &> :first-child {
-        background: hsla(228, 43%, 9%, 0.75);
-        backdrop-filter: blur(3px);
-        border: 1px solid hsla(111, 24%, 94%, .1);
-        width: max-content;
-        margin: 0 auto;
-        padding: 6px 12px;
-        border-radius: $spacing-lg;
-        cursor: pointer;
-    }
-}
-
-[active-step="1"] ~ .fuse {
-    top: 45%;
-}
-[active-step="2"] + .fuse {
-}
-[active-step="3"] + .fuse {
-
-}
-[active-step="4"] + .fuse {
-
-}
-[active-step="5"] + .fuse {
-
-}
-
-.fuse {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
 }
