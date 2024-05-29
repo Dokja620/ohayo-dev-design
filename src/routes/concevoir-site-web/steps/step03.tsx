@@ -4,59 +4,24 @@ export const Step03 = component$(() => {
     return (
         <div class="step-3">
             <h2>À quel stade en êtes vous ?</h2>
+            <p>Lesquels de ces options vous avez déjà ?</p>
             <div class="third-step">
-                <div class="feature">
-                    <p>Hébèregement :</p>
-                    <div>
-                        <span>
-                            <input type="radio" name="host" id="yes-host" />
-                            <label for="yes-host">J'ai déjà</label>
-                        </span>
-                        <span>
-                            <input type="radio" name="host" id="no-host" />
-                            <label for="no-host">Je n'en ai pas</label>
-                        </span>
-                    </div>
-                </div>
-                <div class="feature">
-                    <p>Design :</p>
-                    <div>
-                        <span>
-                            <input type="radio" name="design" id="yes-design" />
-                            <label for="yes-design">J'ai déjà</label>
-                        </span>
-                        <span>
-                            <input type="radio" name="design" id="no-design" />
-                            <label for="no-design">Je n'en ai pas</label>
-                        </span>
-                    </div>
-                </div>
-                <div class="feature">
-                    <p>Visuels :</p>
-                    <div>
-                        <span>
-                            <input type="radio" name="visual" id="yes-visual" />
-                            <label for="yes-visual">J'ai déjà</label>
-                        </span>
-                        <span>
-                            <input type="radio" name="visual" id="no-visual" />
-                            <label for="no-visual">Je n'en ai pas</label>
-                        </span>
-                    </div>
-                </div>
-                <div class="feature">
-                    <p>Textes :</p>
-                    <div>
-                        <span>
-                            <input type="radio" name="texts" id="yes-texts" />
-                            <label for="yes-texts">J'ai déjà</label>
-                        </span>
-                        <span>
-                            <input type="radio" name="texts" id="no-texts" />
-                            <label for="no-texts">Je n'en ai pas</label>
-                        </span>
-                    </div>
-                </div>
+                <span class="feature">
+                    <input type="checkbox" name="host" id="host" />
+                    <label for="host"><span>Hébergement</span></label>
+                </span>
+                <span class="feature">
+                    <input type="checkbox" name="design" id="design" />
+                    <label for="design"><span>Design</span></label>
+                </span>
+                <span class="feature">
+                    <input type="checkbox" name="visual" id="visual" />
+                    <label for="visual"><span>Visuel</span></label>
+                </span>
+                <span class="feature">
+                    <input type="checkbox" name="textss" id="textss" />
+                    <label for="textss"><span>Textes</span></label>
+                </span>
             </div>
             <Slot />
         </div>

@@ -4,21 +4,6 @@ export const Step05 = component$(() => {
     return (
         <div class="step-5">
             <div class="last-step">
-                <p>Via quoi souhaitez vous être contacter ?</p>
-                <div class="last-options">
-                    <span>
-                        <input type="radio" name="get-in-touch" id="contact-mail" />
-                        <label for="contact-mail">E-mail</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="get-in-touch" id="contact-phone" />
-                        <label for="contact-phone">Numéro</label>
-                    </span>
-                    <span>
-                        <input type="radio" name="get-in-touch" id="contact-social" />
-                        <label for="contact-social">Réseau social</label>
-                    </span>
-                </div>
                 <p>Mode de paiement :</p>
                 <div class="last-options">
                     <span>

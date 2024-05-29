@@ -3,13 +3,37 @@
     display: none;
 }
 
-[active-step="1"]>.step-1,
+[active-step="1"] .step-1,
 [active-step="2"]>.step-2,
 [active-step="3"]>.step-3,
-[active-step="4"]>.step-4,
-[active-step="5"]>.step-5 {
-    display: block;
+[active-step="4"]>.step-4 {
+    display: grid;
+    height: 100%;
+    animation: fadeStep .5s ease-in-out forwards;
+}
 
+/* Apply styles based on active-step attribute */
+form:has(>div[active-step="1"]) > .navigation-form .step:nth-child(-n+1) > .num,
+form:has(>div[active-step="2"]) > .navigation-form .step:nth-child(-n+2) > .num,
+form:has(>div[active-step="3"]) > .navigation-form .step:nth-child(-n+3) > .num,
+form:has(>div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num {
+    background: color-mix(in srgb, var(--mint-cream), transparent 30%);
+    p{
+        color: var(--black-pearl);
+        font-weight: 600;
+    }
+}
+
+@keyframes fadeStep {
+    from {
+        opacity: 0;
+        transform: translateX(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 // Layout
@@ -28,6 +52,7 @@ form{
     padding-right: $spacing-xxl;
     backdrop-filter: blur(2px);
     width: clamp(300px, 75%, 900px);
+    height: 587px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -35,6 +60,8 @@ form{
     .buttons{
         display: flex;
         justify-content: flex-end;
+        justify-self: flex-end;
+        align-self: flex-end;
         gap: $spacing;
     }
     button{
@@ -44,22 +71,25 @@ form{
         border-radius: $spacing-xs;
         text-transform: uppercase;
         font-weight: 800;
+        height: fit-content;
         letter-spacing: 1px;
         color: var(--black-pearl);
-        margin: $spacing-xl 0 0;
+        margin: 0;
         width: max-content;
         cursor: pointer;
     }
 }
 //Navigation form
 .navigation-form {
+    width: fit-content;
     display: grid;
     gap: $spacing;
-    background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) center/auto 100% no-repeat;
+    background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) top left/auto 100% no-repeat;
     padding: $spacing-lg 65px $spacing-lg $spacing-lg;
     border-radius: $spacing;
 }
 .step{
+    width: auto;
     display: flex;
     align-items: center;
     gap: $spacing;
@@ -79,6 +109,7 @@ form{
     aspect-ratio: 1/1;
     border-radius: 50%;
     position: relative;
+    transition: .5s;
     p{
         position: absolute;
         top: 50%;
@@ -86,6 +117,7 @@ form{
         transform: translate(-50%, -50%);
         font-size: 1.2rem;
         opacity: .9;
+        transition: .25s;
     }
 }
 
@@ -112,8 +144,8 @@ form{
 .first-step{
     display: grid;
     // grid-template-columns: 1fr 1fr;
-    gap: $spacing-xl;
-    margin: $spacing-lg 0 0;
+    gap: $spacing;
+    margin: 0;
     .in{
         display: grid;
         gap: $spacing-xs;
@@ -139,4 +171,169 @@ form{
     label{
         font-weight: 200;
     }
+}
+
+// step 02
+.second-step, .last-options{
+    > p{
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    .site-type{
+        display: flex;
+        gap: $spacing-xxl;
+        margin: $spacing 0 $spacing-lg; 
+    }
+    .options{
+        display: grid;
+        gap: $spacing;
+        margin: $spacing 0 0;
+    }
+    input{
+        opacity: 0;
+    }
+    input:checked + label::before{
+        border: 2px solid var(--mint-cream);
+    }
+    input:checked + label::after{
+        opacity: 1;
+        transform: rotate(-45deg) scale(1);
+    }
+    label{
+        position: relative;
+        margin: 0 0 0 $spacing;
+        cursor: pointer;
+        &:hover::before{
+            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -29px;
+            width: 16px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
+            background: var(--black-pearl);
+            transition: .15s;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: -24px;
+            width: 8px;
+            opacity: 0;
+            transform: rotate(0) scale(0);
+            aspect-ratio: 2/1;
+            border-left: 2px solid var(--mint-cream);
+            border-bottom: 2px solid var(--mint-cream);
+            transition: .15s;
+        }
+    }
+}
+
+// step 03
+.step-3{
+    flex-wrap: wrap;
+    gap: $spacing;
+}
+.third-step{
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xl;
+}
+.feature{
+    position: relative;
+    position: relative;
+    height: max-content;
+    input{
+        position: absolute;
+        top: $spacing;
+        left: $spacing;
+        opacity: 0;
+    }
+    input:checked + label::before{
+        border: 2px solid var(--mint-cream);
+    }
+    input:checked + label::after{
+        opacity: 1;
+        transform: rotate(-45deg) scale(1);
+    }
+    label{
+        display: block;
+        padding: 60px 0;
+        width: 150px;
+        background: hsla(228, 43%, 9%, 0.5);
+        backdrop-filter: blur(3px);
+        border: 1px solid hsla(111, 24%, 94%, .1);
+        border-radius: $spacing;
+        cursor: pointer;
+        position: relative;
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover::before{
+            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: $spacing-xs;
+            right: $spacing-xs;
+            width: 20px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
+            background: var(--black-pearl);
+            transition: .15s;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 8px;
+            opacity: 0;
+            transform: rotate(0) scale(0);
+            aspect-ratio: 2/1;
+            border-left: 2px solid var(--mint-cream);
+            border-bottom: 2px solid var(--mint-cream);
+            transition: .15s;
+        }
+    }
+}
+
+// step 04
+.step-4{
+    gap: $spacing;
+    > p{
+        margin: 0 0 $spacing;
+    }
+    textarea{
+        background: hsla(228, 43%, 9%, 0.5);
+        backdrop-filter: blur(3px);
+        border: 1px solid hsla(111, 24%, 94%, .1);
+        resize: none;
+        width: 100%;
+        margin: 0 0 $spacing-xs;
+        padding: $spacing;
+        border-radius: $spacing;
+        transition: .25s;
+        font-weight: 200;
+        font-size: 1rem;
+        &:focus{
+            border: 1px solid hsla(111, 24%, 94%, .15);
+            outline: none;
+        }
+    }
+}
+
+.last-options{
+    display: flex;
+    gap: $spacing-xxl;
 }

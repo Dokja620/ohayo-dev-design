@@ -20,19 +20,19 @@ export const Step02 = component$(() => {
                 <div class="options">
                     <span>
                         <input type="checkbox" name="responsive" id="ui-design" />
-                        <label for="ui-design">Avec UI Designer</label>
+                        <label for="ui-design">Design UI/UX</label>
                     </span>
                     <span>
                         <input type="checkbox" name="responsive" id="redactor" />
-                        <label for="redactor">Avec Rédacteur</label>
+                        <label for="redactor">Rédaction</label>
                     </span>
                     <span>
                         <input type="checkbox" name="responsive" id="back-end" />
-                        <label for="back-end">Avec Back-End</label>
+                        <label for="back-end">Services Back-End</label>
                     </span>
                     <span>
                         <input type="checkbox" name="responsive" id="seo" />
-                        <label for="seo">Avec SEO</label>
+                        <label for="seo">Réferencement naturel</label>
                     </span>
                     <span>
                         <input type="checkbox" name="responsive" id="extra-services" />
