@@ -879,12 +879,42 @@ footer a {
   display: none;
 }
 
-[active-step="1"] > .step-1,
+[active-step="1"] .step-1,
 [active-step="2"] > .step-2,
 [active-step="3"] > .step-3,
-[active-step="4"] > .step-4,
-[active-step="5"] > .step-5 {
-  display: block;
+[active-step="4"] > .step-4 {
+  display: grid;
+  height: 100%;
+  animation: fadeStep 0.5s ease-in-out forwards;
+}
+
+/* Apply styles based on active-step attribute */
+
+form:has(> div[active-step="1"]) > .navigation-form .step:nth-child(-n+1) > .num,
+form:has(> div[active-step="2"]) > .navigation-form .step:nth-child(-n+2) > .num,
+form:has(> div[active-step="3"]) > .navigation-form .step:nth-child(-n+3) > .num,
+form:has(> div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num {
+  background: color-mix(in srgb, var(--mint-cream), transparent 30%);
+}
+
+form:has(> div[active-step="1"]) > .navigation-form .step:nth-child(-n+1) > .num p,
+form:has(> div[active-step="2"]) > .navigation-form .step:nth-child(-n+2) > .num p,
+form:has(> div[active-step="3"]) > .navigation-form .step:nth-child(-n+3) > .num p,
+form:has(> div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num p {
+  color: var(--black-pearl);
+  font-weight: 600;
+}
+
+@keyframes fadeStep {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 #order {
@@ -904,6 +934,7 @@ form {
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   width: clamp(300px, 75%, 900px);
+  height: 587px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -913,6 +944,8 @@ form {
 form .buttons {
   display: flex;
   justify-content: flex-end;
+  justify-self: flex-end;
+  align-self: flex-end;
   gap: 1em;
 }
 
@@ -923,23 +956,28 @@ form button {
   border-radius: 0.6666666667em;
   text-transform: uppercase;
   font-weight: 800;
+  height: -moz-fit-content;
+  height: fit-content;
   letter-spacing: 1px;
   color: var(--black-pearl);
-  margin: 2em 0 0;
+  margin: 0;
   width: -moz-max-content;
   width: max-content;
   cursor: pointer;
 }
 
 .navigation-form {
+  width: -moz-fit-content;
+  width: fit-content;
   display: grid;
   gap: 1em;
-  background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) center/auto 100% no-repeat;
+  background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) top left/auto 100% no-repeat;
   padding: 1.75em 65px 1.75em 1.75em;
   border-radius: 1em;
 }
 
 .step {
+  width: auto;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -965,6 +1003,7 @@ form button {
   aspect-ratio: 1/1;
   border-radius: 50%;
   position: relative;
+  transition: 0.5s;
 }
 
 .num p {
@@ -974,6 +1013,7 @@ form button {
   transform: translate(-50%, -50%);
   font-size: 1.2rem;
   opacity: 0.9;
+  transition: 0.25s;
 }
 
 .required {
@@ -997,8 +1037,8 @@ form button {
 
 .first-step {
   display: grid;
-  gap: 2em;
-  margin: 1.75em 0 0;
+  gap: 1em;
+  margin: 0;
 }
 
 .first-step .in {
@@ -1035,6 +1075,201 @@ form button {
 
 .first-step label {
   font-weight: 200;
+}
+
+.second-step > p,
+.last-options > p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.second-step .site-type,
+.last-options .site-type {
+  display: flex;
+  gap: 3em;
+  margin: 1em 0 1.75em;
+}
+
+.second-step .options,
+.last-options .options {
+  display: grid;
+  gap: 1em;
+  margin: 1em 0 0;
+}
+
+.second-step input,
+.last-options input {
+  opacity: 0;
+}
+
+.second-step input:checked + label::before,
+.last-options input:checked + label::before {
+  border: 2px solid var(--mint-cream);
+}
+
+.second-step input:checked + label::after,
+.last-options input:checked + label::after {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1);
+}
+
+.second-step label,
+.last-options label {
+  position: relative;
+  margin: 0 0 0 1em;
+  cursor: pointer;
+}
+
+.second-step label:hover::before,
+.last-options label:hover::before {
+  border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+}
+
+.second-step label::before,
+.last-options label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -29px;
+  width: 16px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
+  background: var(--black-pearl);
+  transition: 0.15s;
+}
+
+.second-step label::after,
+.last-options label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -24px;
+  width: 8px;
+  opacity: 0;
+  transform: rotate(0) scale(0);
+  aspect-ratio: 2/1;
+  border-left: 2px solid var(--mint-cream);
+  border-bottom: 2px solid var(--mint-cream);
+  transition: 0.15s;
+}
+
+.step-3 {
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.third-step {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.feature {
+  position: relative;
+  position: relative;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.feature input {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  opacity: 0;
+}
+
+.feature input:checked + label::before {
+  border: 2px solid var(--mint-cream);
+}
+
+.feature input:checked + label::after {
+  opacity: 1;
+  transform: rotate(-45deg) scale(1);
+}
+
+.feature label {
+  display: block;
+  padding: 60px 0;
+  width: 150px;
+  background: hsla(228, 43%, 9%, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
+  border-radius: 1em;
+  cursor: pointer;
+  position: relative;
+}
+
+.feature label span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feature label:hover::before {
+  border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+}
+
+.feature label::before {
+  content: "";
+  position: absolute;
+  top: 0.6666666667em;
+  right: 0.6666666667em;
+  width: 20px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
+  background: var(--black-pearl);
+  transition: 0.15s;
+}
+
+.feature label::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 8px;
+  opacity: 0;
+  transform: rotate(0) scale(0);
+  aspect-ratio: 2/1;
+  border-left: 2px solid var(--mint-cream);
+  border-bottom: 2px solid var(--mint-cream);
+  transition: 0.15s;
+}
+
+.step-4 {
+  gap: 1em;
+}
+
+.step-4 > p {
+  margin: 0 0 1em;
+}
+
+.step-4 textarea {
+  background: hsla(228, 43%, 9%, 0.5);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  border: 1px solid hsla(111, 24%, 94%, 0.1);
+  resize: none;
+  width: 100%;
+  margin: 0 0 0.6666666667em;
+  padding: 1em;
+  border-radius: 1em;
+  transition: 0.25s;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.step-4 textarea:focus {
+  border: 1px solid hsla(111, 24%, 94%, 0.15);
+  outline: none;
+}
+
+.last-options {
+  display: flex;
+  gap: 3em;
 }
 
 #offer {

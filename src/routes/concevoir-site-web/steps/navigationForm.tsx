@@ -14,14 +14,14 @@ export const NavigationForm = component$(() => {
                 <span class="num"><p>2</p></span>
                 <span>
                     <p>Étape 2</p>
-                    <h4>Votre Site</h4>
+                    <h4>Plus sur votre site</h4>
                 </span>
             </div>
             <div class="step">
                 <span class="num"><p>3</p></span>
                 <span>
                     <p>Étape 3</p>
-                    <h4>Vos Informations</h4>
+                    <h4>Vous aves besoins de</h4>
                 </span>
             </div>
             <div class="step">
@@ -29,13 +29,6 @@ export const NavigationForm = component$(() => {
                 <span>
                     <p>Étape 4</p>
                     <h4>Description</h4>
-                </span>
-            </div>
-            <div class="step">
-                <span class="num"><p>5</p></span>
-                <span>
-                    <p>Étape 5</p>
-                    <h4>Au final</h4>
                 </span>
             </div>
         </div>
