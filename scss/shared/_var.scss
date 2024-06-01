@@ -35,7 +35,7 @@ $breakpoint-xs: 475px;
         }
         &:hover :nth-child(#{$i}) {
             text-shadow: black 0px 0px 5px;
-            color: var(--moonstone);
+            color: var(--primary-100);
         }
     }
 }

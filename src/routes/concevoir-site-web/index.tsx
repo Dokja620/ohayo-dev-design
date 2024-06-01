@@ -22,7 +22,6 @@ export default component$(() => {
                 <div id="multiform" class="form-steps" active-step="1">
                     <div class="step-1">
                         <h2>Qui fait la commande ?</h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                         <div class="first-step">
                             <span class="f in">
                                 <label for="first-name-input">Nom</label>
