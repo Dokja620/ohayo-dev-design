@@ -1038,7 +1038,7 @@ form button {
   width: fit-content;
   display: grid;
   gap: 1em;
-  background: url(/public/media/test/008.jpg) center/cover no-repeat;
+  background: url(/public/media/main-bg1.webp) center/cover no-repeat;
   padding: 1.75em 65px 1.75em 1.75em;
   border-radius: 1em;
   position: relative;
