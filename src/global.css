@@ -1460,7 +1460,7 @@ footer a {
     display: grid;
     position: absolute;
     gap: 1em 0;
-    top: 64px;
+    top: 66px;
     right: -22px;
     opacity: 0;
     transform: translateX(25%);
