@@ -1,14 +1,8 @@
-import { component$, useStore, useVisibleTask$, $} from "@builder.io/qwik";
+import { component$, useStore, useVisibleTask$, $ } from "@builder.io/qwik";
 import { Link } from '@builder.io/qwik-city';
 import type { DocumentHead } from "@builder.io/qwik-city";
-// import { useAOS } from "@cloudgakkai/qwik-aos";
-import { useAOS } from "../hooks/useAos";
-
-import planet from "/public/media/home/planet.webp";
-import spatio from "/public/media/home/spatio.webp";
-import spatioStand from "/public/media/home/spatio-stand.webp";
 import rocket from "/public/media/home/rocket.svg";
-// import price from "/public/public/media/home/price.svg";
+import spatioStand from "/public/media/home/spatio-stand.webp";
 import arrow from "/public/media/home/IcOutlineArrowBackIosNew.svg";
 import arrowr from "/public/media/home/IcOutlineArrowForwardIosNew.svg";
 
@@ -46,33 +40,43 @@ export default component$(() => {
         }
     });
 
-    const { aosInit } = useAOS();
-
-    // eslint-disable-next-line qwik/no-use-visible-task
-    useVisibleTask$(
-        () => {
-        aosInit();
-        },
-        { strategy: "document-ready" }
-    );
-
     return (
         <>
             {/* Hero section */}
             <section id="hero">
                 <div class="content">
                     <div class="intro">
-                        <h1>Rendez votre entreprise visible à l'international</h1>
-                        <p>Démarrer dès maintenant la conception de votre site web avec Ohayo Dev & Design pour viser un public mondial avec un service accessible partout 24h/24 et 07j/07.</p>
+                        <h1>Rendez votre entreprise <span>visible a l'international</span></h1>
+                        <p>Franchissez les barrières géographiques et temporelles : Élargissez votre influence, atteignez un public mondial et offrez des services disponibles 24/7. Commencez dès maintenant la création de votre site web !</p>
                     </div>
                     <div class="c-t-a">
                         <Link href='/concevoir-site-web'>Démarrer maintenant <span><img src={rocket} alt="rocket icon" width={30} height={30}/></span></Link>
                         {/* <div>Demander un devis<span><img src={price} alt="rocket icon" width={30} height={30}/></span></div> */}
                     </div>
                 </div>
+            </section>
 
-                <div class="bg-h planet"><img src={planet} alt="" width={894} height={894}/></div>
-                <div class="bg-h spatio"><img src={spatio} alt="" width={621} height={826}/></div>
+            {/* Infinite skills slider section */}
+            <section id="scroll" data-aos="fade-down">
+                <div class="content">
+                    <h2>Nous maitrisons :</h2>
+                    <div class="scroll">
+                        <div class="tools">
+                            {tools.map(tool => (
+                                <span key={tool.src}>
+                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
+                                </span>
+                            ))}
+                        </div>
+                        <div class="tools"> 
+                            {tools.map(tool => (
+                                <span key={tool.src}>
+                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </section>
 
             {/* Why us section */}
@@ -81,7 +85,7 @@ export default component$(() => {
                     <h2>Voir nos portfolio :</h2>
                     <div class="portfolios">
                         <span class="front">
-                            <a href="https://dokja620.github.io/portefolio" target="_blank">Développeur Front-End</a>
+                            <a href="https://axel-rakotoarivao.pages.dev/" target="_blank">Développeur Front-End</a>
                         </span>
                         <span>
                             <a href="https://rjauniix.github.io/Portfolio/" target="_blank">Développeur Back-End</a>
@@ -178,29 +182,6 @@ export default component$(() => {
                             }}>
                                 <img src={arrowr} alt="forward arrow" width={50} height={50}/>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Infinite skills slider section */}
-            <section id="scroll" data-aos="fade-down">
-                <div class="content">
-                    <h2>Nous maitrisons :</h2>
-                    <div class="scroll">
-                        <div class="tools">
-                            {tools.map(tool => (
-                                <span key={tool.src}>
-                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
-                                </span>
-                            ))}
-                        </div>
-                        <div class="tools"> 
-                            {tools.map(tool => (
-                                <span key={tool.src}>
-                                    <img src={tool.src} alt={tool.alt} width={200} height={200} loading="lazy"/>
-                                </span>
-                            ))}
                         </div>
                     </div>
                 </div>

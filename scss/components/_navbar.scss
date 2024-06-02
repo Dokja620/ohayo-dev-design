@@ -1,207 +1,191 @@
 header{
-    bottom: 1px solid hsla(111, 24%, 94%, .1);
-    padding: 8px $spacing $spacing;
+    padding: $spacing-xs $spacing-xl;
     position: absolute;
     width: 100%;
-    z-index: 4;
-    @media (max-width: 768px) {
-        background: hsla(230, 70%, 5%, .50);
-        border-bottom: 1px solid hsla(111, 24%, 94%, .1);
-        backdrop-filter: blur(2px);
-        nav{
-            justify-content: initial;
-        }
-        .command{
-            margin-left: auto;
-        }
-        .burger-menu{
-            display: flex;
-        }
-        .burger-btn{
-            display: block;
-        }
-
-        .nav-links{
-            position: absolute;
-            gap: 8px;
-            padding: 0 $spacing 10px $spacing;
-            top: 70px;
-            right: -10px;
-            background: hsla(230, 70%, 5%, .95);
-            border: 1px solid hsla(111, 24%, 94%, .15);
-            border-radius: $spacing-md 0 $spacing-md $spacing-md;
-            flex-direction: column;
-            z-index: 5;
-            overflow: clip;
-            height: 0px;
-            max-height: 190px;
-            opacity: 0;
-            transition: opacity .15s linear, height .25s ease-in-out;
-            &:hover > .link{
-                opacity: .5;
-            }
-            .link:hover{
-                opacity: 1;
-            }
-        }
-        .link{
-            transition: .15s ease-in-out;
-            .ico-nav{
-                display: block;
-            }
-        }
+    z-index: 5;
+}
+.nav-links{
+    display: flex;
+    gap: 0 $spacing-xxl;
+    a{
+        @include light();
     }
-    @media (max-width: 475px) {
-        .burger-menu{
-            display: flex;
-            margin-left: auto;
-        }
-        .link.order-link{
-            display: flex;
-        }
-        .command{
-            display: none;
-        }
-        .burger-btn{
-            &:checked ~ .nav-links{
-                height: 400%;
-                max-height: 250px;
-            }
-        }
-    }
+}
+.ico-nav{
+    display: none;
+}
+.order-link{
+    display: none;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 5;
     position: relative;
-    a{
-        // font-weight: 600;
-        text-transform: uppercase;
-    }
 }
 
-.logo{
-    display: flex;
-    height: max-content;
-    z-index: 5;
-}
-
-.ico-planet{
-    height: 45px;
-    width: auto;
+.logo a{
+    height: auto;
+    width: 85px;
+    display: inline-block;
     img{
         width: 100%;
         height: 100%;
     }
 }
 
-.link{
-    padding: 10px 0 0;
-    z-index: 5;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    a {
-        letter-spacing: 1px;
-    }
-    
-    .ico-nav{
-        display: none;
-        padding: 2px 0 0;
-        filter: invert(94%) sepia(3%) saturate(391%) hue-rotate(66deg) brightness(105%) contrast(91%);
-    }
-    &.order-link{
-        display: none;
-    }
-}
 
-.nav-links{
-    display: flex;
-    gap: $spacing-lg;
-    a {
-        @include light(12, .05s);
-    }
-}
-
-// launch project btn
+// c-t-a
 .command{
     a{
-        padding: 8px 12px;
-        border-radius: $spacing-lg;
-        border: 1px solid hsla(111, 24%, 94%, .75);
-        transition: .25s ease-in-out background;
-        &:hover{
-            background: hsla(211, 93%, 27%, 1);
-        }
+        padding: 6px 12px;
     }
-}
-
-// full css burger menu
-.burger-btn{
-    display: none;
-    position: absolute;
-    right: 1px;
-    width: 30px;
-    height: 30px;
-    top: 12px;
-    z-index: 5;
-    opacity: 0;
-}
-
-.burger-menu{
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    width: 32px;
-    margin: 9px 0 0 $spacing;
+    padding: 6px;
+    border: 1px solid var(--secondary-100);
+    border-radius: $spacing-md;
+    transition: .25s;
     cursor: pointer;
-    .line{
-        flex-grow: 1;
-        height: 3px;
-        border-radius: 2px;
-        background: var(--mint-cream);
-    }
-    .double{
-        display: flex;
-        gap: 4px;
-        & :nth-child(1){
-            width: 55%;
-            transition: .25s width ease-in-out;
-        }
-        & :nth-child(2){
-            width: 10%;
-            transition: .25s width ease-in-out;
-        }
+    &:hover{
+        background: var(--primary-350);
     }
 }
 
-#toggle-off{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100lvh;
-    z-index: 4;
-}
-
-
-// Full css burger menu
-.burger-btn{
-    &:checked ~ #toggle-off{
-        display: block;
+// mobile version
+nav:has(.burger-menu input:checked) {
+    .burger-menu{
+        label{
+            :nth-child(1){
+                transform: translateY(3px) rotate(-45deg);
+            }
+            :nth-child(2){
+                opacity: 0;
+            }
+            :nth-child(3){
+                transform: translateY(-3px) rotate(45deg);
+            }
+        }
     }
-    &:checked ~ .nav-links{
-        height: 300%;
+    .nav-links{
+        transform: translateX(0) scaleX(1);
         opacity: 1;
     }
-    &:checked ~ .burger-menu .double :nth-child(1){
-        width: 25%;
+}
+.burger-menu{
+    display: none;
+    input{
+        position: absolute;
+        opacity: 0;
     }
-    &:checked ~ .burger-menu .double :nth-child(2){
-        width: 75%;
+    label{
+        position: relative;
+        cursor: pointer;
+        opacity: .8;
+        transition: .25s opacity ease-in-out;
+        &:hover{
+            opacity: 1;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 25px;
+            height: 20px;
+        }
+        > div{
+            width: 25px;
+            height: 3px;
+            border-radius: 2px;
+            background: var(--secondary-100);
+            transition: .25s ease-in-out;
+        }
+        :nth-child(1){
+            transform: translateY(-4px);
+        }
+        :nth-child(2){
+            opacity: 1;
+            transition-delay: .05s;
+        }
+        :nth-child(3){
+            transform: translateY(4px);
+            transition-delay: .1s;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) {
+    header{
+        position: fixed;
+        border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
+        background: hsla(263, 69%, 5%, 0.75); 
+        z-index: 5;
+        padding: $spacing-xs $spacing;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(20px);
+        }
+    }
+    .nav-links{
+        display: grid;
+        position: absolute;
+        gap: $spacing 0;
+        top: 66px;
+        right: -8px;
+        transform: translateX(25%) scaleX(0);
+        transform-origin: top right;
+        padding: $spacing $spacing-lg $spacing $spacing;
+        border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
+        border-radius: $spacing;
+        background: hsla(263, 69%, 5%, 0.75);
+        transition: .15s;
+        .link a{
+            text-shadow: initial;
+            color: initial;
+        }
+        &:hover .link {
+            opacity: 0.5;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(20px);
+            border-radius: $spacing;
+            z-index: 1;
+            transition: 2s;
+        }
+        .ico-nav{
+            display: block;
+            filter: invert(1);
+        }
+        .order-link{
+            display: block;
+        }
+        .link{
+            display: flex;
+            gap: $spacing-xs;
+            z-index: 2;
+            cursor: pointer;
+            transition: .25s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .command{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
     }
 }

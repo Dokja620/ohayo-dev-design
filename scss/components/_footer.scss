@@ -125,6 +125,9 @@ footer {
 
     a {
         font-weight: 200;
+        &:nth-child(4){
+            background: red;
+        }
     }
 
     ul {
@@ -141,7 +144,9 @@ footer {
         pointer-events: none;
     }
 }
-
+.mail a{
+    text-transform: initial;
+}
 .social-media {
     display: flex;
     justify-content: center;
@@ -190,7 +195,7 @@ footer {
 
 .get-to-top {
     position: absolute;
-    top: -115px;
+    top: -75px;
     right: $spacing;
     filter: invert(100%);
     opacity: .7;

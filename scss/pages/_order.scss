@@ -17,9 +17,9 @@ form:has(>div[active-step="1"]) > .navigation-form .step:nth-child(-n+1) > .num,
 form:has(>div[active-step="2"]) > .navigation-form .step:nth-child(-n+2) > .num,
 form:has(>div[active-step="3"]) > .navigation-form .step:nth-child(-n+3) > .num,
 form:has(>div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num {
-    background: color-mix(in srgb, var(--mint-cream), transparent 30%);
+    background: color-mix(in srgb, var(--secondary-100), transparent 20%);
     p{
-        color: var(--black-pearl);
+        color: black;
         font-weight: 600;
     }
 }
@@ -41,11 +41,11 @@ form:has(>div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: calc(100vh - 86px);
-    margin-top: 100px;
+    min-height: 100vh;
+    padding-top: 50px;
 }
 form{
-    background: hsla(230, 70%, 5%, .50);
+    background: hsla(260, 69%, 5%, 0.5);
     border: 1px solid hsla(111, 24%, 94%, .1);
     border-radius: $spacing-lg;
     padding: $spacing-lg;
@@ -57,15 +57,19 @@ form{
     display: flex;
     justify-content: space-between;
     gap: $spacing-xxl;
+    h2{
+        font-size: 1.45rem;
+    }
     .buttons{
         display: flex;
         justify-content: flex-end;
         justify-self: flex-end;
         align-self: flex-end;
+        flex-wrap: wrap;
         gap: $spacing;
     }
     button{
-        background: color-mix(in srgb, var(--mint-cream), transparent 30%);
+        background: color-mix(in srgb, var(--secondary-100), transparent 30%);
         padding: $spacing $spacing-lg;
         border: none;
         border-radius: $spacing-xs;
@@ -73,10 +77,45 @@ form{
         font-weight: 800;
         height: fit-content;
         letter-spacing: 1px;
-        color: var(--black-pearl);
+        color: black;
         margin: 0;
         width: max-content;
         cursor: pointer;
+    }
+    @media (max-width: $breakpoint-xs) {
+        background: none;
+        border: none;
+        width: 100%;
+        height: 475px;
+        flex-direction: column;
+        padding: $spacing-md;
+        padding-right: $spacing-md;
+        justify-content: initial;
+        gap: $spacing-xxl;
+        font-size: .9rem;
+        h2{
+            font-size: 1.15rem;
+            margin: 0 0 $spacing-xs;
+        }
+        .buttons{
+            margin: $spacing-lg 0 0;
+        }
+        .navigation-form{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: $spacing;
+        }
+        .step{
+
+            >:last-child{
+                display: none;
+            }
+        }
+        .step-3 label{
+            width: 125px;
+            margin: 0 auto; 
+        }
     }
 }
 //Navigation form
@@ -84,9 +123,21 @@ form{
     width: fit-content;
     display: grid;
     gap: $spacing;
-    background: url(/public/media/form.png) center/cover no-repeat, url(/public/media/bg-004-1.webp) top left/auto 100% no-repeat;
+    background: url(/public/media/test/008.jpg) center/cover no-repeat;
     padding: $spacing-lg 65px $spacing-lg $spacing-lg;
     border-radius: $spacing;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: color-mix(in srgb, black, transparent 80%);
+        border-radius: $spacing;
+        z-index: 1;
+    }
 }
 .step{
     width: auto;
@@ -94,12 +145,14 @@ form{
     align-items: center;
     gap: $spacing;
     height: fit-content;
+    z-index: 2;
     :last-child > p{
         font-size: .8rem;
         opacity: .8;
     }
     h4{
         width: max-content;
+        text-shadow: 0px 0px 5px black, 0px 0px 10px black, 0px 0px 15px black, 0px 0px 15px black, 0px 0px 25px black;
     }
 }
 .num{
@@ -149,6 +202,7 @@ form{
     .in{
         display: grid;
         gap: $spacing-xs;
+        transition: .25s;
         &.required input{
             border: 1px solid hsla(0, 100%, 50%, .5);
         }
@@ -193,7 +247,7 @@ form{
         opacity: 0;
     }
     input:checked + label::before{
-        border: 2px solid var(--mint-cream);
+        border: 2px solid var(--secondary-100);
     }
     input:checked + label::after{
         opacity: 1;
@@ -204,7 +258,7 @@ form{
         margin: 0 0 0 $spacing;
         cursor: pointer;
         &:hover::before{
-            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+            border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 40%);
         }
         &::before{
             content: '';
@@ -214,8 +268,8 @@ form{
             width: 16px;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
-            background: var(--black-pearl);
+            border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 70%);
+            background: black;
             transition: .15s;
         }
         &::after{
@@ -227,8 +281,8 @@ form{
             opacity: 0;
             transform: rotate(0) scale(0);
             aspect-ratio: 2/1;
-            border-left: 2px solid var(--mint-cream);
-            border-bottom: 2px solid var(--mint-cream);
+            border-left: 2px solid var(--secondary-100);
+            border-bottom: 2px solid var(--secondary-100);
             transition: .15s;
         }
     }
@@ -255,7 +309,7 @@ form{
         opacity: 0;
     }
     input:checked + label::before{
-        border: 2px solid var(--mint-cream);
+        border: 2px solid var(--secondary-100);
     }
     input:checked + label::after{
         opacity: 1;
@@ -278,7 +332,7 @@ form{
             transform: translate(-50%, -50%);
         }
         &:hover::before{
-            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 40%);
+            border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 40%);
         }
         &::before{
             content: '';
@@ -288,8 +342,8 @@ form{
             width: 20px;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            border: 2px solid color-mix(in srgb, var(--mint-cream), transparent 70%);
-            background: var(--black-pearl);
+            border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 70%);
+            background: black;
             transition: .15s;
         }
         &::after{
@@ -301,8 +355,8 @@ form{
             opacity: 0;
             transform: rotate(0) scale(0);
             aspect-ratio: 2/1;
-            border-left: 2px solid var(--mint-cream);
-            border-bottom: 2px solid var(--mint-cream);
+            border-left: 2px solid var(--secondary-100);
+            border-bottom: 2px solid var(--secondary-100);
             transition: .15s;
         }
     }
@@ -331,9 +385,12 @@ form{
             outline: none;
         }
     }
+    @media (max-width: $breakpoint-xs) {
+    }
 }
 
 .last-options{
     display: flex;
+    flex-wrap: wrap;
     gap: $spacing-xxl;
 }

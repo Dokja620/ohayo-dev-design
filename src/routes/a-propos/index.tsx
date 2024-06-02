@@ -4,15 +4,12 @@ import jenna from '/public/media/team/001.webp';
 import axel from '/public/media/team/002.webp';
 import andreas from '/public/media/team/003.webp';
 import florence from '/public/media/team/004.webp';
-import planet from "/public/media/home/planet.webp";
-import planetViolet from "/public/media/home/planet-001.webp";
-import spatio from "/public/media/home/spatio.webp";
 
 export default component$(() => {
 
     return (
-        <section id="about" class="container">
-            <div class="part">
+        <section id="about">
+            <div class="part container">
                 <div class="text">
                     <h1>À-propos de nous</h1>
                     <p>
@@ -78,15 +75,6 @@ export default component$(() => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="deco-more spatios">
-                <img src={spatio} alt="" height={826} width={621}/>
-            </div>
-            <div class="deco-more planets one">
-                <img src={planet} alt="" height={894} width={894}/>
-            </div>
-            <div class="deco-more planets two">
-                <img src={planetViolet} alt="" height={894} width={894}/>
             </div>
         </section>
     );

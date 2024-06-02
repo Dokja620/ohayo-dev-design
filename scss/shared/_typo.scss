@@ -11,14 +11,27 @@
     font-style: normal;
     src: url('/public/fonts/Montserrat.woff2') format('woff2');
 }
-
+@font-face {
+    font-family: "Pirulen V2";
+    src:    url("/public/fonts/Pirulen.woff2")format("woff2"),
+            url("/public/fonts/Pirulen.woff")format("woff");
+}
+@font-face {
+    font-family: "BEYNO";
+    src: url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.eot");
+    src: url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/87e0d5d6ba27de27e759ab254219b6b1.svg#BEYNO")format("svg");
+}
 h1 {
-    font-family: "Bunken Tech Sans SC Wide W01Bd";
+    font-family: "Pirulen V2";
     text-transform: uppercase;
 }
 
 h2 {
-    font-family: "Bunken Tech Sans SC Wide W01Bd";
+    font-family: "Pirulen V2";
 }
 
 body {
@@ -43,7 +56,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.728rem;
+    font-size: 1.528rem;
     /* 33.12px */
 }
 

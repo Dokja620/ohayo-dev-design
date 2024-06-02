@@ -17,11 +17,8 @@ export default component$(() => {
         <header>
             <nav>
                 <div class="logo">
-                    <Link href='/' class="ico-planet"><img src={logo} alt="aze" width={378} height={172}/></Link>
+                    <Link href="/"><img src={logo} alt="aze" width={378} height={172}/></Link>
                 </div>
-
-                <input type="checkbox" name="burger" id="burger-toggle" class="burger-btn"/>
-                <label for="burger-toggle" id="toggle-off"></label>
 
                 <div class="nav-links">
                     <div class="link order-link"><span class="ico-nav"><img src={orderLogo} alt="" width={20} height={20}/></span><Link href='/concevoir-site-web'>{splitTextToChars('Concevoir')}</Link></div>
@@ -33,9 +30,12 @@ export default component$(() => {
                 <div class="link command"><Link href='/concevoir-site-web'>{splitTextToChars('Concevoir')}</Link></div>
 
                 <div class="burger-menu">
-                    <div class="line"></div>
-                    <div class="double"><div class="line"></div><div class="line"></div></div>
-                    <div class="line"></div>
+                    <input type="checkbox" name="buger-menu" id="burger-menu" />
+                    <label for="burger-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </label>
                 </div>
             </nav>
         </header>
