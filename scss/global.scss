@@ -27,8 +27,10 @@
 }
 
 body {
-    width: 100vw;
-    background: #000;
+    max-width: 100vw;
+    min-height: 100vh;
+    background: #000 url('/media/stars-001.png');
+    overflow-x: hidden;
     &::-webkit-scrollbar {
         width: .35em;
     }
@@ -54,4 +56,7 @@ body {
 
 // pages
 @import './pages/home';
-@import './pages/home';
+@import './pages/order';
+@import './pages/service';
+@import './pages/work';
+@import './pages/about';

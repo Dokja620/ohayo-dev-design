@@ -2,6 +2,7 @@ header{
     padding: $spacing-xs $spacing-xl;
     position: absolute;
     width: 100%;
+    z-index: 5;
 }
 .nav-links{
     display: flex;
@@ -54,9 +55,6 @@ nav{
 nav:has(.burger-menu input:checked) {
     .burger-menu{
         label{
-            > div{
-                background: color-mix(in srgb, var(--secondary-100), transparent 0%);
-            }
             :nth-child(1){
                 transform: translateY(3px) rotate(-45deg);
             }
@@ -69,11 +67,8 @@ nav:has(.burger-menu input:checked) {
         }
     }
     .nav-links{
-        transform: translateX(0) scale(1);
+        transform: translateX(0) scaleX(1);
         opacity: 1;
-        &::before{
-            backdrop-filter: blur(20px);
-        }
     }
 }
 .burger-menu{
@@ -85,6 +80,11 @@ nav:has(.burger-menu input:checked) {
     label{
         position: relative;
         cursor: pointer;
+        opacity: .8;
+        transition: .25s opacity ease-in-out;
+        &:hover{
+            opacity: 1;
+        }
         &::before{
             content: '';
             position: absolute;
@@ -97,11 +97,8 @@ nav:has(.burger-menu input:checked) {
             width: 25px;
             height: 3px;
             border-radius: 2px;
-            background: color-mix(in srgb, var(--secondary-100), transparent 20%);
+            background: var(--secondary-100);
             transition: .25s ease-in-out;
-            &:hover{
-                background: color-mix(in srgb, var(--secondary-100), transparent 0%);
-            }
         }
         :nth-child(1){
             transform: translateY(-4px);
@@ -123,6 +120,7 @@ nav:has(.burger-menu input:checked) {
         border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
         background: hsla(263, 69%, 5%, 0.75); 
         z-index: 5;
+        padding: $spacing-xs $spacing;
         &::before{
             content: '';
             position: absolute;
@@ -138,14 +136,14 @@ nav:has(.burger-menu input:checked) {
         position: absolute;
         gap: $spacing 0;
         top: 66px;
-        right: -22px;
-        opacity: 0;
-        transform: translateX(25%);
+        right: -8px;
+        transform: translateX(25%) scaleX(0);
+        transform-origin: top right;
         padding: $spacing $spacing-lg $spacing $spacing;
         border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
         border-radius: $spacing;
         background: hsla(263, 69%, 5%, 0.75);
-        transition: .25s;
+        transition: .15s;
         .link a{
             text-shadow: initial;
             color: initial;
@@ -160,7 +158,7 @@ nav:has(.burger-menu input:checked) {
             left: 0;
             width: 100%;
             height: 100%;
-            backdrop-filter: blur(0);
+            backdrop-filter: blur(20px);
             border-radius: $spacing;
             z-index: 1;
             transition: 2s;

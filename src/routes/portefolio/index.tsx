@@ -46,9 +46,9 @@ export default component$(() => {
                             </div>
                         <a href="/malala" target="_blank">Voir le site</a> */}
                     </div>
-                    <div class="go-to">
+                    {/* <div class="go-to">
                         <a href="http://" target="_blank">Visiter le site</a>
-                    </div>
+                    </div> */}
                     <div class="nav-btn pre" onClick$={(event) => {event.preventDefault(); changeStep(5);}}>
                         <img src={upArrow} alt="go to top arrow" width={45} height={45}/>
                     </div>

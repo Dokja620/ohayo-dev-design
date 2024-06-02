@@ -1,9 +1,10 @@
 #about{
-    margin-top: 55px;
+    padding-top: 55px;
     width: 100vw;
     position: relative;
+    background: url('/public/media/test/008.jpg') center/cover no-repeat;
     @media (max-width: $breakpoint-lg) {
-        margin-top: 85px;
+        padding-top: 105px;
         .part{
             width: 90%;
         }
@@ -30,7 +31,7 @@
     display: flex;
     align-items: center;
     .text{
-        background: hsla(230, 70%, 5%, .7);
+        background: hsla(257, 69%, 5%, 0.7);
         padding: $spacing-xl;
         border-radius: $spacing-xl;
     }
@@ -69,10 +70,10 @@
         margin: 0 auto 8px;
         border-radius: 50%;
         overflow: hidden;
-        background: var(--dark-black) url('/public/media/stars-001.png');
+        background: black url('/public/media/stars-001.png');
         backdrop-filter: blur(5px);
-        border: 2px solid var(--oxford-blue);
-        box-shadow: 0px 0px 10px var(--chinese-violet);
+        border: 2px solid var(--primary-500);
+        box-shadow: 0px 0px 10px var(--primary-500);
         img{
             width: 125%;
             height: 125%;

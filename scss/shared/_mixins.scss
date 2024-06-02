@@ -1,5 +1,5 @@
 @mixin button(){
-    background: var(--btn-grey);
+    background: var(--secondary-400);
     border: none;
     border-radius: $spacing;
     padding: $spacing $spacing-xxl;
@@ -8,6 +8,6 @@
     font-weight: 600;
     letter-spacing: 2px;
     cursor: pointer;
-    text-shadow: var(--phthalo-blue) 0px 0px 3px, var(--powder-blue) 0px 0px 5px;
+    text-shadow: color-mix(in srgb, var(--primary-100), transparent 70%) 0px 0px 3px, color-mix(in srgb, var(--primary-100), transparent 70%) 0px 0px 5px;
     box-shadow: -4px -4px 3px hsla(0, 0%, 20%, 0.521);
 }

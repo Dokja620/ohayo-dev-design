@@ -1,5 +1,5 @@
 #offer{
-    margin-top: 85px;
+    padding-top: 85px;
     h1{
         font-size: 1.4rem;
         text-align: center;
@@ -48,8 +48,7 @@
         }
     }
     @media (max-width: $breakpoint-xs) {
-        padding: 0 $spacing;
-        margin: 30% 0;
+        padding: 85px $spacing;
         .product{
             grid-column: span 2;
         }
@@ -67,9 +66,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 75px;
     justify-content: space-evenly;
-    background: hsla(230, 70%, 5%, .5);
+    background: hsla(260, 69%, 5%, 0.5);
+    border: 1px solid hsla(111, 24%, 94%, .1);
     backdrop-filter: blur(3px);
-    border: 2px solid #3f3636;
     border-radius: $spacing-md;
     padding: $spacing-lg;
     position: relative;
@@ -103,8 +102,9 @@
 
 .product{
     border: 2px solid var(--oxford-blue);
-    background: var(--black-pearl);
-    backdrop-filter: blur(25%);
+    background: hsla(228, 43%, 9%, 0.5);
+    backdrop-filter: blur(3px);
+    border: 1px solid hsla(111, 24%, 94%, .1);
     border-radius: $spacing-lg;
     padding: 16px 8px;
     outline: 1px solid hsla(0, 0%, 8%, 0.3);
