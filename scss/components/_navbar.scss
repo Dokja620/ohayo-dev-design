@@ -13,11 +13,15 @@ header{
 .ico-nav{
     display: none;
 }
+.order-link{
+    display: none;
+}
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo a{
@@ -50,6 +54,9 @@ nav{
 nav:has(.burger-menu input:checked) {
     .burger-menu{
         label{
+            > div{
+                background: color-mix(in srgb, var(--secondary-100), transparent 0%);
+            }
             :nth-child(1){
                 transform: translateY(3px) rotate(-45deg);
             }
@@ -59,6 +66,13 @@ nav:has(.burger-menu input:checked) {
             :nth-child(3){
                 transform: translateY(-3px) rotate(45deg);
             }
+        }
+    }
+    .nav-links{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        &::before{
+            backdrop-filter: blur(20px);
         }
     }
 }
@@ -83,8 +97,11 @@ nav:has(.burger-menu input:checked) {
             width: 25px;
             height: 3px;
             border-radius: 2px;
-            background: var(--secondary-100);
+            background: color-mix(in srgb, var(--secondary-100), transparent 20%);
             transition: .25s ease-in-out;
+            &:hover{
+                background: color-mix(in srgb, var(--secondary-100), transparent 0%);
+            }
         }
         :nth-child(1){
             transform: translateY(-4px);
@@ -101,8 +118,70 @@ nav:has(.burger-menu input:checked) {
 }
 
 @media (max-width: $breakpoint-md) {
+    header{
+        position: fixed;
+        border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
+        background: hsla(263, 69%, 5%, 0.75); 
+        z-index: 5;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(20px);
+        }
+    }
     .nav-links{
-        display: none;
+        display: grid;
+        position: absolute;
+        gap: $spacing 0;
+        top: 64px;
+        right: -22px;
+        opacity: 0;
+        transform: translateX(25%);
+        padding: $spacing $spacing-lg $spacing $spacing;
+        border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
+        border-radius: $spacing;
+        background: hsla(263, 69%, 5%, 0.75);
+        transition: .25s;
+        .link a{
+            text-shadow: initial;
+            color: initial;
+        }
+        &:hover .link {
+            opacity: 0.5;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(0);
+            border-radius: $spacing;
+            z-index: 1;
+            transition: 2s;
+        }
+        .ico-nav{
+            display: block;
+            filter: invert(1);
+        }
+        .order-link{
+            display: block;
+        }
+        .link{
+            display: flex;
+            gap: $spacing-xs;
+            z-index: 2;
+            cursor: pointer;
+            transition: .25s;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
     .command{
         display: none;
