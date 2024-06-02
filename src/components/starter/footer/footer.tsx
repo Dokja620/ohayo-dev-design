@@ -16,8 +16,8 @@ export default component$(() => {
     });
     return (
         <footer>
-            <div class="deco ship"><img loading="lazy" src={ship} alt="spaceship illustration" width={1500} height={844}/></div>
-            <div class="deco spatio"><img loading="lazy" src={spatio} alt="spationaute illustration" width={1500} height={844}/></div>
+            {/* <div class="deco ship"><img loading="lazy" src={ship} alt="spaceship illustration" width={1500} height={844}/></div>
+            <div class="deco spatio"><img loading="lazy" src={spatio} alt="spationaute illustration" width={1500} height={844}/></div> */}
             <div class="separation"></div>
             <div class="get-in-touch">
                 <div class="tel">

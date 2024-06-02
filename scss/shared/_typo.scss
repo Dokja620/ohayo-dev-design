@@ -13,12 +13,8 @@
 }
 @font-face {
     font-family: "Pirulen V2";
-    src: url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.eot");
-    src: url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/eb481342c9a3f1756204044159fae0f4.svg#Pirulen V2")format("svg");
+    src:    url("/public/fonts/Pirulen.woff2")format("woff2"),
+            url("/public/fonts/Pirulen.woff")format("woff");
 }
 @font-face {
     font-family: "BEYNO";
@@ -35,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-family: "Bunken Tech Sans SC Wide W01Bd";
+    font-family: "Pirulen V2";
 }
 
 body {
@@ -60,7 +56,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.728rem;
+    font-size: 1.528rem;
     /* 33.12px */
 }
 
