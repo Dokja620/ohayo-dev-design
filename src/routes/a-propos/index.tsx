@@ -13,7 +13,7 @@ export default component$(() => {
                 <div class="text">
                     <h1>À-propos de nous</h1>
                     <p>
-                        Ohayo Dev & Design est une agence de développement web basée à Antananarivo, Madagascar en 2024. 
+                        Ohayo Dev & Design est une agence de développement web basée à Madagascar, Antananarivo en 2024. 
                         Dirigée par Jenna ANDRIANARISATA, notre agence se distingue par son expertise dans le développement 
                         full code avec éditeur de code ainsi que le développement low code avec CMS. <br /> <br />
 

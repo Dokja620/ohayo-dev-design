@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import { Link } from '@builder.io/qwik-city';
-import logo from '/public/media/logo-md-1.webp';
+import logo from '/public/media/logo-md-2.webp';
 import infoLogo from "../icons/IcBaselineInfo.svg"
 import serviceLogo from "../icons/IcSharpMiscellaneousServices.svg"
 import workLogo from "../icons/IcRoundFolderShared.svg"
@@ -31,11 +31,12 @@ export default component$(() => {
 
                 <div class="burger-menu">
                     <input type="checkbox" name="buger-menu" id="burger-menu" />
-                    <label for="burger-menu">
+                    <label id="lab-menu" for="burger-menu">
                         <div></div>
                         <div></div>
                         <div></div>
                     </label>
+                    <label id="lab-close" for="burger-menu"></label>
                 </div>
             </nav>
         </header>
