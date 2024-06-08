@@ -45,7 +45,7 @@ form:has(>div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num 
     }
 }
 form{
-    background: hsla(260, 69%, 5%, 0.5);
+    background: hsla(240, 69%, 5%, 0.5);
     border: 1px solid hsla(111, 24%, 94%, .1);
     border-radius: $spacing-lg;
     padding: $spacing-lg;
