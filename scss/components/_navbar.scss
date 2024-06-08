@@ -52,9 +52,17 @@ nav{
 }
 
 // mobile version
+#lab-close{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
 nav:has(.burger-menu input:checked) {
     .burger-menu{
-        label{
+        #lab-menu{
             :nth-child(1){
                 transform: translateY(3px) rotate(-45deg);
             }
@@ -64,6 +72,9 @@ nav:has(.burger-menu input:checked) {
             :nth-child(3){
                 transform: translateY(-3px) rotate(45deg);
             }
+        }
+        #lab-close{
+            display: initial;
         }
     }
     .nav-links{
@@ -77,7 +88,7 @@ nav:has(.burger-menu input:checked) {
         position: absolute;
         opacity: 0;
     }
-    label{
+    #lab-menu{
         position: relative;
         cursor: pointer;
         opacity: .8;
@@ -118,7 +129,7 @@ nav:has(.burger-menu input:checked) {
     header{
         position: fixed;
         border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
-        background: hsla(263, 69%, 5%, 0.75); 
+        background: hsla(240, 69%, 5%, 0.75); 
         z-index: 5;
         padding: $spacing-xs $spacing;
         &::before{
@@ -142,8 +153,9 @@ nav:has(.burger-menu input:checked) {
         padding: $spacing $spacing-lg $spacing $spacing;
         border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
         border-radius: $spacing;
-        background: hsla(263, 69%, 5%, 0.75);
+        background: hsla(240, 69%, 5%, 0.75);
         transition: .15s;
+        z-index: 5;
         .link a{
             text-shadow: initial;
             color: initial;

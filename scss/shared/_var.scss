@@ -34,7 +34,7 @@ $breakpoint-xs: 475px;
             transition: .25s all ease-in-out $delay;
         }
         &:hover :nth-child(#{$i}) {
-            text-shadow: black 0px 0px 5px;
+            text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
             color: var(--primary-100);
         }
     }

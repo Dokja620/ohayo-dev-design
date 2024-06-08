@@ -1,6 +1,4 @@
 import { component$, $ } from "@builder.io/qwik";
-import ship from '/public/media/foot-001.webp';
-import spatio from '/public/media/foot-002.webp';
 import upArrow from '/public/media/nav/up-001.svg';
 import facebook from '../icons/facebook.webp';
 import whatsapp from '../icons/whatsapp.webp';
@@ -32,9 +30,9 @@ export default component$(() => {
                 </div>
             </div>
             <div class="social-media">
-                <div class="ico"><a href="facebook.com" target="_blank"><img loading="lazy" src={facebook} alt="Facebook icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="https://www.facebook.com/profile.php?id=61556413784520" target="_blank"><img loading="lazy" src={facebook} alt="Facebook icon" width={35} height={35}/></a></div>
                 <div class="ico"><a href="whatsapp.com" target="_blank"><img loading="lazy" src={whatsapp} alt="whatsapp icon" width={35} height={35}/></a></div>
-                <div class="ico"><a href="linkedin.com" target="_blank"><img loading="lazy" src={linkedin} alt="linkedin icon" width={35} height={35}/></a></div>
+                <div class="ico"><a href="https://www.linkedin.com/in/ohayo-dev-design-900b472b6/" target="_blank"><img loading="lazy" src={linkedin} alt="linkedin icon" width={35} height={35}/></a></div>
                 <div class="ico"><a href="github.com" target="_blank"><img loading="lazy" src={github} alt="github icon" width={35} height={35}/></a></div>
             </div>
             <div class="copyright">
