@@ -12,10 +12,10 @@
   --primary-700: hsla(240, 90%, 30%, 1);
   --primary-800: hsla(260, 80%, 20%, 1);
   --primary-900: hsla(280, 60%, 10%, 1);
-  --secondary-400: #1e1e20;
-  --secondary-300: #72687d;
-  --secondary-200: #d8d4f2;
-  --secondary-100: #edf3ec;
+  --secondary-400: hsl(240, 3%, 12%);
+  --secondary-300: hsl(269, 9%, 45%);
+  --secondary-200: hsl(248, 54%, 89%);
+  --secondary-100: hsl(111, 23%, 94%);
 }
 
 * {
@@ -41,12 +41,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--black-pearl);
+  background: color-mix(in srgb, var(--primary-700), transparent 80%);
   border-left: 1px solid hsla(111, 24%, 94%, 0.1);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--lavender-web);
+  background: var(--secondary-300);
 }
 
 @font-face {
@@ -144,7 +144,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(1) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -153,7 +153,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(2) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -162,7 +162,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(3) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -171,7 +171,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(4) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -180,7 +180,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(5) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -189,7 +189,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(6) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -198,7 +198,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(7) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -207,7 +207,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(8) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -216,7 +216,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(9) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -225,7 +225,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(10) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -234,7 +234,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(11) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -243,7 +243,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(12) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -252,7 +252,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(13) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -261,7 +261,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(14) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -270,7 +270,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(15) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -279,7 +279,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(16) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -288,7 +288,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(17) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -297,7 +297,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(18) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -306,7 +306,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(19) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -315,7 +315,7 @@ header {
 }
 
 .nav-links a:hover :nth-child(20) {
-  text-shadow: black 0px 0px 5px;
+  text-shadow: rgba(255, 255, 255, 0.158) 0px 0px 5px;
   color: var(--primary-100);
 }
 
@@ -633,7 +633,7 @@ footer a {
 }
 
 .c-t-a a:hover {
-  background: var(--primary-350);
+  background: var(--primary-400);
 }
 
 .c-t-a span {
@@ -657,7 +657,7 @@ footer a {
   padding: 1.75em;
   border-radius: 1.75em;
   position: relative;
-  background: hsla(270, 69%, 5%, 0.75);
+  background: hsla(240, 69%, 5%, 0.75);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   border: 1px solid hsla(111, 24%, 94%, 0.5);
@@ -815,7 +815,7 @@ footer a {
 }
 
 .portfolios {
-  background: hsla(273, 69%, 5%, 0.31) url("/public/media/home/bg-port-002.webp") top center/cover no-repeat;
+  background: hsla(243, 69%, 5%, 0.31) url("/public/media/home/bg-port.webp") top center/cover no-repeat;
   border-radius: 2em;
   border: 2px solid hsla(111, 24%, 94%, 0.1);
   display: flex;
@@ -835,7 +835,7 @@ footer a {
   height: max-content;
   border-radius: 2em;
   border: 2px solid #fff;
-  background: hsla(293, 69%, 5%, 0.7);
+  background: hsla(233, 69%, 5%, 0.7);
   box-shadow: 0px 0px 10px var(--primary-500), 0px 0px 10px var(--primary-500) inset;
   padding: 1em;
   max-width: 27ch;
@@ -845,7 +845,7 @@ footer a {
 }
 
 .portfolios a:hover {
-  background: var(--primary-350);
+  background: var(--primary-400);
 }
 
 #scroll {
@@ -930,7 +930,7 @@ footer a {
   border-radius: 1.75em;
   padding: 2em 1em;
   position: relative;
-  background: hsla(270, 69%, 5%, 0.75);
+  background: hsla(233, 69%, 5%, 0.75);
   border: 1px solid hsla(111, 24%, 94%, 0.5);
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
@@ -994,11 +994,8 @@ form:has(> div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num
 }
 
 #order {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   min-height: 100vh;
-  padding-top: 50px;
+  padding-top: 125px;
 }
 
 form {
@@ -1031,7 +1028,7 @@ form .buttons {
 }
 
 form button {
-  background: color-mix(in srgb, var(--secondary-100), transparent 30%);
+  background: color-mix(in srgb, white, transparent 20%);
   padding: 1em 1.75em;
   border: none;
   border-radius: 0.6666666667em;
@@ -1052,7 +1049,7 @@ form button {
   width: fit-content;
   display: grid;
   gap: 1em;
-  background: url(/public/media/main-bg1.webp) center/cover no-repeat;
+  background: url(/public/media/main-bg-002.webp) center/cover no-repeat;
   padding: 1.75em 65px 1.75em 1.75em;
   border-radius: 1em;
   position: relative;
@@ -1625,7 +1622,7 @@ form button {
   padding-top: 55px;
   width: 100vw;
   position: relative;
-  background: url("/public/media/main-bg1.webp") center/cover no-repeat;
+  background: url("/public/media/main-bg-002.webp") center/cover no-repeat;
 }
 
 .part {
@@ -1837,6 +1834,10 @@ form button {
     padding: 12px;
   }
 
+  #scroll {
+    margin: 0 0 100px;
+  }
+
   #about {
     padding-top: 105px;
   }
@@ -1858,7 +1859,7 @@ form button {
   header {
     position: fixed;
     border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
-    background: hsla(263, 69%, 5%, 0.75);
+    background: hsla(240, 69%, 5%, 0.75);
     z-index: 5;
     padding: 0.6666666667em 1em;
   }
@@ -1885,7 +1886,7 @@ form button {
     padding: 1em 1.75em 1em 1em;
     border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
     border-radius: 1em;
-    background: hsla(263, 69%, 5%, 0.75);
+    background: hsla(240, 69%, 5%, 0.75);
     transition: 0.15s;
     z-index: 5;
   }
@@ -2173,6 +2174,10 @@ form button {
     margin: 0 auto 62px;
   }
 
+  #scroll {
+    margin: 0 0 0px;
+  }
+
   #scroll h2 {
     font-size: 1.4rem;
   }
@@ -2188,7 +2193,7 @@ form button {
   }
 
   #visit .home-links {
-    background: hsla(263, 70%, 5%, 0.75);
+    background: hsla(240, 69%, 5%, 0.75);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: 1px solid hsla(111, 24%, 94%, 0.5);
@@ -2204,11 +2209,17 @@ form button {
     width: 100%;
   }
 
+  #order {
+    padding-top: 85px;
+  }
+
   form {
     background: none;
     border: none;
     width: 100%;
-    height: 475px;
+    min-height: 475px;
+    height: -moz-max-content;
+    height: max-content;
     flex-direction: column;
     padding: 1.5em;
     padding-right: 1.5em;
@@ -2218,8 +2229,8 @@ form button {
   }
 
   form h2 {
-    font-size: 1.15rem;
-    margin: 0 0 0.6666666667em;
+    font-size: 1.1rem;
+    margin: 0 0 1.75em;
   }
 
   form .buttons {
@@ -2240,6 +2251,10 @@ form button {
   form .step-3 label {
     width: 125px;
     margin: 0 auto;
+  }
+
+  .feature label::after {
+    right: 16px;
   }
 
   #offer {

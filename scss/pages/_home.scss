@@ -48,7 +48,7 @@
             transform: translateY(-2px) rotate(55deg);
         }
         &:hover{
-            background: var(--primary-350);
+            background: var(--primary-400);
         }
     }
     span{
@@ -75,7 +75,7 @@
     padding: $spacing-lg;
     border-radius: $spacing-lg;
     position: relative;
-    background: hsla(270, 69%, 5%, 0.75);
+    background: hsla(240, 69%, 5%, 0.75);
     backdrop-filter: blur(5px);
     border: 1px solid hsla(111, 24%, 94%, .5);
 
@@ -338,7 +338,7 @@
 }
 
 .portfolios {
-    background: hsla(273, 69%, 5%, 0.31) url('/public/media/home/bg-port-002.webp') top center/cover no-repeat;
+    background: hsla(243, 69%, 5%, 0.31) url('/public/media/home/bg-port.webp') top center/cover no-repeat;
     border-radius: $spacing-xl;
     border: 2px solid hsla(111, 24%, 94%, .1);
     display: flex;
@@ -356,7 +356,7 @@
         height: max-content;
         border-radius: $spacing-xl;
         border: 2px solid #fff;
-        background: hsla(293, 69%, 5%, 0.7);
+        background: hsla(233, 69%, 5%, 0.7);
         box-shadow: 0px 0px 10px var(--primary-500), 0px 0px 10px var(--primary-500) inset;
         padding: $spacing;
         max-width: 27ch;
@@ -364,7 +364,7 @@
         letter-spacing: 1px;
         transition: .25s ease-in-out background;
         &:hover{
-            background: var(--primary-350);
+            background: var(--primary-400);
         }
     }
 }
@@ -385,12 +385,16 @@
         text-align: center;
         margin: 0 0 $spacing;
     }
+    @media (max-width: $breakpoint-lg) {
+        margin: 0 0 100px;
+    }
     @media (max-width: $breakpoint-md) {
         .content{
             margin-top: 72px;
         }
     }
     @media (max-width: $breakpoint-xs) {
+        margin: 0 0 0px;
         h2{
             font-size: 1.4rem;
         }
@@ -457,7 +461,7 @@
         padding: 0 $spacing;
         margin: $spacing-xxl 0 $spacing-xxl;
         .home-links {
-            background: hsla(263, 70%, 5%, .75);
+            background: hsla(240, 69%, 5%, 0.75);
             backdrop-filter: blur(5px);
             border: 1px solid hsla(111, 24%, 94%, .5);
             gap: $spacing;
@@ -475,7 +479,7 @@
     border-radius: $spacing-lg;
     padding: $spacing-xl $spacing;
     position: relative;
-    background: hsla(270, 69%, 5%, 0.75);
+    background: hsla(233, 69%, 5%, 0.75);
     border: 1px solid hsla(111, 24%, 94%, .5);
     // background: hsla(227, 61%, 54%, 1);
     backdrop-filter: blur(2px);

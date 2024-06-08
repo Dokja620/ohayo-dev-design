@@ -38,7 +38,7 @@ export default component$(() => {
             </div>
             <div class="parts">
                 <div class="team">
-                    <div class="person">
+                    <a class="person" href="https://jenna-wendy.github.io/Portefolio" target="_blank">
                         <div class="picture jenna">
                             <img src={jenna} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
@@ -46,8 +46,8 @@ export default component$(() => {
                             <p id="name">Jenna ANDRIANARISATA</p>
                             <h4 id="job">UI/UX Designer</h4>
                         </div>
-                    </div>
-                    <div class="person">
+                    </a>
+                    <a class="person" href="https://axel-rakotoarivao.pages.dev/" target="_blank">
                         <div class="picture axel">
                             <img src={axel} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
@@ -55,8 +55,8 @@ export default component$(() => {
                             <p id="name">Axel RAKOTOARIVAO</p>
                             <h4 id="job">Front-End Developer</h4>
                         </div>
-                    </div>
-                    <div class="person">
+                    </a>
+                    <a class="person" href="https://rjauniix.github.io/Portfolio" target="_blank">
                         <div class="picture andreas">
                             <img src={andreas} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
@@ -64,8 +64,8 @@ export default component$(() => {
                             <p id="name">Andréas RABESON</p>
                             <h4 id="job">Back-End Developer</h4>
                         </div>
-                    </div>
-                    <div class="person">
+                    </a>
+                    <a class="person" href="https://tantelyflorence.github.io/portfolio-tantely/" target="_blank">
                         <div class="picture florence">
                             <img src={florence} alt="picture of Jenna" width={1344} height={756}/>
                         </div>
@@ -73,7 +73,7 @@ export default component$(() => {
                             <p id="name">Florence RAFARANIARIVELO</p>
                             <h4 id="job">SEO Analyst</h4>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>

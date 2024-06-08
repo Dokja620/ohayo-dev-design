@@ -129,7 +129,7 @@ nav:has(.burger-menu input:checked) {
     header{
         position: fixed;
         border-bottom: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
-        background: hsla(263, 69%, 5%, 0.75); 
+        background: hsla(240, 69%, 5%, 0.75); 
         z-index: 5;
         padding: $spacing-xs $spacing;
         &::before{
@@ -153,7 +153,7 @@ nav:has(.burger-menu input:checked) {
         padding: $spacing $spacing-lg $spacing $spacing;
         border: 2px solid color-mix(in srgb, var(--secondary-100), transparent 85%);
         border-radius: $spacing;
-        background: hsla(263, 69%, 5%, 0.75);
+        background: hsla(240, 69%, 5%, 0.75);
         transition: .15s;
         z-index: 5;
         .link a{

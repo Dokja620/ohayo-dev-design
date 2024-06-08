@@ -84,7 +84,7 @@ export default component$(() => {
               </span>
               <span class="f in">
                 <label for="phone-input">Numéro</label>
-                <input type="text" id="phone-input" placeholder="ex: +261 32 00 000 00" onInput$={(e) => formState.phone = (e.target as HTMLInputElement).value} />
+                <input type="number" id="phone-input" placeholder="ex: +261 32 00 000 00" onInput$={(e) => formState.phone = (e.target as HTMLInputElement).value} />
               </span>
             </div>
             <div class="buttons">

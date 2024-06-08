@@ -10,10 +10,10 @@
     --primary-800: hsla(260, 80%, 20%, 1);
     --primary-900: hsla(280, 60%, 10%, 1);
 
-    --secondary-400: #1e1e20;  
-    --secondary-300: #72687d;  
-    --secondary-200: #d8d4f2;  
-    --secondary-100: #edf3ec;  
+    --secondary-400: hsl(240, 3%, 12%);  
+    --secondary-300: hsl(269, 9%, 45%);  
+    --secondary-200: hsl(248, 54%, 89%);  
+    --secondary-100: hsl(111, 23%, 94%);  
 }
 
 * {
@@ -37,12 +37,12 @@ body {
     }
 
     &::-webkit-scrollbar-track {
-        background: var(--black-pearl);
+        background: color-mix(in srgb, var(--primary-700), transparent 80%);
         border-left: 1px solid hsla(111, 24%, 94%, .1);
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--lavender-web);
+        background: var(--secondary-300);
     }
 }
 

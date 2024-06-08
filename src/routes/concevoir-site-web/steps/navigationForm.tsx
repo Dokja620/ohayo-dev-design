@@ -14,23 +14,23 @@ export const NavigationForm = component$(() => {
                 <span class="num"><p>2</p></span>
                 <span>
                     <p>Étape 2</p>
-                    <h4>Plus sur votre site</h4>
+                    <h4>Choix du Site</h4>
                 </span>
             </div>
             <div class="step">
                 <span class="num"><p>3</p></span>
                 <span>
                     <p>Étape 3</p>
-                    <h4>Vous aves besoins de</h4>
+                    <h4>A-propos du Projet</h4>
                 </span>
             </div>
             <div class="step">
                 <span class="num"><p>4</p></span>
                 <span>
                     <p>Étape 4</p>
-                    <h4>Description</h4>
+                    <h4>Détails et Contact</h4>
                 </span>
             </div>
         </div>
-    )
+    );
 });

@@ -38,11 +38,11 @@ form:has(>div[active-step="4"]) > .navigation-form .step:nth-child(-n+4) > .num 
 
 // Layout
 #order {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
-    padding-top: 50px;
+    padding-top: 125px;
+    @media (max-width: $breakpoint-xs) {
+        padding-top: 85px;
+    }
 }
 form{
     background: hsla(260, 69%, 5%, 0.5);
@@ -69,7 +69,7 @@ form{
         gap: $spacing;
     }
     button{
-        background: color-mix(in srgb, var(--secondary-100), transparent 30%);
+        background: color-mix(in srgb, white, transparent 20%);
         padding: $spacing $spacing-lg;
         border: none;
         border-radius: $spacing-xs;
@@ -86,7 +86,8 @@ form{
         background: none;
         border: none;
         width: 100%;
-        height: 475px;
+        min-height: 475px;
+        height: max-content;
         flex-direction: column;
         padding: $spacing-md;
         padding-right: $spacing-md;
@@ -94,8 +95,8 @@ form{
         gap: $spacing-xxl;
         font-size: .9rem;
         h2{
-            font-size: 1.15rem;
-            margin: 0 0 $spacing-xs;
+            font-size: 1.10rem;
+            margin: 0 0 $spacing-lg;
         }
         .buttons{
             margin: $spacing-lg 0 0;
@@ -123,7 +124,7 @@ form{
     width: fit-content;
     display: grid;
     gap: $spacing;
-    background: url(/public/media/main-bg1.webp) center/cover no-repeat;
+    background: url(/public/media/main-bg-002.webp) center/cover no-repeat;
     padding: $spacing-lg 65px $spacing-lg $spacing-lg;
     border-radius: $spacing;
     position: relative;
@@ -358,6 +359,9 @@ form{
             border-left: 2px solid var(--secondary-100);
             border-bottom: 2px solid var(--secondary-100);
             transition: .15s;
+            @media (max-width: $breakpoint-xs) {
+                right: 16px;
+            }
         }
     }
 }
@@ -384,8 +388,6 @@ form{
             border: 1px solid hsla(111, 24%, 94%, .15);
             outline: none;
         }
-    }
-    @media (max-width: $breakpoint-xs) {
     }
 }
 
